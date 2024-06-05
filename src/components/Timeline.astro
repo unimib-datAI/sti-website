@@ -1,0 +1,124 @@
+---
+import Release from "@components/Release.astro";
+import Card from "@components/Card.astro";
+import Button from "@components/Button.astro";
+import Stats from "@components/Stats.astro";
+import arc from "@/assets/arc.png";
+import network from "@/assets/network.png";
+---
+
+<section>
+  <ol class="relative border-s border-purple-500 max-w-screen-lg m-auto">
+    <div class="absolute top-0 left-0 w-[1px] h-full bg-purple-500"></div>
+    <Release title="Mammotab 2024" version="V2" link="#">
+      <div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <p>
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <p>
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur.
+        </p>
+      </div>
+
+      <div class="space-y-4">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <Card>
+            <Stats label="N. of tables" value="888,372" />
+          </Card>
+          <Card>
+            <Stats label="Entities" value="40,702,248" />
+          </Card>
+          <Card>
+            <Stats label="Classes" value="4" />
+          </Card>
+          <Card>
+            <Stats label="Properties" value="4" />
+          </Card>
+        </div>
+
+        <Card>
+          <div class="grid grid-cols-3 lg:grid-cols-6 gap-4">
+            <Stats label="Total rows" value="21,731,092" variant="secondary" />
+            <Stats label="Min rows" value="4" variant="secondary" />
+            <Stats label="Max rows" value="244,193" variant="secondary" />
+            <Stats label="Total cols" value="5,030,655" variant="secondary" />
+            <Stats label="Min cols" value="1" variant="secondary" />
+            <Stats label="Max cols" value="1,000" variant="secondary" />
+          </div>
+        </Card>
+      </div>
+      <div
+        class="rounded-lg bg-gray-600 aspect-video grid place-content-center font-bold"
+      >
+        Video
+      </div>
+      <Button href="#" variant="secondary"> Find on Zenodo </Button>
+      <Button href="#" variant="secondary"> Find on Github </Button>
+    </Release>
+
+    <Release title="Upgrades">
+      <div class="flex gap-4 mt-8">
+        <img src={arc.src} class="aspect-square shrink-0 w-14 h-14" />
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <p>
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex gap-4">
+        <img src={network.src} class="aspect-square shrink-0 w-14 h-14" />
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <p>
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </div>
+      </div>
+    </Release>
+
+    <Release title="Mammotab" version="V1" link="#">
+      <div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <p>
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <p>
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+        <Card>
+          <Stats label="Lorem Ipsum" value="Stats" />
+        </Card>
+        <Card>
+          <Stats label="Lorem Ipsum" value="Stats" />
+        </Card>
+        <Card>
+          <Stats label="Lorem Ipsum" value="Stats" />
+        </Card>
+      </div>
+    </Release>
+  </ol>
+</section>

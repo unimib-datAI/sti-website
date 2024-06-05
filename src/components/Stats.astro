@@ -1,0 +1,21 @@
+---
+type Props = {
+  label: string;
+  value: string;
+  variant?: "primary" | "secondary";
+};
+
+const { label, value, variant = "primary" } = Astro.props;
+---
+
+<div class="flex flex-col items-center">
+  <span
+    class:list={[
+      "font-semibold",
+      variant === "primary"
+        ? "text-3xl bg-gradient-30 from-[#9E0974] to-[#6665E9] inline-block text-transparent bg-clip-text"
+        : "text-xl",
+    ]}>{value}</span
+  >
+  <span class="font-semibold text-gray-600">{label}</span>
+</div>
