@@ -1,0 +1,29 @@
+---
+type Props = {
+  /**
+   * The title of the link.
+   */
+  title: string;
+  /**
+   * The URL of the link.
+   */
+  href: string;
+};
+
+const { title, href } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+
+const slug = Astro.url.pathname;
+---
+
+<li>
+  <a
+    href={base + href}
+    class:list={[
+      "block py-2 px-3 rounded md:bg-transparent md:p-0",
+      slug === href ? "text-purple-500" : "",
+      slug,
+    ]}
+    aria-current="page">{title}</a
+  >
+</li>
