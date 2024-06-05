@@ -6,7 +6,7 @@ const isProd = import.meta.env.PROD;
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://unimibinside.github.io/MammoTab-Website/",
-  base: isProd ? "/MammoTab-Website/" : "/",
+  site: "https://unimibinside.github.io/mammotab-website/",
+  base: isProd ? "/mammotab-website/" : "/",
   integrations: [tailwind()],
 });
