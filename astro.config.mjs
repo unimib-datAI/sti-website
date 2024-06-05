@@ -5,5 +5,6 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   site: "https://unimibinside.github.io/MammoTab-Website/",
+  base: "/MammoTab-Website/",
   integrations: [tailwind()],
 });
