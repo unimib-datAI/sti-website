@@ -15,15 +15,13 @@ const { title, version, link } = Astro.props;
     class="absolute w-3 h-3 bg-purple-500 rounded-full mt-1.5 -start-1.5 border border-purple-500"
   >
   </div>
-  <div
-    class="pt-1.5 mb-1 text-lg uppercase leading-none text-gray-400 dark:text-gray-500"
-  >
+  <div class="pt-1.5 mb-1 text-lg uppercase leading-none text-gray-500">
     {title}
   </div>
   {
     version && (
       <div class="flex items-center justify-between mb-4">
-        <h3 class="text-4xl font-semibold text-gray-900 dark:text-white">
+        <h3 class="text-4xl font-semibold bg-gradient-to-b from-[#FD726D] to-[#E99E57] inline-block text-transparent bg-clip-text">
           {version}
         </h3>
         {link && (

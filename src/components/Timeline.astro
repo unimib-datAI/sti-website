@@ -5,6 +5,8 @@ import Button from "@components/Button.astro";
 import Stats from "@components/Stats.astro";
 import arc from "@/assets/arc.png";
 import network from "@/assets/network.png";
+import github from "@/assets/github.png";
+import zenodo from "@/assets/zenodo.png";
 ---
 
 <section>
@@ -58,8 +60,14 @@ import network from "@/assets/network.png";
       >
         Video
       </div>
-      <Button href="#" variant="secondary"> Find on Zenodo </Button>
-      <Button href="#" variant="secondary"> Find on Github </Button>
+      <Button href="#" variant="secondary">
+        Find on Zenodo
+        <img src={zenodo.src} class="ms-2 w-6 h-6" />
+      </Button>
+      <Button href="#" variant="secondary" className="ml-4">
+        Find on Github
+        <img src={github.src} class="ms-2 w-6 h-6" />
+      </Button>
     </Release>
 
     <Release title="Upgrades">
