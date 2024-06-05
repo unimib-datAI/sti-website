@@ -2,8 +2,9 @@
 type Prop = {
   href?: string;
   variant?: "primary" | "secondary";
+  className?: string;
 };
-const { href = "#", variant = "primary" } = Astro.props;
+const { href = "#", variant = "primary", className } = Astro.props;
 ---
 
 <a
@@ -13,6 +14,7 @@ const { href = "#", variant = "primary" } = Astro.props;
     variant === "primary"
       ? "bg-purple-500 hover:bg-purple-500/80"
       : "bg-purple-700 hover:bg-purple-700/80 saturate-50",
+    className,
   ]}
 >
   <slot />
