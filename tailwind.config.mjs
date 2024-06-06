@@ -6,6 +6,11 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
+      
+      rotate: {
+          '210': '210deg',
+      },
+
       fontFamily: {
         sans: ["Inter var", "Inter", ...defaultTheme.fontFamily.sans],
       },
