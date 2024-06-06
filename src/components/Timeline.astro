@@ -1,6 +1,7 @@
 ---
 import Release from "@components/Release.astro";
 import Card from "@components/Card.astro";
+import Banner from "@components/Banner.astro";
 import Button from "@components/Button.astro";
 import Stats from "@components/Stats.astro";
 import arc from "@/assets/arc.png";
@@ -11,7 +12,7 @@ import zenodo from "@/assets/zenodo.png";
 
 <section>
   <ol class="relative border-s border-purple-500 max-w-screen-lg m-auto">
-    <div class="absolute top-0 left-0 w-[1px] h-full bg-purple-500"></div>
+    <div class="absolute top-0 left-0 w-[1px] h-full bg-purple-500 "></div>
     <Release title="Mammotab 2024" version="V2" link="#">
       <div>
         <p>
@@ -29,7 +30,7 @@ import zenodo from "@/assets/zenodo.png";
       </div>
 
       <div class="space-y-4">
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-10">
           <Card>
             <Stats label="N. of tables" value="888,372" />
           </Card>
@@ -44,7 +45,7 @@ import zenodo from "@/assets/zenodo.png";
           </Card>
         </div>
 
-        <Card>
+        <Banner>
           <div class="grid grid-cols-3 lg:grid-cols-6 gap-4">
             <Stats label="Total rows" value="21,731,092" variant="secondary" />
             <Stats label="Min rows" value="4" variant="secondary" />
@@ -53,7 +54,7 @@ import zenodo from "@/assets/zenodo.png";
             <Stats label="Min cols" value="1" variant="secondary" />
             <Stats label="Max cols" value="1,000" variant="secondary" />
           </div>
-        </Card>
+        </Banner>
       </div>
       <div
         class="rounded-lg bg-gray-600 aspect-video grid place-content-center font-bold"
@@ -74,11 +75,11 @@ import zenodo from "@/assets/zenodo.png";
       <div class="flex gap-4 mt-8">
         <img src={arc.src} class="aspect-square shrink-0 w-14 h-14" />
         <div>
-          <p>
+          <p class="ml-5">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
-          <p>
+          <p class="ml-5">
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
             nisi ut aliquip ex ea commodo consequat.
           </p>
@@ -88,11 +89,11 @@ import zenodo from "@/assets/zenodo.png";
       <div class="flex gap-4">
         <img src={network.src} class="aspect-square shrink-0 w-14 h-14" />
         <div>
-          <p>
+          <p class="ml-5">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
-          <p>
+          <p class="ml-5">
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
             nisi ut aliquip ex ea commodo consequat.
           </p>
