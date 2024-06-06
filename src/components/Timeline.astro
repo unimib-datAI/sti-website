@@ -58,11 +58,9 @@ import Upgrades from "@/components/Upgrades.astro"
           </div>
         </Banner>
       </div>
-      <div
-        class="rounded-lg bg-gray-600 aspect-video grid place-content-center font-bold"
-      >
-        Video
-      </div>
+      
+        <iframe class="rounded-lg bg-gray-600 grid place-content-center w-full aspect-video" src="https://www.dailymotion.com/embed/video/k7DiUU7svU7bsLANU2E"></iframe>
+      
       <Button href="#" variant="secondary">
         Find on Zenodo
         <img src={zenodo.src} class="ms-2 w-6 h-6" />
@@ -71,7 +69,9 @@ import Upgrades from "@/components/Upgrades.astro"
         Find on Github
         <img src={github.src} class="ms-2 w-6 h-6" />
       </Button>
-      <Table></Table>
+      <div >
+        <Table></Table>
+      </div>
     </Release>
 
     <Upgrades title="Upgrades">
