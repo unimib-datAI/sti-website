@@ -10,6 +10,7 @@ import github from "@/assets/github.png";
 import zenodo from "@/assets/zenodo.png";
 import Table from "@/components/Table.astro";
 import Upgrades from "@/components/Upgrades.astro"
+import TableV1 from "@/components//TableV1.astro";
 
 ---
 
@@ -68,13 +69,13 @@ import Upgrades from "@/components/Upgrades.astro"
         Find on Github
         <img src={github.src} class="ms-2 w-6 h-6" />
       </Button>
-      <div>
+      
         <Table></Table>
-      </div>
+      
     </Release>
 
     <Upgrades title="Upgrades">
-      <div class="flex gap-4 mt-8">
+      <div class="flex gap-4 mt-8 items-center">
         <img src={arc.src} class="aspect-square shrink-0 w-14 h-14" />
         <div>
           <p class="ml-5">
@@ -88,7 +89,7 @@ import Upgrades from "@/components/Upgrades.astro"
         </div>
       </div>
 
-      <div class="flex gap-4">
+      <div class="flex gap-4 items-center">
         <img src={network.src} class="aspect-square shrink-0 w-14 h-14" />
         <div>
           <p class="ml-5">
@@ -145,6 +146,7 @@ import Upgrades from "@/components/Upgrades.astro"
             <Stats label="Avg cols" value="5,751" variant="secondary" />
           </div>
         </Banner>
+        <TableV1 ></TableV1>
       </div>
     </Release>
   </ol>
