@@ -1,7 +1,7 @@
 ---
 type Prop = {
   href?: string;
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "disabled";
   className?: string;
 };
 const { href = "#", variant = "primary", className } = Astro.props;
@@ -14,6 +14,9 @@ const { href = "#", variant = "primary", className } = Astro.props;
     variant === "primary"
       ? "bg-purple-500 hover:bg-purple-500/80"
       : "bg-purple-700 hover:bg-purple-700/80 saturate-50",
+    variant === "disabled"
+      ? "cursor-not-allowed"
+      : "",
     className,
   ]}
 >
