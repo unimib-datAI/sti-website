@@ -8,6 +8,8 @@ import arc from "@/assets/arc.png";
 import network from "@/assets/network.png";
 import github from "@/assets/github.png";
 import zenodo from "@/assets/zenodo.png";
+import Table from "@/components/Table.astro";
+import Upgrades from "@/components/Upgrades.astro"
 ---
 
 <section>
@@ -35,24 +37,24 @@ import zenodo from "@/assets/zenodo.png";
             <Stats label="N. of tables" value="888,372" />
           </Card>
           <Card>
-            <Stats label="Entities" value="40,702,248" />
+            <Stats label="Entities" value="21,731,092" />
           </Card>
           <Card>
-            <Stats label="Classes" value="4" />
+            <Stats label="Classes" value="4,937,828" />
           </Card>
           <Card>
-            <Stats label="Properties" value="4" />
+            <Stats label="Properties" value="24,193" />
           </Card>
         </div>
 
         <Banner>
           <div class="grid grid-cols-3 lg:grid-cols-6 gap-4">
             <Stats label="Total rows" value="21,731,092" variant="secondary" />
-            <Stats label="Min rows" value="4" variant="secondary" />
-            <Stats label="Max rows" value="244,193" variant="secondary" />
             <Stats label="Total cols" value="5,030,655" variant="secondary" />
             <Stats label="Min cols" value="1" variant="secondary" />
-            <Stats label="Max cols" value="1,000" variant="secondary" />
+            <Stats label="Max cols" value="51,000" variant="secondary" />
+            <Stats label="Avg rows" value="24,462" variant="secondary" />
+            <Stats label="Avg cols" value="5,663" variant="secondary" />
           </div>
         </Banner>
       </div>
@@ -69,9 +71,10 @@ import zenodo from "@/assets/zenodo.png";
         Find on Github
         <img src={github.src} class="ms-2 w-6 h-6" />
       </Button>
+      <Table></Table>
     </Release>
 
-    <Release title="Upgrades">
+    <Upgrades title="Upgrades">
       <div class="flex gap-4 mt-8">
         <img src={arc.src} class="aspect-square shrink-0 w-14 h-14" />
         <div>
@@ -99,7 +102,7 @@ import zenodo from "@/assets/zenodo.png";
           </p>
         </div>
       </div>
-    </Release>
+    </Upgrades>
 
     <Release title="Mammotab" version="V1" link="#">
       <div>
@@ -117,16 +120,32 @@ import zenodo from "@/assets/zenodo.png";
         </p>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
-        <Card>
-          <Stats label="Lorem Ipsum" value="Stats" />
-        </Card>
-        <Card>
-          <Stats label="Lorem Ipsum" value="Stats" />
-        </Card>
-        <Card>
-          <Stats label="Lorem Ipsum" value="Stats" />
-        </Card>
+      <div class="space-y-4">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-10">
+          <Card>
+            <Stats label="N. of tables" value="980,254" />
+          </Card>
+          <Card>
+            <Stats label="Entities" value="43,661,125" />
+          </Card>
+          <Card>
+            <Stats label="Classes" value="5,541,283" />
+          </Card>
+          <Card>
+            <Stats label="Properties" value="2,4193" />
+          </Card>
+        </div>
+
+        <Banner>
+          <div class="grid grid-cols-3 lg:grid-cols-6 gap-4">
+            <Stats label="Total rows" value="23,230" variant="secondary" />
+            <Stats label="Total cols" value="5,638,191" variant="secondary" />
+            <Stats label="Min cols" value="1" variant="secondary" />
+            <Stats label="Max cols" value="100,012" variant="secondary" />
+            <Stats label="Avg rows" value="23,698" variant="secondary" />
+            <Stats label="Avg cols" value="5,751" variant="secondary" />
+          </div>
+        </Banner>
       </div>
     </Release>
   </ol>
