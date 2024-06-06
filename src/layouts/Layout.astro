@@ -1,7 +1,7 @@
 ---
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
-
+import Bgblur from "@components/Bgblur.astro";
 
 interface Props {
   title: string;
@@ -27,7 +27,9 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body class="bg-background text-foreground font-sans ">
+    
     <Header />
+    
     <slot />
     <Footer />
   </body>
