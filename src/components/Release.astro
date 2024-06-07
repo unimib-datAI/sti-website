@@ -7,11 +7,11 @@ type Props = {
   title: string;
   version?: string;
   link?: string;
-  
+  downloadable?: string; 
   
 };
 
-const { title, version, link } = Astro.props;
+const { title, version, link, downloadable = "true" } = Astro.props;
 ---
 
 <li class="mb-20 ms-12">
@@ -29,7 +29,7 @@ const { title, version, link } = Astro.props;
           {version}
         </h3>
         {link && (
-          <Button href={link} variant="primary" version={version}>
+          <Button href={link} variant={!!downloadable ? "primary":"disabled"} >
             Download
             <svg
               class="w-4 h-4 ms-2"

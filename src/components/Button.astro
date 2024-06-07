@@ -12,17 +12,9 @@ const { href = "#", variant = "primary", className, version = "V1"} = Astro.prop
   href={href}
   class:list={[
     "inline-flex justify-center items-center px-4 py-2 text-sm font-bold rounded-lg transition-colors",
-    variant === "primary"
-      ? "bg-purple-500 hover:bg-purple-500/80"
-      : "bg-purple-700 hover:bg-purple-700/80 saturate-50 ",
-    variant === "disabled" 
-      ? "cursor-not-allowed bg-gray-800" 
-      : "",
-    
-    className,
-    version === "V1"
-      ? "bg-purple-500 hover:bg-purple-500/80"
-      :"cursor-not-allowed bg-gray-800" ,
+    variant === "primary" && "bg-purple-500 hover:bg-purple-500/80",
+variant ==="secondary" && "bg-purple-700 hover:bg-purple-700/80 saturate-50",
+variant ==="disabled" && "cursor-not-allowed pointer-events-none bg-gray-800"
     
   ]}
 >
