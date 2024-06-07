@@ -22,7 +22,6 @@ import TableV2 from "@/components/TableV2.astro";
       version="V2"
       link="https://doi.org/10.5281/zenodo.7014472"
       downloadable="false"
-
     >
       <div>
         <p>
@@ -81,7 +80,11 @@ import TableV2 from "@/components/TableV2.astro";
       <TableV2 />
 
       <div class="flex flex-col gap-4 md:flex-row">
-        <Button href="#" variant="disabled">
+        <Button
+          href="#"
+          variant="disabled"
+          tooltip="Coming soon after SemTab 2024"
+        >
           Find on Zenodo
           <img src={zenodo.src} class="ms-2 w-6 h-6" />
         </Button>

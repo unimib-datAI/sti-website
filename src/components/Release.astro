@@ -1,14 +1,11 @@
 ---
-
 import Button from "@/components/Button.astro";
-
 
 type Props = {
   title: string;
   version?: string;
   link?: string;
-  downloadable?: string; 
-  
+  downloadable?: string;
 };
 
 const { title, version, link, downloadable = "true" } = Astro.props;
@@ -29,7 +26,13 @@ const { title, version, link, downloadable = "true" } = Astro.props;
           {version}
         </h3>
         {link && (
-          <Button href={link} variant={!!downloadable ? "primary":"disabled"} >
+          <Button
+            href={link}
+            variant={downloadable === "true" ? "primary" : "disabled"}
+            tooltip={
+              downloadable === "false" && "Coming soon after SemTab 2024"
+            }
+          >
             Download
             <svg
               class="w-4 h-4 ms-2"

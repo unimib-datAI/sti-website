@@ -1,22 +1,67 @@
 ---
 type Prop = {
   href?: string;
-  variant?: "primary" | "secondary" | "disabled" ;
+  variant?: "primary" | "secondary" | "disabled";
   className?: string;
-  version?: "V2" | "V1" ;
+  version?: "V2" | "V1";
+  tooltip?: string;
 };
-const { href = "#", variant = "primary", className, version = "V1"} = Astro.props;
+const { href = "#", variant = "primary", className, tooltip } = Astro.props;
 ---
 
-<a 
-  href={href}
-  class:list={[
-    "inline-flex justify-center items-center px-4 py-2 text-sm font-bold rounded-lg transition-colors",
-    variant === "primary" && "bg-purple-500 hover:bg-purple-500/80",
-variant ==="secondary" && "bg-purple-700 hover:bg-purple-700/80 saturate-50",
-variant ==="disabled" && "cursor-not-allowed pointer-events-none bg-gray-800"
-    
-  ]}
->
-  <slot />
-</a>
+<button-with-tooltip>
+  <a
+    href={href}
+    data-tooltip={tooltip}
+    class:list={[
+      "relative inline-flex justify-center items-center px-4 py-2 text-sm font-bold rounded-lg transition-colors",
+      variant === "primary" && "bg-purple-500 hover:bg-purple-500/80",
+      variant === "secondary" &&
+        "bg-purple-700 hover:bg-purple-700/80 saturate-50",
+      variant === "disabled" &&
+        "cursor-not-allowed active:pointer-events-none bg-gray-800",
+      className,
+    ]}
+  >
+    <slot />
+  </a>
+  <div
+    role="tooltip"
+    class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700"
+  >
+    {tooltip}
+    <div
+      class="absolute left-0 translate-x-28 bg-inherit h-2 border-solid before:border-red-500 before:rotate-45 before:h-2 before:w-2 before:absolute before:bg-inherit after:border-red-500 after:rotate-45 after:h-2 after:w-2 after:absolute after:bg-inherit -bottom-1 z-50"
+    >
+    </div>
+  </div>
+</button-with-tooltip>
+
+<script>
+  import { Tooltip, type TooltipOptions } from "flowbite";
+
+  class ButtonWithTooltip extends HTMLElement {
+    constructor() {
+      super();
+
+      const $triggerEl = this.querySelector<HTMLElement>("a");
+      const $targetEl = this.querySelector<HTMLElement>("div[role='tooltip']");
+      const hasTooltip = $triggerEl?.getAttribute("data-tooltip");
+
+      this.addEventListener("mouseover", () => {
+        if (!hasTooltip) return;
+
+        const options = {
+          placement: "top",
+          triggerType: "hover",
+        } as TooltipOptions;
+
+        const tooltip = new Tooltip($targetEl, $triggerEl, options);
+
+        tooltip.show();
+      });
+    }
+  }
+
+  customElements.define("button-with-tooltip", ButtonWithTooltip);
+</script>
