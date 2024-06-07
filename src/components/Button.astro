@@ -1,14 +1,14 @@
 ---
 type Prop = {
   href?: string;
-  variant?: "primary" | "secondary" | "disabled" | "disabledTooltip";
+  variant?: "primary" | "secondary" | "disabled" ;
   className?: string;
   version?: "V2" | "V1" ;
 };
 const { href = "#", variant = "primary", className, version = "V1"} = Astro.props;
 ---
 
-<a
+<a 
   href={href}
   class:list={[
     "inline-flex justify-center items-center px-4 py-2 text-sm font-bold rounded-lg transition-colors",
@@ -18,13 +18,12 @@ const { href = "#", variant = "primary", className, version = "V1"} = Astro.prop
     variant === "disabled" 
       ? "cursor-not-allowed bg-gray-800" 
       : "",
-    variant === "disabledTooltip" 
-      ? "cursor-not-allowed bg-gray-800" 
-      : "",  
+    
     className,
     version === "V1"
       ? "bg-purple-500 hover:bg-purple-500/80"
-      :"cursor-not-allowed bg-gray-800 ",
+      :"cursor-not-allowed bg-gray-800" ,
+    
   ]}
 >
   <slot />
