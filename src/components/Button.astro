@@ -3,8 +3,9 @@ type Prop = {
   href?: string;
   variant?: "primary" | "secondary" | "disabled" | "disabledTooltip";
   className?: string;
+  version?: "V2" | "V1" ;
 };
-const { href = "#", variant = "primary", className } = Astro.props;
+const { href = "#", variant = "primary", className, version = "V1"} = Astro.props;
 ---
 
 <a
@@ -21,6 +22,9 @@ const { href = "#", variant = "primary", className } = Astro.props;
       ? "cursor-not-allowed bg-gray-800" 
       : "",  
     className,
+    version === "V1"
+      ? "bg-purple-500 hover:bg-purple-500/80"
+      :"cursor-not-allowed bg-gray-800",
   ]}
 >
   <slot />
