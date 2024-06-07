@@ -1,7 +1,7 @@
 ---
 type Prop = {
   href?: string;
-  variant?: "primary" | "secondary" | "disabled";
+  variant?: "primary" | "secondary" | "disabled" | "disabledTooltip";
   className?: string;
 };
 const { href = "#", variant = "primary", className } = Astro.props;
@@ -13,8 +13,13 @@ const { href = "#", variant = "primary", className } = Astro.props;
     "inline-flex justify-center items-center px-4 py-2 text-sm font-bold rounded-lg transition-colors",
     variant === "primary"
       ? "bg-purple-500 hover:bg-purple-500/80"
-      : "bg-purple-700 hover:bg-purple-700/80 saturate-50",
-    variant === "disabled" ? "cursor-not-allowed" : "",
+      : "bg-purple-700 hover:bg-purple-700/80 saturate-50 ",
+    variant === "disabled" 
+      ? "cursor-not-allowed bg-gray-800" 
+      : "",
+    variant === "disabledTooltip" 
+      ? "cursor-not-allowed bg-gray-800" 
+      : "",  
     className,
   ]}
 >
