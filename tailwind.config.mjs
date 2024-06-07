@@ -15,7 +15,7 @@ export default {
         sans: ["Inter var", "Inter", ...defaultTheme.fontFamily.sans],
       },
       colors: ({ colors }) => ({
-        background: "#0A0A0B",
+        background: "#0E0202",
         foreground: "#FBFBFB",
         gray: {
           ...colors.gray,
