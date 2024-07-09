@@ -4,6 +4,9 @@ import Bgblur from "@components/Bgblur.astro";
 import Hero from "@components/Hero.astro";
 import Timeline from "@components/Timeline.astro";
 import Section from "@components/Section.astro";
+import Card from "@components/Card.astro";
+import Objectives from "@components/Objectives.astro";
+import Carousel from "@components/Carousel.astro";
 ---
 
 <Layout title="Tutorial">
@@ -24,6 +27,11 @@ import Section from "@components/Section.astro";
         application of two state-of-the-art approaches.
       </p>
     </Section>
+    <Carousel />
+    <Objectives
+      title="L1"
+      text="Present key aspects of STI: the role of semantic annotation of tabular data; why STI remains relevant in the generative AI era; phases of STI design and deployment; and a review of existing solutions, highlighting their strengths and limitations"
+    />
     <Timeline />
   </main>
 </Layout>
