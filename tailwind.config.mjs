@@ -24,10 +24,11 @@ export default {
         purple: {
           500: "#6665E9",
         },
-        cardBackground: "#030313",
+        cardBackground: "#0C0C2F",
         tableTop: "#38384C",
         tableBottom: "#1E1A26",
         tableText: "#A5A0B5",
+        
       }),
     },
   },
