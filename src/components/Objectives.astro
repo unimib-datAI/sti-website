@@ -10,7 +10,7 @@ const { icon, title, text, bgColor } = Astro.props;
 ---
 
 <div
-  class="w-96 mr-6 bg-cardBackground rounded-lg px-8 py-5 overflow-hidden inline-block"
+  class="w-96 margin bg-cardBackground rounded-lg px-8 py-5 overflow-hidden inline-block"
 >
   <div class="flex items-center mt-2 mb-2">
     <div class:list={["rounded-full p-2", bgColor]}>
@@ -39,3 +39,9 @@ const { icon, title, text, bgColor } = Astro.props;
 
   <p class="mb-3 font-normal text-gray-400">{text}</p>
 </div>
+
+<style>
+  .margin + .margin {
+    margin-left: 1.5rem;
+  }
+</style>

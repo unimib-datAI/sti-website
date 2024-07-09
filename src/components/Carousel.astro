@@ -2,7 +2,7 @@
 import Objectives from "./Objectives.astro";
 ---
 
-<div class="flex overflow-x-scroll pb-10 hide-scroll-bar mt-5">
+<div class="flex overflow-x-scroll pt-5 pb-5 scroll-bar">
   <div class="flex flex-nowrap">
     <Objectives
       title="L1"
@@ -34,11 +34,19 @@ import Objectives from "./Objectives.astro";
 </div>
 
 <style>
-  .hide-scroll-bar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+  /* width */
+  .scroll-bar::-webkit-scrollbar {
+    height: 8px;
   }
-  .hide-scroll-bar::-webkit-scrollbar {
-    display: none;
+
+  /* Handle */
+  .scroll-bar::-webkit-scrollbar-thumb {
+    background: #6665e9;
+    border-radius: 8px;
+  }
+
+  /* Handle on hover */
+  .scroll-bar::-webkit-scrollbar-thumb:hover {
+    background: #555;
   }
 </style>
