@@ -15,23 +15,23 @@ import TableV2 from "@/components/TableV2.astro";
 ---
 
 <section>
-  <ol class="relative border-s border-purple-500 max-w-screen-lg m-auto">
+  <ol class="relative border-s border-purple-500 max-w-screen-lg mt-8">
     <div class="absolute top-0 left-0 w-[1px] h-full bg-purple-500"></div>
     <Upgrades title="50 minutes" version="Semantic Table Interpretation">
-      <div class="flex gap-4 mt-8 items-center">
+      <div class="flex gap-4 items-center">
         <div>
-          <p class="ml-5 md:text-lg lg:text-xl">
-            <b>Topics:</b> definitions; challenges; examples; semantic interpretation
+          <p class="text-base md:text-base lg:text-base">
+            <strong class="font-bold">Topics:</strong>  definitions; challenges; examples; semantic interpretation
             as key enablers.
           </p>
         </div>
       </div>
     </Upgrades>
     <Upgrades title="50 minutes" version="State-of-the-art">
-      <div class="flex gap-4 mt-8 items-center">
+      <div class="flex gap-4 items-center">
         <div>
-          <p class="ml-5 md:text-lg lg:text-xl">
-            <b>Topics:</b> semantic table interpretation tools and techniques: lessons
+          <p class="text-base md:text-base lg:text-base">
+            <strong class="font-bold">Topics:</strong> semantic table interpretation tools and techniques: lessons
             learned and limitations.
           </p>
         </div>
@@ -39,14 +39,14 @@ import TableV2 from "@/components/TableV2.astro";
     </Upgrades>
 
     <Upgrades title="30 minutes" version="Break">
-      <div class="flex gap-4 mt-8 items-center"></div>
+      <div class="flex gap-4 items-center"></div>
     </Upgrades>
 
     <Upgrades title="60 minutes" version="Semantic Table Interpretation tasks">
-      <div class="flex gap-4 mt-8 items-center">
+      <div class="flex gap-4 items-center">
         <div>
-          <p class="ml-5 md:text-lg lg:text-xl">
-            <b>Topics:</b> how to implement different apporaches for CEA, CTA and
+          <p class="text-base md:text-base lg:text-base">
+            <strong class="font-bold">Topics:</strong>  how to implement different apporaches for CEA, CTA and
             CPA using heuristic, ML and LLM techniques.
           </p>
         </div>
@@ -54,78 +54,13 @@ import TableV2 from "@/components/TableV2.astro";
     </Upgrades>
 
     <Upgrades title="40 minutes" version="Hands-on session">
-      <div class="flex gap-4 mt-8 items-center">
+      <div class="flex gap-4 items-center">
         <div>
-          <p class="ml-5 md:text-lg lg:text-xl">
+          <p class="text-base md:text-base lg:text-base">
             Analysis and use of SOTA approaches, s-elBat [2] and TableLlama
           </p>
         </div>
       </div>
     </Upgrades>
-
-    <Release
-      title="Mammotab 2022"
-      version="V1"
-      link="https://doi.org/10.5281/zenodo.7014472"
-    >
-      <div>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
-        <p>
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat.
-        </p>
-        <p>
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur.
-        </p>
-      </div>
-
-      <div class="space-y-4">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
-          <Card>
-            <Stats label="N. of tables" value="980.254" />
-          </Card>
-          <Card>
-            <Stats label="Entities" value="43.661.125" />
-          </Card>
-          <Card>
-            <Stats label="Classes" value="5.541.283" />
-          </Card>
-        </div>
-
-        <Banner>
-          <div class="grid grid-cols-2 lg:grid-cols-6 gap-4">
-            <Stats label="Total rows" value="23.229.899" variant="secondary" />
-            <Stats label="Min rows" value="4" variant="secondary" />
-            <Stats label="Max rows" value="14.436" variant="secondary" />
-            <Stats label="Total cols" value="5.638.191" variant="secondary" />
-            <Stats label="Min cols" value="1" variant="secondary" />
-            <Stats label="Max cols" value="100.012" variant="secondary" />
-          </div>
-        </Banner>
-      </div>
-
-      <TableV1 />
-
-      <div class="flex flex-col gap-4 md:flex-row">
-        <Button
-          href="https://doi.org/10.5281/zenodo.7014472"
-          variant="secondary"
-        >
-          Find on Zenodo
-          <img src={zenodo.src} class="ms-2 w-6 h-6" />
-        </Button>
-        <Button
-          href="https://bitbucket.org/disco_unimib/mammotab/src/master/"
-          variant="secondary"
-        >
-          Find on Bitbucket
-          <img src={bitbucket.src} class="ms-2 w-4 h-4" />
-        </Button>
-      </div>
-    </Release>
   </ol>
 </section>
