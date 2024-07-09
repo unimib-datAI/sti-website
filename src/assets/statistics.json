@@ -1,0 +1,593 @@
+{
+  "approaches": [
+    {
+      "author": "Huynh",
+      "datasets": [
+        "VizNet",
+        "T2Dv2"
+      ],
+      "year": 2019
+    },
+    {
+      "author": "Suhara",
+      "datasets": [
+        "VizNet"
+      ],
+      "year": 2022
+    },
+    {
+      "author": "Kayali",
+      "datasets": [
+        "VizNet"
+      ],
+      "year": 2023
+    },
+    {
+      "author": "Su",
+      "datasets": [
+        "VizNet"
+      ],
+      "year": 2022
+    },
+    {
+      "author": "Hoseinzade",
+      "datasets": [
+        "VizNet"
+      ],
+      "year": 2024
+    },
+    {
+      "author": "Sun",
+      "datasets": [
+        "VizNet"
+      ],
+      "year": 2023
+    },
+    {
+      "author": "Miao",
+      "datasets": [
+        "VizNet"
+      ],
+      "year": 2023
+    },
+    {
+      "author": "Ritze",
+      "datasets": [
+        "T2Dv2"
+      ],
+      "year": 2015
+    },
+    {
+      "author": "Ermilov",
+      "datasets": [
+        "T2Dv2"
+      ],
+      "year": 2016
+    },
+    {
+      "author": "Pham",
+      "datasets": [
+        "T2Dv2"
+      ],
+      "year": 2016
+    },
+    {
+      "author": "Efthymiou",
+      "datasets": [
+        "T2Dv2",
+        "Limaye"
+      ],
+      "year": 2017
+    },
+    {
+      "author": "Chen",
+      "datasets": [
+        "T2Dv2",
+        "Limaye"
+      ],
+      "year": 2019
+    },
+    {
+      "author": "Chen",
+      "datasets": [
+        "T2Dv2",
+        "Limaye"
+      ],
+      "year": 2019
+    },
+    {
+      "author": "Kruit",
+      "datasets": [
+        "T2Dv2"
+      ],
+      "year": 2019
+    },
+    {
+      "author": "Zhang",
+      "datasets": [
+        "T2Dv2"
+      ],
+      "year": 2019
+    },
+    {
+      "author": "Cremaschi",
+      "datasets": [
+        "T2Dv2",
+        "Limaye",
+        "SemTab2020"
+      ],
+      "year": 2020
+    },
+    {
+      "author": "Eslahi",
+      "datasets": [
+        "T2Dv2",
+        "Limaye"
+      ],
+      "year": 2020
+    },
+    {
+      "author": "Guo",
+      "datasets": [
+        "T2Dv2",
+        "Limaye"
+      ],
+      "year": 2020
+    },
+    {
+      "author": "Khurana",
+      "datasets": [
+        "T2Dv2",
+        "Limaye",
+        "SemTab2020"
+      ],
+      "year": 2020
+    },
+    {
+      "author": "Zhang",
+      "datasets": [
+        "T2Dv2"
+      ],
+      "year": 2020
+    },
+    {
+      "author": "Deng",
+      "datasets": [
+        "T2Dv2",
+        "TURL"
+      ],
+      "year": 2022
+    },
+    {
+      "author": "Liu",
+      "datasets": [
+        "T2Dv2",
+        "Limaye",
+        "SemTab2022"
+      ],
+      "year": 2022
+    },
+    {
+      "author": "Kayali",
+      "datasets": [
+        "T2Dv2"
+      ],
+      "year": 2023
+    },
+    {
+      "author": "Dash",
+      "datasets": [
+        "T2Dv2",
+        "TURL"
+      ],
+      "year": 2022
+    },
+    {
+      "author": "Ritze",
+      "datasets": [
+        "WebTableStitching"
+      ],
+      "year": 2017
+    },
+    {
+      "author": "Zwicklbauer",
+      "datasets": [
+        "Limaye"
+      ],
+      "year": 2013
+    },
+    {
+      "author": "Zhang",
+      "datasets": [
+        "Limaye",
+        "LimayeAll",
+        "Limaye200",
+        "MusicBrainz",
+        "IMDB"
+      ],
+      "year": 2017
+    },
+    {
+      "author": "Zhang",
+      "datasets": [
+        "LimayeAll",
+        "Limaye200",
+        "MusicBrainz",
+        "IMDB"
+      ],
+      "year": 2014
+    },
+    {
+      "author": "Taheriyan",
+      "datasets": [
+        "Taheriyan"
+      ],
+      "year": 2016
+    },
+    {
+      "author": "Nguyen",
+      "datasets": [
+        "Tough Table (2T) SemTab2020",
+        "SemTab2020"
+      ],
+      "year": 2020
+    },
+    {
+      "author": "Shigapov",
+      "datasets": [
+        "Tough Table (2T) SemTab2020",
+        "SemTab2020"
+      ],
+      "year": 2020
+    },
+    {
+      "author": "Chen",
+      "datasets": [
+        "Tough Table (2T) SemTab2020",
+        "SemTab2020"
+      ],
+      "year": 2020
+    },
+    {
+      "author": "Tyagi",
+      "datasets": [
+        "Tough Table (2T) SemTab2020",
+        "SemTab2020"
+      ],
+      "year": 2020
+    },
+    {
+      "author": "Huynh",
+      "datasets": [
+        "Tough Table (2T) SemTab2020",
+        "SemTab2020"
+      ],
+      "year": 2020
+    },
+    {
+      "author": "Cremaschi",
+      "datasets": [
+        "Tough Table (2T) SemTab2020"
+      ],
+      "year": 2020
+    },
+    {
+      "author": "Abdelmageed",
+      "datasets": [
+        "Tough Table (2T) SemTab2020",
+        "SemTab2020"
+      ],
+      "year": 2020
+    },
+    {
+      "author": "Azzi",
+      "datasets": [
+        "Tough Table (2T) SemTab2020",
+        "SemTab2020"
+      ],
+      "year": 2020
+    },
+    {
+      "author": "Kim",
+      "datasets": [
+        "Tough Table (2T) SemTab2020",
+        "SemTab2020"
+      ],
+      "year": 2020
+    },
+    {
+      "author": "Abdelmageed",
+      "datasets": [
+        "Tough Table (2T) SemTab2022",
+        "Biodiv SemTab2022",
+        "SemTab2022"
+      ],
+      "year": 2022
+    },
+    {
+      "author": "Huynh",
+      "datasets": [
+        "Tough Table (2T) SemTab2022",
+        "GitTables SemTab2022",
+        "Biodiv SemTab2022",
+        "SemTab2022"
+      ],
+      "year": 2022
+    },
+    {
+      "author": "Cremaschi",
+      "datasets": [
+        "Tough Table (2T) SemTab2022",
+        "GitTables SemTab2022",
+        "Biodiv SemTab2022",
+        "SemTab2022"
+      ],
+      "year": 2022
+    },
+    {
+      "author": "Jiomekong",
+      "datasets": [
+        "Tough Table (2T) SemTab2022",
+        "GitTables SemTab2022",
+        "Biodiv SemTab2022"
+      ],
+      "year": 2022
+    },
+    {
+      "author": "Baazouzi",
+      "datasets": [
+        "Tough Table (2T) SemTab2022"
+      ],
+      "year": 2022
+    },
+    {
+      "author": "Li",
+      "datasets": [
+        "Tough Table (2T) SemTab2022",
+        "GitTables SemTab2022",
+        "Biodiv SemTab2022"
+      ],
+      "year": 2022
+    },
+    {
+      "author": "Foko",
+      "datasets": [
+        "SOTAB SemTab2023",
+        "SemTab2023"
+      ],
+      "year": 2023
+    },
+    {
+      "author": "Baazouzi",
+      "datasets": [
+        "SOTAB SemTab2023",
+        "SemTab2023"
+      ],
+      "year": 2023
+    },
+    {
+      "author": "Dasoulas",
+      "datasets": [
+        "SOTAB SemTab2023",
+        "SemTab2023"
+      ],
+      "year": 2023
+    },
+    {
+      "author": "Mehryar",
+      "datasets": [
+        "SOTAB SemTab2023",
+        "SemTab2023"
+      ],
+      "year": 2023
+    },
+    {
+      "author": "Parmar",
+      "datasets": [
+        "SOTAB SemTab2023",
+        "SemTab2023"
+      ],
+      "year": 2023
+    },
+    {
+      "author": "Avogadro",
+      "datasets": [
+        "GitTables SemTab2021",
+        "Biodiv SemTab2021",
+        "SemTab2021"
+      ],
+      "year": 2021
+    },
+    {
+      "author": "Huynh",
+      "datasets": [
+        "GitTables SemTab2021",
+        "Biodiv SemTab2021",
+        "SemTab2021"
+      ],
+      "year": 2021
+    },
+    {
+      "author": "Abdelmageed",
+      "datasets": [
+        "GitTables SemTab2021",
+        "Biodiv SemTab2021",
+        "SemTab2021"
+      ],
+      "year": 2021
+    },
+    {
+      "author": "Baazouzi",
+      "datasets": [
+        "GitTables SemTab2021",
+        "Biodiv SemTab2021",
+        "SemTab2021"
+      ],
+      "year": 2021
+    },
+    {
+      "author": "Hulsebos",
+      "datasets": [
+        "GitTables"
+      ],
+      "year": 2023
+    },
+    {
+      "author": "Gao",
+      "datasets": [
+        "GitTables",
+        "TURL"
+      ],
+      "year": 2023
+    },
+    {
+      "author": "Abdelmageed",
+      "datasets": [
+        "BioDivTab"
+      ],
+      "year": 2021
+    },
+    {
+      "author": "Nguyen",
+      "datasets": [
+        "Biodiv SemTab2021",
+        "SemTab2021"
+      ],
+      "year": 2021
+    },
+    {
+      "author": "Steenwinckel",
+      "datasets": [
+        "Biodiv SemTab2021",
+        "SemTab2021"
+      ],
+      "year": 2021
+    },
+    {
+      "author": "Zhou",
+      "datasets": [
+        "TURL"
+      ],
+      "year": 2021
+    },
+    {
+      "author": "Chen",
+      "datasets": [
+        "TURL"
+      ],
+      "year": 2024
+    },
+    {
+      "author": "Khatiwada",
+      "datasets": [
+        "TURL"
+      ],
+      "year": 2023
+    },
+    {
+      "author": "Su",
+      "datasets": [
+        "TURL"
+      ],
+      "year": 2022
+    },
+    {
+      "author": "Miao",
+      "datasets": [
+        "TURL"
+      ],
+      "year": 2023
+    },
+    {
+      "author": "Chabot",
+      "datasets": [
+        "SemTab2019"
+      ],
+      "year": 2019
+    },
+    {
+      "author": "Cremaschi",
+      "datasets": [
+        "SemTab2019"
+      ],
+      "year": 2019
+    },
+    {
+      "author": "Morikawa",
+      "datasets": [
+        "SemTab2019"
+      ],
+      "year": 2019
+    },
+    {
+      "author": "Nguyen",
+      "datasets": [
+        "SemTab2019"
+      ],
+      "year": 2019
+    },
+    {
+      "author": "Steenwinckel",
+      "datasets": [
+        "SemTab2019"
+      ],
+      "year": 2019
+    },
+    {
+      "author": "Thawani",
+      "datasets": [
+        "SemTab2019"
+      ],
+      "year": 2019
+    },
+    {
+      "author": "Hoseinzade",
+      "datasets": [
+        "SemTab2019"
+      ],
+      "year": 2024
+    },
+    {
+      "author": "Sun",
+      "datasets": [
+        "SemTab2019"
+      ],
+      "year": 2023
+    },
+    {
+      "author": "Baazouzi",
+      "datasets": [
+        "SemTab2020"
+      ],
+      "year": 2020
+    },
+    {
+      "author": "Yumusak",
+      "datasets": [
+        "SemTab2020"
+      ],
+      "year": 2020
+    },
+    {
+      "author": "Yang",
+      "datasets": [
+        "SemTab2021"
+      ],
+      "year": 2021
+    },
+    {
+      "author": "Chen",
+      "datasets": [
+        "SemTab2022"
+      ],
+      "year": 2022
+    },
+    {
+      "author": "Henriksen",
+      "datasets": [
+        "SemTab2023"
+      ],
+      "year": 2023
+    }
+  ]
+}

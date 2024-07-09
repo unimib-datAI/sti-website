@@ -1,0 +1,179 @@
+---
+type Props = {
+  data: {
+    author: string;
+    datasets: string[];
+    year: number;
+    [key: string]: unknown;
+  }[];
+};
+
+const { data } = Astro.props;
+const stringifyData = JSON.stringify(data);
+---
+
+<dataset-chart data={stringifyData}></dataset-chart>
+
+<script>
+  import * as d3 from "d3";
+
+  type Data = {
+    author: string;
+    datasets: string[];
+    year: number;
+    [key: string]: unknown;
+  }[];
+
+  class DatasetChart extends HTMLElement {
+    constructor() {
+      super();
+      this.attachShadow({ mode: "open" });
+    }
+
+    chart = () => {
+      // Set up the SVG canvas dimensions
+      const width = 800;
+      const height = 2000;
+      const margintop = 0;
+      const marginbottom = 0;
+      const marginleft = 30;
+      const legendWidth = 140;
+
+      const rawData = this.getAttribute("data");
+      if (!rawData) return;
+      const json = JSON.parse(rawData) as Data;
+
+      const data = json
+        .sort((a, b) => {
+          const nameA = a.author.toUpperCase();
+          const nameB = b.author.toUpperCase();
+          if (nameA < nameB) {
+            return -1;
+          }
+          if (nameA > nameB) {
+            return 1;
+          }
+
+          // names must be equal
+          return 0;
+        })
+        .sort((a, b) => b.year - a.year)
+        .sort((a, b) => b.datasets.length - a.datasets.length);
+
+      if (!data) return;
+
+      const approaches = Array.from(
+        new Set(data.map((d) => `${d.author} (${d.year})`))
+      );
+      const gsValues = Array.from(
+        new Set(data.map((d) => d.datasets).flat())
+      ).sort((a, b) => {
+        const nameA = a.toUpperCase(); // ignore upper and lowercase
+        const nameB = b.toUpperCase(); // ignore upper and lowercase
+        if (nameA < nameB) {
+          return -1;
+        }
+        if (nameA > nameB) {
+          return 1;
+        }
+
+        // names must be equal
+        return 0;
+      });
+
+      // Create an SVG element
+      const svg = d3
+        .create("svg")
+        .attr("width", width)
+        .attr("height", height)
+        .style("font-family", "sans-serif")
+        .style("font-size", "0.7rem");
+
+      // Create a color scale with random colors for each approach
+      const colorScale = d3
+        .scaleOrdinal()
+        .domain(gsValues)
+        .range(
+          d3.schemeCategory10.concat(d3.schemeSet3).concat(d3.schemePaired)
+        );
+
+      const wl = width - marginleft;
+
+      // Create y scale
+      const yScale = d3
+        .scaleBand()
+        .domain(approaches)
+        .range([margintop, height - marginbottom])
+        .padding(0.2);
+
+      // Add y-axis to the SVG
+      svg
+        .append("g")
+        .attr("transform", `translate(${legendWidth},0)`)
+        .call(d3.axisLeft(yScale).tickSizeOuter(0))
+        .selectAll("text")
+        .attr("y", 0)
+        .attr("x", -10)
+        .attr("text-anchor", "end");
+
+      const group = d3.group(data, (d) => `${d.author} (${d.year})`);
+
+      // Add the squares
+      data.forEach((item) => {
+        const datasets = item.datasets;
+        if (datasets.length > 0) {
+          const group = svg.append("g");
+          datasets.forEach((d, i) => {
+            group
+              .append("rect")
+              .attr("y", yScale(`${item.author} (${item.year})`) ?? 0)
+              .attr("x", i * 1.2 * yScale.bandwidth() + legendWidth + 7)
+              .attr("width", yScale.bandwidth())
+              .attr("height", yScale.bandwidth())
+              .attr("fill", colorScale(d) as string)
+              .append("title")
+              .text(d);
+          });
+        }
+      });
+
+      // Add the legend
+      const legend = svg
+        .append("g")
+        .attr("transform", `translate(${wl},${margintop})`)
+        .selectAll("g")
+        .data(gsValues)
+        .enter()
+        .append("g")
+        .attr("transform", (d, i) => `translate(0,${i * 30})`) // Adjust the spacing as needed
+        .style("position", "fixed");
+
+      legend
+        .append("rect")
+        .attr("x", 0)
+        .attr("y", 0)
+        .attr("width", 24)
+        .attr("height", 24)
+        .attr("fill", (d) => colorScale(d) as string);
+
+      legend
+        .append("text")
+        .attr("x", -8)
+        .attr("y", 12)
+        .attr("font-size", "0.7rem")
+        .attr("fill", "currentColor")
+        .attr("dy", "0.35em")
+        .attr("text-anchor", "end")
+        .text((d) => d);
+
+      // Return the SVG node
+      return Object.assign(svg.node() as object);
+    };
+
+    connectedCallback() {
+      this?.shadowRoot?.appendChild(this.chart());
+    }
+  }
+
+  customElements.define("dataset-chart", DatasetChart);
+</script>
