@@ -8,6 +8,11 @@ import Card from "@components/Card.astro";
 import Objectives from "@components/Objectives.astro";
 import Carousel from "@components/Carousel.astro";
 import Presenter from "@components/Presenter.astro";
+
+import marco from "src/assets/marco.jpeg";
+import MatteoPalmonari from "src/assets/MatteoPalmonari.jpg";
+import ErnestoJimenezRuiz from "src/assets/ErnestoJimenezRuiz.jpg";
+import fabio from "src/assets/fabio.jpg";
 ---
 
 <Layout title="Tutorial">
@@ -74,25 +79,25 @@ import Presenter from "@components/Presenter.astro";
     </Section>
     <Section title="Presenters">
       <Presenter
-        image="/src/assets/MatteoPalmonari.jpg"
+        image={MatteoPalmonari.src}
         name="Matteo palmonari"
         profession="Professor at the University of Milan-Bicocca"
         description="His research interests are at the intersection of Artificial Intelligence and Data Management. He has been a coordinator and partner in projects about data enrichment, and he is particularly interested in combining machine learning and human-in-the-loop mechanisms to support knowledge-based applications."
       />
       <Presenter
-        image="/src/assets/fabio.jpg"
+        image={fabio.src}
         name="Fabio D'Adda"
         profession="Research Assistant at the University of Milan-Bicocca"
         description="He specialises in the application of ML techniques in the Semantic Web. He is chair of SemTab 2024, and organiser of the “STI vs LLMs Track”"
       />
       <Presenter
-        image="/src/assets/marco.jpeg"
+        image={marco.src}
         name="Marco Cremaschi"
         profession="Research Assistant at the University of Milan-Bicocca"
         description="He specialises in the application of ML techniques in the Semantic Web. He is chair of SemTab 2024, and organiser of the “STI vs LLMs Track”"
       />
       <Presenter
-        image="/src/assets/ErnestoJimenezRuiz.jpg"
+        image={ErnestoJimenezRuiz.src}
         name="Ernesto Jim ́enez-Ruiz"
         profession="Lecturer in Artificial Intelligence and Senior Tutor for Research at City, University of London affiliated to the Research Center for Adaptive Computer Systems and Machine Learning"
         description="His current research interests focus on applying Semantic Technology to Data Science workflows and combining Knowledge Representation and Machine Learning techniques. He is one of the founders of the SemTab challenge"
