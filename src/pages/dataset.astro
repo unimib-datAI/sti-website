@@ -1,14 +1,19 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import Bgblur from "@components/Bgblur.astro";
-import Hero from "@components/Hero.astro";
-import Timeline from "@components/Timeline.astro";
+import Section from "@components/Section.astro";
+import DatasetGraph from "@components/DatasetGraph.astro";
+import Card from "@components/Card.astro";
+
+import statistics from "@/assets/statistics.json";
+const { approaches } = statistics;
 ---
 
 <Layout title="Mammotab website">
   <main class="px-4">
-    <Bgblur />
-    <Hero />
-    <Timeline />
+    <Section title="Datasets statistics">
+      <div class="bg-cardBackground py-10 rounded-lg">
+        <DatasetGraph data={approaches} />
+      </div>
+    </Section>
   </main>
 </Layout>
