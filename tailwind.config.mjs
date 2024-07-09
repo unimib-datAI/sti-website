@@ -28,6 +28,16 @@ export default {
         tableTop: "#38384C",
         tableBottom: "#1E1A26",
         tableText: "#A5A0B5",
+        iconBackground: {
+          100: "#9E0974",
+          200: "#8E2294",
+          300: "#8236AE",
+          400: "#754CC9",
+          500: "#6665E9",
+
+
+
+        },
         
       }),
     },
