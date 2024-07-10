@@ -2,34 +2,71 @@
 import Layout from "@/layouts/Layout.astro";
 import Hero from "@components/Hero.astro";
 import Section from "@components/Section.astro";
+import Button from "@components/Button.astro";
 import Graph1 from "src/assets/Graph1.png";
 import graph3 from "src/assets/graph3.png";
 import Card from "@components/Card.astro";
-
 ---
 
 <Layout title="STI resources">
   <main class="px-4">
     <Hero />
     <Section title="Description">
-      <p class="mb-6 mt-4 lg:mb-8 md:text-base lg:text-base"> Semantic Table Interpretation, as defined by the widely accepted formalisation from the SemTab challenge, involves annotating relational tables with information from a Knowledge Graph (KG). This process includes associating each column in a table with one or more KG types, known as Column Type Annotation (CTA). Additionally, Cell Entity Annotation (CEA) is applied to annotate each cell in "entity columns" with a KG entity or mark it as NIL if it does not exist in the KG.  Column Property Annotation (CPA) involves annotating pairs of columns with a binary KG property. The result of this annotation process is a table enriched with semantic information, which can introduce new elements to the KG. </p>
-      <p class="mb-6 mt-4 lg:mb-8 md:text-base lg:text-base"> Learn more about Semantic Table Interpretation</p>
-</Section>
-    <Section title="Tutorial">
-      <p
-           class="mb-6 mt-4 lg:mb-8 md:text-base lg:text-base"
-      >
-      Discover the comprehensive world of Semantic Table Interpretation (STI) in this tutorial, which covers both theoretical and practical aspects, and trace the evolution of STI from heuristic-based methods to machine learning (ML) techniques and the latest large language model (LLM) innovations. By examining the unique characteristics, advantages, and limitations of each approach you will understand their optimal contexts of use.
+      <p class="mb-6 mt-4 lg:mb-8 md:text-base lg:text-base">
+        Semantic Table Interpretation, as defined by the widely accepted
+        formalisation from the SemTab challenge, involves annotating relational
+        tables with information from a Knowledge Graph (KG). This process
+        includes associating each column in a table with one or more KG types,
+        known as Column Type Annotation (CTA). Additionally, Cell Entity
+        Annotation (CEA) is applied to annotate each cell in "entity columns"
+        with a KG entity or mark it as NIL if it does not exist in the KG.
+        Column Property Annotation (CPA) involves annotating pairs of columns
+        with a binary KG property. The result of this annotation process is a
+        table enriched with semantic information, which can introduce new
+        elements to the KG.
       </p>
-      <p class="mb-6 mt-4 lg:mb-8 md:text-base lg:text-base"> Learn more in the Tutorial page</p>
+      <p class="mb-6 mt-4 lg:mb-8 md:text-base lg:text-base">
+        Learn more about Semantic Table Interpretation
+      </p>
+      <Button href="https://doi.org/10.5281/zenodo.7014472" variant="secondary">
+        Description
+      </Button>
+    </Section>
+    <Section title="Tutorial">
+      <p class="mb-6 mt-4 lg:mb-8 md:text-base lg:text-base">
+        Discover the comprehensive world of Semantic Table Interpretation (STI)
+        in this tutorial, which covers both theoretical and practical aspects,
+        and trace the evolution of STI from heuristic-based methods to machine
+        learning (ML) techniques and the latest large language model (LLM)
+        innovations. By examining the unique characteristics, advantages, and
+        limitations of each approach you will understand their optimal contexts
+        of use.
+      </p>
+
+      <p class="mb-6 mt-4 lg:mb-8 md:text-base lg:text-base pr-10">
+        Learn more in the Tutorial page
+      </p>
+      <Button href="https://doi.org/10.5281/zenodo.7014472" variant="secondary">
+        Go to Tutorial
+      </Button>
     </Section>
     <Section title="Mammotab">
-      <p
-           class="mb-6 mt-4 lg:mb-8 md:text-base lg:text-base"
-      >
-      MammoTab is a unique dataset consisting of 1 million Wikipedia tables, extracted from over 20 million Wikipedia pages, and annotated using Wikidata. This dataset fills a gap in the current state-of-the-art resources, making it an excellent tool for testing and training Semantic Table Interpretation approaches. MammoTab is specifically designed to address several key challenges, including disambiguation, homonymy, and NIL-mentions, providing a comprehensive resource for advancing STI research and applications.
+      <p class="mb-6 mt-4 lg:mb-8 md:text-base lg:text-base">
+        MammoTab is a unique dataset consisting of 1 million Wikipedia tables,
+        extracted from over 20 million Wikipedia pages, and annotated using
+        Wikidata. This dataset fills a gap in the current state-of-the-art
+        resources, making it an excellent tool for testing and training Semantic
+        Table Interpretation approaches. MammoTab is specifically designed to
+        address several key challenges, including disambiguation, homonymy, and
+        NIL-mentions, providing a comprehensive resource for advancing STI
+        research and applications.
       </p>
-      <p class="mb-6 mt-4 lg:mb-8 md:text-base lg:text-base">Learn more about Mammotab</p>
+      <p class="mb-6 mt-4 lg:mb-8 md:text-base lg:text-base">
+        Learn more about Mammotab
+      </p>
+      <Button href="https://doi.org/10.5281/zenodo.7014472" variant="secondary">
+        Check out Mammotab
+      </Button>
     </Section>
   </main>
 </Layout>
