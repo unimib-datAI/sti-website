@@ -1,25 +1,45 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-
+import Graph1 from "src/assets/Graph1.png";
+import graph3 from "src/assets/graph3.png";
 import Section from "@components/Section.astro";
 ---
 
 <Layout title="Tutorial">
   <main class="px-4">
-    <Section title="">
-      <h1 class="py-4 text-4xl font-bold mt-8">Tutorial</h1>
-      <p
-        class="mb-6 mt-4 font-light lg:mb-8 md:text-lg lg:text-xl text-gray-400"
-      >
-        This tutorial introduces the topic of Semantic Table Interpretation
-        (STI), covering theoretical and practical considerations. In particular,
-        the tutorial will provide a comprehensive analysis of how the approaches
-        to STI have evolved from heuristic-based to ML-based, to the most recent
-        LLM-based approaches. The analysis will consider the specific
-        characteristics of these different classes, providing insights into
-        their respective advantages and limitations to identify the contexts of
-        use. The final part will describe a case study to demonstrate the
-        application of two state-of-the-art approaches.
+    <Section title="Description">
+      <p class="mb-6 mt-4 lg:mb-8 md:text-base lg:text-base">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a dui
+        porta, vestibulum nunc eget, varius erat. Mauris eu eleifend neque,
+        vitae porta lacus. Sed elementum nibh a nisl blandit consectetur.
+      </p>
+
+      <p class="mb-6 mt-4 lg:mb-8 md:text-base lg:text-base">
+        <div
+          class="w-full margin bg-cardBackground rounded-lg px-8 py-20 overflow-hidden inline-block"
+        >
+          <img
+            src={graph3.src}
+            alt="graph3"
+            class="lg:mt-0 lg:col-span-4 lg:flex max-w-4xl w-full m-auto object-fit-cover"
+          />
+        </div>
+
+        <p class="mb-6 mt-4 lg:mb-8 md:text-base lg:text-base">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a dui
+          porta, vestibulum nunc eget, varius erat. Mauris eu eleifend neque,
+          vitae porta lacus. Sed elementum nibh a nisl blandit consectetur.
+        </p>
+
+        <div
+          class="w-full margin bg-cardBackground rounded-lg px-8 py-20 overflow-hidden inline-block"
+        >
+          <img
+            src={Graph1.src}
+            alt="graph1"
+            class="lg:mt-0 lg:col-span-4 lg:flex m-auto max-w-4xl w-full object-fit-cover"
+          />
+        </div>
       </p>
     </Section>
   </main>
