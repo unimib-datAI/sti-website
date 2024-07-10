@@ -22,9 +22,7 @@ const { title, version, link, downloadable = "true" } = Astro.props;
   {
     version && (
       <div class="flex items-center justify-between mb-4">
-        <h3 class="text-4xl font-semibold bg-gradient-to-b from-[#FD726D] to-[#E99E57] inline-block text-transparent bg-clip-text">
-          {version}
-        </h3>
+        <h3 class="text-4xl font-semibold text-purple-400">{version}</h3>
         {link && (
           <Button
             href={link}
