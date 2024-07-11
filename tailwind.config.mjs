@@ -8,6 +8,8 @@ export default {
     extend: {
 
       
+
+
       backgroundSize: {
         "400%": "400%",
       },
@@ -32,8 +34,9 @@ export default {
         sans: ["Inter var", "Inter", ...defaultTheme.fontFamily.sans],
       },
       colors: ({ colors }) => ({
+        
         background: "#0E0202",
-        foreground: "#FBFBFB",
+        foreground: "#D9D9D9",
         gray: {
           ...colors.gray,
           800: "#645F6E",
