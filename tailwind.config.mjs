@@ -6,10 +6,6 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
-
-      
-
-
       backgroundSize: {
         "400%": "400%",
       },
@@ -22,12 +18,10 @@ export default {
           "0%,100%": { backgroundPosition: "0% 50%" },
           "50%": { backgroundPosition: "100% 50%" },
         },
-        
-        
       },
-      
+
       rotate: {
-          '210': '210deg',
+        210: "210deg",
       },
 
       fontFamily: {
@@ -47,6 +41,7 @@ export default {
         cardBackground: "#0C0C2F",
         tableTop: "#38384C",
         tableBottom: "#1E1A26",
+        tableAlt: "#282332",
         tableText: "#A5A0B5",
         iconBackground: {
           100: "#9E0974",
@@ -54,11 +49,7 @@ export default {
           300: "#8236AE",
           400: "#754CC9",
           500: "#6665E9",
-
-
-
         },
-        
       }),
     },
   },
@@ -92,5 +83,3 @@ export default {
     }),
   ],
 };
-
-

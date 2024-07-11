@@ -2,18 +2,25 @@
 import Layout from "@/layouts/Layout.astro";
 import Section from "@components/Section.astro";
 import DatasetGraph from "@components/DatasetGraph.astro";
-import Card from "@components/Card.astro";
+import StiTable from "@components/sti-table";
 
 import statistics from "@/assets/statistics.json";
 const { approaches } = statistics;
+
+import data from "@/assets/sti-survey.json";
 ---
 
 <Layout title="Dataset">
   <main class="px-4">
     <Section title="Datasets statistics">
-      <div class="bg-cardBackground py-10 rounded-lg">
+      <div
+        class="bg-cardBackground p-10 pl-2 pb-0 rounded-lg inline-block max-h-[800px] overflow-y-auto mt-5"
+      >
         <DatasetGraph data={approaches} />
       </div>
+    </Section>
+    <Section title="Dataset details">
+      <StiTable data={data} />
     </Section>
   </main>
 </Layout>

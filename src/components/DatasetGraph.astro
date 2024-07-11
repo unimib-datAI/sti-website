@@ -47,14 +47,8 @@ const stringifyData = JSON.stringify(data);
         .sort((a, b) => {
           const nameA = a.author.toUpperCase();
           const nameB = b.author.toUpperCase();
-          if (nameA < nameB) {
-            return -1;
-          }
-          if (nameA > nameB) {
-            return 1;
-          }
-
-          // names must be equal
+          if (nameA < nameB) return -1;
+          if (nameA > nameB) return 1;
           return 0;
         })
         .sort((a, b) => b.year - a.year)
@@ -68,16 +62,10 @@ const stringifyData = JSON.stringify(data);
       const gsValues = Array.from(
         new Set(data.map((d) => d.datasets).flat())
       ).sort((a, b) => {
-        const nameA = a.toUpperCase(); // ignore upper and lowercase
-        const nameB = b.toUpperCase(); // ignore upper and lowercase
-        if (nameA < nameB) {
-          return -1;
-        }
-        if (nameA > nameB) {
-          return 1;
-        }
-
-        // names must be equal
+        const nameA = a.toUpperCase();
+        const nameB = b.toUpperCase();
+        if (nameA < nameB) return -1;
+        if (nameA > nameB) return 1;
         return 0;
       });
 
@@ -107,8 +95,10 @@ const stringifyData = JSON.stringify(data);
         .padding(0.2);
 
       // Add y-axis to the SVG
-      svg
-        .append("g")
+      const wrapper = svg.append("g").attr("id", "axis");
+
+      wrapper
+        .insert("g", "#axis")
         .attr("transform", `translate(${legendWidth},0)`)
         .call(d3.axisLeft(yScale).tickSizeOuter(0))
         .selectAll("text")
@@ -116,16 +106,14 @@ const stringifyData = JSON.stringify(data);
         .attr("x", -10)
         .attr("text-anchor", "end");
 
-      const group = d3.group(data, (d) => `${d.author} (${d.year})`);
-
       // Add the squares
       data.forEach((item) => {
         const datasets = item.datasets;
         if (datasets.length > 0) {
-          const group = svg.append("g");
+          const group = wrapper.insert("g", "#axis");
           datasets.forEach((d, i) => {
             group
-              .append("rect")
+              .insert("rect", "#axis")
               .attr("y", yScale(`${item.author} (${item.year})`) ?? 0)
               .attr("x", i * 1.2 * yScale.bandwidth() + legendWidth + 7)
               .attr("width", yScale.bandwidth())
