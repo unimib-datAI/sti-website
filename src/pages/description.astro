@@ -6,16 +6,51 @@ import Section from "@components/Section.astro";
 ---
 
 <Layout title="Tutorial">
-  <main class="px-4">
-    <Section title="Description">
-      <p class="mb-6 mt-4 lg:mb-8 md:text-base lg:text-base">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a dui
-        porta, vestibulum nunc eget, varius erat. Mauris eu eleifend neque,
-        vitae porta lacus. Sed elementum nibh a nisl blandit consectetur.
+  <main class="px-4 mt-20">
+    <Section title="The Importance of Tables in Information Management">
+      <p class="mt-4 mb-6 lg:mb-8 md:text-base lg:text-base">
+        Tables are crucial for creating, organizing, and sharing information. Dating back to 2500 BC, Merer, an Egyptian naval inspector, documented his activities in a table on papyrus. Today, tables are widely used in business, science, and the web, especially with the rise of the Open Data movement.
       </p>
-
-      <p class="mb-6 mt-4 lg:mb-8 md:text-base lg:text-base">
-        <div
+      <p class="mt-4 mb-2 md:text-base lg:text-base font-bold"> Some key statistics:
+      </p>
+      <ul class=" list-disc list-inside">
+        <li>
+          <strong>Web Tables:</strong> In 2008, 14.1 billion HTML tables were extracted, with 154 million high-quality ones. The Common Crawl 2015 repository has 233 million content tables.
+        </li>
+        <li>
+          <strong>Wikipedia Tables</strong> The 2022 English Wikipedia snapshot includes 2,803,424 tables from 21,149,260 articles.
+        </li>
+        <li>
+          <strong>Spreadsheets</strong> Between 750 million and 2 billion people use Google Sheets or Microsoft Excel globally.
+        </li>
+    </ul>
+      <p class="mb-6 mt-4 lg:mb-8 md:text-base lg:text-base"> Understanding tabular data can be challenging, even with headers. </p>
+      <Section title="The role of Knowledge Graph"> 
+        <p class="mb-6 mt-4 md:text-base lg:text-base">Knowledge Graphs (KGs) represent relationships between entities (e.g., people, places, events) in graph structures. They use RDF (Resource Description Framework) to encode data meaningfully, facilitating data integration from various formats. Ontologies in RDF specify the meanings of types and properties through logical axioms. 
+        </p>
+        <p class="mb-6 md:text-base lg:text-base"> 
+          Developing KGs enhances data integration and enriches data. Semantic Table Interpretation (STI) is essential for constructing and extending KGs from semi-structured data, attracting significant attention in fields like Semantic Web, Data Management, AI, and NLP.
+        </p>
+      </Section>
+      <Section title="Semantic Table Interpretation"> 
+        <p class="mb-6 mt-4 md:text-base lg:text-base">In line with the widely accepted formalisation from the SemTab challenge, we define Semantic Table Interpretation (STI) as follows:
+        <p class="mb-6 md:text-base lg:text-base"> 
+          Developing KGs enhances data integration and enriches data. Semantic Table Interpretation (STI) is essential for constructing and extending KGs from semi-structured data, attracting significant attention in fields like Semantic Web, Data Management, AI, and NLP.
+        </p>
+        <ul class=" list-disc list-inside">
+          <li>
+            <strong>Web Tables:</strong> In 2008, 14.1 billion HTML tables were extracted, with 154 million high-quality ones. The Common Crawl 2015 repository has 233 million content tables.
+          </li>
+          <li>
+            <strong>Wikipedia Tables</strong> The 2022 English Wikipedia snapshot includes 2,803,424 tables from 21,149,260 articles.
+          </li>
+          <li>
+            <strong>Spreadsheets</strong> Between 750 million and 2 billion people use Google Sheets or Microsoft Excel globally.
+          </li>
+      </ul>
+      </Section>
+      
+      <div
           class="w-full margin bg-cardBackground rounded-lg px-8 py-20 overflow-hidden inline-block"
         >
           <img
