@@ -8,6 +8,8 @@ import Card from "@components/Card.astro";
 import Objectives from "@components/Objectives.astro";
 import Carousel from "@components/Carousel.astro";
 import Presenter from "@components/Presenter.astro";
+import logoISWC from "@/assets/logoISWC.png";
+
 
 import marco from "src/assets/marco.jpeg";
 import MatteoPalmonari from "src/assets/MatteoPalmonari.jpg";
@@ -17,12 +19,15 @@ import fabio from "src/assets/fabio.jpg";
 
 <Layout title="Tutorial">
   <main class="px-4">
-    <Section title="">
-      <h1
-        class="py-4 text-4xl font-bold mt-8 bg-gradient-to-r from-[#9E0974] to-[#6665E9] inline-block text-transparent bg-clip-text"
-      >
-        ISWC 2024 TUTORIAL
-      </h1>
+    <Section>
+      <div class="flex gap-4 mt-8 items-center">
+        <img
+      src={logoISWC.src}
+      alt="table illustration"
+      class="max-w-16 object-fit-cover shrink-0"
+    />
+    <h1 class="py-4 text-4xl font-bold">ISWC 2024 TUTORIAL</h1> 
+      </div>
       <p
         class="mb-6 mt-4 font-light lg:mb-8 md:text-lg lg:text-xl text-gray-400"
       >
@@ -102,7 +107,7 @@ import fabio from "src/assets/fabio.jpg";
       />
       <Presenter
         image={ErnestoJimenezRuiz.src}
-        name="Ernesto Jim ́enez-Ruiz"
+        name="Ernesto Jimenez-Ruiz"
         profession="Lecturer in Artificial Intelligence and Senior Tutor for Research at City, University of London affiliated to the Research Center for Adaptive Computer Systems and Machine Learning"
         description="His current research interests focus on applying Semantic Technology to Data Science workflows and combining Knowledge Representation and Machine Learning techniques. He is one of the founders of the SemTab challenge"
       />

@@ -7,6 +7,8 @@ import Graph1 from "src/assets/Graph1.png";
 import graph3 from "src/assets/graph3.png";
 import Card from "@components/Card.astro";
 import mammoth from "@/assets/geometric-mammoth.png";
+import logoISWC from "@/assets/logoISWC.png";
+
 ---
 
 <Layout title="STI resources">
@@ -44,7 +46,12 @@ import mammoth from "@/assets/geometric-mammoth.png";
           class="text-3xl font-semibold bg-gradient-to-r from-[#9E0974] to-[#6665E9] inline-block text-transparent bg-clip-text mt-10"
         >
           ISWC 2024 TUTORIAL
-        </h2>
+        </h2> 
+        <img
+        src={logoISWC.src}
+        alt="table illustration"
+        class="mt-4 max-w-12 object-fit-cover shrink-0"
+      />
         <p class="mb-6 mt-4 md:text-base lg:text-base">
           Discover the comprehensive world of Semantic Table Interpretation
           (STI) in this tutorial, which covers both theoretical and practical
@@ -54,10 +61,7 @@ import mammoth from "@/assets/geometric-mammoth.png";
           advantages, and limitations of each approach you will understand their
           optimal contexts of use.
         </p>
-        <p class="mb-4 mt-4 md:text-base lg:text-base pr-10">
-          Learn more about the ISW2024 Tutorial
-        </p>
-        <Button href="/tutorial" variant="secondary"> Go to Tutorial </Button>
+          <Button href="/tutorial" variant="secondary"> Learn more about the ISW2024 Tutorial </Button>
       </section>
     </Section>
 
@@ -76,7 +80,7 @@ import mammoth from "@/assets/geometric-mammoth.png";
           />
         </div>
         <div>
-          <h3 class="mt-2 text-2xl font-semibold text-purple-400">Mammotab</h3>
+          <h3 class="mt-2 text-2xl font-semibold text-orange-">Mammotab</h3>
           <p class="mb-6 mt-4 md:text-base lg:text-base">
             MammoTab is a unique dataset consisting of 1 million Wikipedia
             tables, extracted from over 20 million Wikipedia pages, and
