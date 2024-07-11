@@ -52,19 +52,30 @@ import mammoth from "@/assets/geometric-mammoth.png";
     <div class="h-32 bg-gradient-to-b from-[#0C0C2F] to-[#0E0202]"></div>
 
     <Section title="Our Datasets">
-      <h3 class="mt-2 text-2xl font-semibold text-purple-400">Mammotab</h3>
-      <p class="mb-6 mt-4 md:text-base lg:text-base">
-        MammoTab is a unique dataset consisting of 1 million Wikipedia tables,
-        extracted from over 20 million Wikipedia pages, and annotated using
-        Wikidata. This dataset fills a gap in the current state-of-the-art
-        resources, making it an excellent tool for testing and training Semantic
-        Table Interpretation approaches. MammoTab is specifically designed to
-        address several key challenges, including disambiguation, homonymy, and
-        NIL-mentions, providing a comprehensive resource for advancing STI
-        research and applications.
-      </p>
-      <p class="mt-4 mb-6 md:text-base lg:text-base"></p>
-      <Button href="/mammotab" variant="secondary"> Check out Mammotab </Button>
+      <div class="flex flex-wrap lg:flex-nowrap mt-8">
+      <div>
+        <img
+        src={mammoth.src}
+        alt="table illustration"
+        class="lg:mt-0 lg:col-span-4 max-w-48 object-fit-cover lg:mr-8"
+      />
+      </div>
+      <div>
+        <h3 class="mt-2 text-2xl font-semibold text-purple-400">Mammotab</h3>
+        <p class="mb-6 mt-4 md:text-base lg:text-base">
+          MammoTab is a unique dataset consisting of 1 million Wikipedia tables,
+          extracted from over 20 million Wikipedia pages, and annotated using
+          Wikidata. This dataset fills a gap in the current state-of-the-art
+          resources, making it an excellent tool for testing and training Semantic
+          Table Interpretation approaches. MammoTab is specifically designed to
+          address several key challenges, including disambiguation, homonymy, and
+          NIL-mentions, providing a comprehensive resource for advancing STI
+          research and applications.
+        </p>
+        <p class="mt-4 mb-6 md:text-base lg:text-base"></p>
+        <Button href="/mammotab" variant="secondary"> Check out Mammotab </Button>
+      </div>
+    </div>
     </Section>
   </main>
 </Layout>
