@@ -9,30 +9,36 @@ import Card from "@components/Card.astro";
 ---
 
 <Layout title="STI resources">
-  <main class="px-4">
+  <main class="">
     <Hero />
-    <div class="h-32 bg-gradient-to-t from-[#0C0C2F] to-[#0E0202]"></div>
-    <div class="bg-sectionBackground py-10">
-      <Section title="What's Semantic Table Interpretation?">
-        <p class="mt-4 mb-6 md:text-base lg:text-base">
-          Semantic Table Interpretation, as defined by the widely accepted
-          formalisation from the SemTab challenge, involves annotating
-          relational tables with information from a Knowledge Graph (KG). This
-          process includes associating each column in a table with one or more
-          KG types, known as Column Type Annotation (CTA). Additionally, Cell
-          Entity Annotation (CEA) is applied to annotate each cell in "entity
-          columns" with a KG entity or mark it as NIL if it does not exist in
-          the KG. Column Property Annotation (CPA) involves annotating pairs of
-          columns with a binary KG property. The result of this annotation
-          process is a table enriched with semantic information, which can
-          introduce new elements to the KG.
-        </p>
-        <p class="mt-4 mb-4 md:text-base lg:text-base"></p>
-        <Button href="/description" variant="secondary">
-          Learn more about STI
-        </Button>
-      </Section>
-      <Section title="ISWC 2024 TUTORIAL">
+
+    <Section
+      title="What's Semantic Table Interpretation?"
+      className="bg-sectionBackground py-10 shadow-[5px_5px_40px_40px_#0C0C2F]"
+    >
+      <p class="mt-4 mb-6 md:text-base lg:text-base">
+        Semantic Table Interpretation, as defined by the widely accepted
+        formalisation from the SemTab challenge, involves annotating relational
+        tables with information from a Knowledge Graph (KG). This process
+        includes associating each column in a table with one or more KG types,
+        known as Column Type Annotation (CTA). Additionally, Cell Entity
+        Annotation (CEA) is applied to annotate each cell in "entity columns"
+        with a KG entity or mark it as NIL if it does not exist in the KG.
+        Column Property Annotation (CPA) involves annotating pairs of columns
+        with a binary KG property. The result of this annotation process is a
+        table enriched with semantic information, which can introduce new
+        elements to the KG.
+      </p>
+      <p class="mt-4 mb-4 md:text-base lg:text-base"></p>
+      <Button href="/description" variant="secondary">
+        Learn more about STI
+      </Button>
+      <section>
+        <h2
+          class="text-3xl font-semibold bg-gradient-to-r from-[#9E0974] to-[#6665E9] inline-block text-transparent bg-clip-text mt-10"
+        >
+          ISWC 2024 TUTORIAL
+        </h2>
         <p class="mb-6 mt-4 md:text-base lg:text-base">
           Discover the comprehensive world of Semantic Table Interpretation
           (STI) in this tutorial, which covers both theoretical and practical
@@ -46,9 +52,8 @@ import Card from "@components/Card.astro";
           Learn more about the ISW2024 Tutorial
         </p>
         <Button href="/tutorial" variant="secondary"> Go to Tutorial </Button>
-      </Section>
-    </div>
-    <div class="h-32 bg-gradient-to-b from-[#0C0C2F] to-[#0E0202]"></div>
+      </section>
+    </Section>
 
     <Section title="Our Datasets">
       <h3 class="mt-2 text-2xl font-semibold text-purple-400">Mammotab</h3>
