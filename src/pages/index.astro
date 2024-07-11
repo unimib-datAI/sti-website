@@ -47,11 +47,6 @@ import logoISWC from "@/assets/logoISWC.png";
         >
           ISWC 2024 TUTORIAL
         </h2> 
-        <img
-        src={logoISWC.src}
-        alt="table illustration"
-        class="mt-4 max-w-12 object-fit-cover shrink-0"
-      />
         <p class="mb-6 mt-4 md:text-base lg:text-base">
           Discover the comprehensive world of Semantic Table Interpretation
           (STI) in this tutorial, which covers both theoretical and practical
@@ -61,7 +56,17 @@ import logoISWC from "@/assets/logoISWC.png";
           advantages, and limitations of each approach you will understand their
           optimal contexts of use.
         </p>
-          <Button href="/tutorial" variant="secondary"> Learn more about the ISW2024 Tutorial </Button>
+        <div class="flex flex-wrap gap-2">
+          <Button href="/tutorial" variant="secondary"> Learn more about the ISWC2024 Tutorial </Button>
+          <Button
+          href="https://iswc2024.semanticweb.org/event/3715c6fc-e2d7-47eb-8c01-5fe4ac589a52/summary"
+          variant="secondary"
+          className="md:ml-4"
+        >
+          ISWC 2024
+          <img src={logoISWC.src} class="ms-2 w-6 h-6" />
+        </Button>
+        </div>
       </section>
     </Section>
 
