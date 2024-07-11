@@ -1,3 +1,9 @@
 {
-  "tailwindCSS.classAttributes": ["class", "class:list"]
+  "tailwindCSS.classAttributes": ["class", "class:list"],
+  "tailwindCSS.includeLanguages": {
+    "astro": "html",
+    "typescriptreact": "html",
+    "plaintext": "html",
+  },
+  "tailwindCSS.experimental.classRegex": ["width: \"\\s*\""]
 }
