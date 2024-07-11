@@ -12,66 +12,59 @@ import mammoth from "@/assets/geometric-mammoth.png";
 <Layout title="STI resources">
   <main class="px-4">
     <Hero />
-    <Section title="What's Semantic Table Interpretation?">
-      <p class="mt-4 mb-6 md:text-base lg:text-base">
-        Semantic Table Interpretation, as defined by the widely accepted
-        formalisation from the SemTab challenge, involves annotating relational
-        tables with information from a Knowledge Graph (KG). This process
-        includes associating each column in a table with one or more KG types,
-        known as Column Type Annotation (CTA). Additionally, Cell Entity
-        Annotation (CEA) is applied to annotate each cell in "entity columns"
-        with a KG entity or mark it as NIL if it does not exist in the KG.
-        Column Property Annotation (CPA) involves annotating pairs of columns
-        with a binary KG property. The result of this annotation process is a
-        table enriched with semantic information, which can introduce new
-        elements to the KG.
-      </p>
-      <p class="mt-4 mb-4 md:text-base lg:text-base">
-      </p>
-      <Button href="/description" variant="secondary"> Learn more about STI </Button>
-    </Section>
-    <Section title="ISWC 2024 TUTORIAL">
-      <p class="mb-6 mt-4 md:text-base lg:text-base">
-        Discover the comprehensive world of Semantic Table Interpretation (STI)
-        in this tutorial, which covers both theoretical and practical aspects,
-        and trace the evolution of STI from heuristic-based methods to machine
-        learning (ML) techniques and the latest large language model (LLM)
-        innovations. By examining the unique characteristics, advantages, and
-        limitations of each approach you will understand their optimal contexts
-        of use.
-      </p>
-      <p class="mb-4 mt-4 md:text-base lg:text-base pr-10">
-        Learn more about the ISW2024 Tutorial
-      </p>
-      <Button href="/tutorial" variant="secondary"> Go to Tutorial </Button>
-    </Section>
-
-    <Section title="Our Projects">
-      <div class="flex flex-wrap lg:flex-nowrap mt-8">
-        <div>
-          <img
-          src={mammoth.src}
-          alt="table illustration"
-          class="lg:mt-0 lg:col-span-2 lg:flex max-w-32 object-fit-cover"
-        />
-        </div>
-      <div class="lg:ml-8">
-        <h3 class="mt-2 text-2xl font-semibold text-purple-400">Mammotab</h3>
-        <p class="mb-6 mt-4 md:text-base lg:text-base">
-          MammoTab is a unique dataset consisting of 1 million Wikipedia tables,
-          extracted from over 20 million Wikipedia pages, and annotated using
-          Wikidata. This dataset fills a gap in the current state-of-the-art
-          resources, making it an excellent tool for testing and training Semantic
-          Table Interpretation approaches. MammoTab is specifically designed to
-          address several key challenges, including disambiguation, homonymy, and
-          NIL-mentions, providing a comprehensive resource for advancing STI
-          research and applications.
-        </p>
+    <div class="h-32 bg-gradient-to-t from-[#0C0C2F] to-[#0E0202]"></div>
+    <div class="bg-sectionBackground py-10">
+      <Section title="What's Semantic Table Interpretation?">
         <p class="mt-4 mb-6 md:text-base lg:text-base">
+          Semantic Table Interpretation, as defined by the widely accepted
+          formalisation from the SemTab challenge, involves annotating
+          relational tables with information from a Knowledge Graph (KG). This
+          process includes associating each column in a table with one or more
+          KG types, known as Column Type Annotation (CTA). Additionally, Cell
+          Entity Annotation (CEA) is applied to annotate each cell in "entity
+          columns" with a KG entity or mark it as NIL if it does not exist in
+          the KG. Column Property Annotation (CPA) involves annotating pairs of
+          columns with a binary KG property. The result of this annotation
+          process is a table enriched with semantic information, which can
+          introduce new elements to the KG.
         </p>
-        <Button href="/mammotab" variant="secondary"> Check out Mammotab </Button>
-      </div>
+        <p class="mt-4 mb-4 md:text-base lg:text-base"></p>
+        <Button href="/description" variant="secondary">
+          Learn more about STI
+        </Button>
+      </Section>
+      <Section title="ISWC 2024 TUTORIAL">
+        <p class="mb-6 mt-4 md:text-base lg:text-base">
+          Discover the comprehensive world of Semantic Table Interpretation
+          (STI) in this tutorial, which covers both theoretical and practical
+          aspects, and trace the evolution of STI from heuristic-based methods
+          to machine learning (ML) techniques and the latest large language
+          model (LLM) innovations. By examining the unique characteristics,
+          advantages, and limitations of each approach you will understand their
+          optimal contexts of use.
+        </p>
+        <p class="mb-4 mt-4 md:text-base lg:text-base pr-10">
+          Learn more about the ISW2024 Tutorial
+        </p>
+        <Button href="/tutorial" variant="secondary"> Go to Tutorial </Button>
+      </Section>
     </div>
+    <div class="h-32 bg-gradient-to-b from-[#0C0C2F] to-[#0E0202]"></div>
+
+    <Section title="Our Datasets">
+      <h3 class="mt-2 text-2xl font-semibold text-purple-400">Mammotab</h3>
+      <p class="mb-6 mt-4 md:text-base lg:text-base">
+        MammoTab is a unique dataset consisting of 1 million Wikipedia tables,
+        extracted from over 20 million Wikipedia pages, and annotated using
+        Wikidata. This dataset fills a gap in the current state-of-the-art
+        resources, making it an excellent tool for testing and training Semantic
+        Table Interpretation approaches. MammoTab is specifically designed to
+        address several key challenges, including disambiguation, homonymy, and
+        NIL-mentions, providing a comprehensive resource for advancing STI
+        research and applications.
+      </p>
+      <p class="mt-4 mb-6 md:text-base lg:text-base"></p>
+      <Button href="/mammotab" variant="secondary"> Check out Mammotab </Button>
     </Section>
   </main>
 </Layout>
