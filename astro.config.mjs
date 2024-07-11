@@ -8,8 +8,8 @@ const isProd = import.meta.env.PROD;
 export default defineConfig({
   site: "https://unimibinside.github.io/sti-website/",
   base: isProd ? "/sti-website/" : "/",
-  integrations: [tailwind({
-    applyBaseStyles: false,
+  integrations: [tailwind(
     
-  })],
+
+  )],
 });
