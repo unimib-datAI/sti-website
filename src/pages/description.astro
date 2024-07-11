@@ -9,7 +9,9 @@ import TableDescription from "@components/TableDescription.astro";
 <Layout title="What's STI?">
   <main class="px-4">
     <Section title="">
-      <h1 class="py-4 text-4xl font-bold mt-8">
+      <h1
+        class="py-4 text-4xl font-bold mt-8 bg-gradient-to-r from-[#9E0974] to-[#6665E9] inline-block text-transparent bg-clip-text"
+      >
         Semantic Table Interpretation
       </h1>
       <p
@@ -80,9 +82,6 @@ import TableDescription from "@components/TableDescription.astro";
           </li>
         </ul>
 
-        <h2 class="text-2xl font-semibold text-purple-400 mb-3">
-          The two inputs
-        </h2>
         <TableDescription />
         <img
           src={inputGraph.src}
@@ -103,7 +102,8 @@ import TableDescription from "@components/TableDescription.astro";
         </ul>
         <p class="mb-6 md:text-base lg:text-base">
           This annotation process can be visualized <strong
-            >in the figure below</strong>
+            >in the figure below</strong
+          >
         </p>
       </p>
       <Section>
