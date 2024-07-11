@@ -7,6 +7,11 @@ export default {
   theme: {
     extend: {
 
+      
+      backgroundSize: {
+        "400%": "400%",
+      },
+
       animation: {
         "background-move": "background-move 5s linear infinite",
       },

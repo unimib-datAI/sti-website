@@ -1,0 +1,13 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .bg-move {
+      @apply bg-gradient-to-r from-[#9E0974] to-[#6665E9] inline-block text-transparent bg-clip-text animate-background-move bg-400%;
+    }
+    .bg-title {
+      @apply bg-gradient-to-r from-[#9E0974] to-[#6665E9] inline-block text-transparent bg-clip-text text-transparent animate-background-move bg-400%;
+    }
+  }
