@@ -37,6 +37,7 @@ export default {
           ...colors.gray,
           800: "#645F6E",
         },
+        orange: "#E99E57",
         purple: {
           500: "#6665E9",
         },
