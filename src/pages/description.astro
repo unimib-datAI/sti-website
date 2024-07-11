@@ -1,0 +1,90 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Graph1 from "src/assets/Graph1.png";
+import graph3 from "src/assets/graph3.png";
+import Section from "@components/Section.astro";
+---
+
+<Layout title="What's STI?">
+  <main class="px-4">
+    <Section title="">
+      <h1 class="py-4 text-4xl font-bold mt-8">Semantic Table Interpretation</h1>
+      <p
+        class="mb-6 mt-4 font-light lg:mb-8 md:text-lg lg:text-xl text-gray-400"
+      >
+      This page provides a detailed explanation of the Semantic Table Interpretation (STI) process. You'll learn about the steps involved in annotating relational tables using knowledge graphs, including column type annotation (CTA), cell entity annotation (CEA), and column property annotation (CPA)
+      </p>
+    </Section>
+    </Section>
+    <Section title="The Importance of Tables in Information Management">
+      <p class="mt-4 md:text-base lg:text-base">
+        Tables are crucial for creating, organizing, and sharing information. Dating back to 2500 BC, Merer, an Egyptian naval inspector, documented his activities in a table on papyrus. Today, tables are widely used in business, science, and the web, especially with the rise of the Open Data movement
+      </p>
+      <p class="mt-4 mb-2 md:text-base lg:text-base font-bold"> Some key statistics:
+      </p>
+      <ul class="list-disc list-inside">
+        <li>
+          <strong>Web Tables:</strong> In 2008, 14.1 billion HTML tables were extracted, with 154 million high-quality ones. The Common Crawl 2015 repository has 233 million content tables
+        </li>
+        <li>
+          <strong>Wikipedia Tables</strong> The 2022 English Wikipedia snapshot includes 2,803,424 tables from 21,149,260 articles
+        </li>
+        <li>
+          <strong>Spreadsheets</strong> Between 750 million and 2 billion people use Google Sheets or Microsoft Excel globally
+        </li>
+    </ul>
+      <p class="mt-4 mb-8 md:text-base lg:text-base"> Understanding tabular data can be challenging, even with headers</p>
+    </Section>
+      
+      <Section title="The role of Knowledge Graph"> 
+        <p class="mt-4 mb-2 md:text-base lg:text-base">Knowledge Graphs (KGs) represent relationships between entities (e.g., people, places, events) in graph structures. They use RDF (Resource Description Framework) to encode data meaningfully, facilitating data integration from various formats. Ontologies in RDF specify the meanings of types and properties through logical axioms 
+        </p>
+        <p class="mt-4 md:text-base lg:text-base"> 
+          Developing KGs enhances data integration and enriches data. Semantic Table Interpretation (STI) is essential for constructing and extending KGs from semi-structured data, attracting significant attention in fields like Semantic Web, Data Management, AI, and NLP
+        </p>
+      </Section>
+
+      <Section title="Semantic Table Interpretation"> 
+        <p class="mb-2 mt-4 md:text-base lg:text-base">In line with the widely accepted formalisation from the SemTab challenge, we define Semantic Table Interpretation (STI) as follows:
+        <ul class=" list-disc list-inside">
+          <li> A relational table <em>T</em>
+          </li>
+          <li class="mb-6">
+            A Knowledge Graph (KG) including entities, statements, and an ontology of types and properties
+          </li>
+      </ul>
+      <div
+          class="w-full margin bg-cardBackground rounded-lg px-8 py-20 overflow-hidden inline-block"
+        >
+          <img
+            src={graph3.src}
+            alt="graph3"
+            class="lg:mt-0 lg:col-span-4 lg:flex max-w-4xl w-full m-auto object-fit-cover"
+          />
+        </div>
+      <p class="mb-2 mt-4 md:text-base lg:text-base">A table <em>T</em> is annotated when:</p>
+      <ul class="mb-4 list-disc list-inside">
+        <li> Each column is associated with one or more KG types
+        </li>
+        <li>
+          Each cell in "entity columns" is annotated with a KG entity or marked as NIL if it doesn't exist in the KG
+        </li>
+        <li>
+          Pairs of columns are annotated with a binary KG property</li>
+    </ul>
+    <p class="mb-6 md:text-base lg:text-base">This annotation process can be visualized <strong>in the figure below</strong></p>
+      </Section>
+      <Section>
+        <div
+          class="w-full margin bg-cardBackground rounded-lg px-8 py-20 overflow-hidden inline-block"
+        >
+          <img
+            src={Graph1.src}
+            alt="graph1"
+            class="lg:mt-0 lg:col-span-4 lg:flex m-auto max-w-4xl w-full object-fit-cover"
+          />
+        </div>
+      </p>
+    </Section>
+  </main>
+</Layout>
