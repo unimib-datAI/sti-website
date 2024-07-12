@@ -6,6 +6,8 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
+
+
       backgroundSize: {
         "400%": "400%",
       },
@@ -28,16 +30,19 @@ export default {
         sans: ["Inter var", "Inter", ...defaultTheme.fontFamily.sans],
       },
       colors: ({ colors }) => ({
+        
         background: "#0E0202",
-        foreground: "#FBFBFB",
+        foreground: "#D9D9D9",
         gray: {
           ...colors.gray,
           800: "#645F6E",
         },
+        orange: "#E99E57",
         purple: {
           500: "#6665E9",
         },
         cardBackground: "#0C0C2F",
+        sectionBackground: "#0C0C2F",
         tableTop: "#38384C",
         tableBottom: "#1E1A26",
         tableAlt: "#282332",

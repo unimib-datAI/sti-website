@@ -6,12 +6,23 @@ import Button from "@components/Button.astro";
 import Graph1 from "src/assets/Graph1.png";
 import graph3 from "src/assets/graph3.png";
 import Card from "@components/Card.astro";
+import mammoth from "@/assets/geometric-mammoth.png";
+import logoISWC from "@/assets/logoISWC.png";
 ---
 
 <Layout title="STI resources">
-  <main class="px-4">
+  <main>
     <Hero />
-    <Section title="What's Semantic Table Interpretation?">
+
+    <Section
+      title=""
+      className="bg-sectionBackground py-10 shadow-[5px_5px_40px_40px_#0C0C2F]"
+    >
+      <h2
+        class="text-3xl font-semibold bg-gradient-to-r from-[#9E0974] to-[#6665E9] inline-block text-transparent bg-clip-text mt-10"
+      >
+        What's Semantic Table Interpretation?
+      </h2>
       <p class="mt-4 mb-6 md:text-base lg:text-base">
         Semantic Table Interpretation, as defined by the widely accepted
         formalisation from the SemTab challenge, involves annotating relational
@@ -25,47 +36,73 @@ import Card from "@components/Card.astro";
         table enriched with semantic information, which can introduce new
         elements to the KG.
       </p>
-      <p class="mt-4 mb-4 md:text-base lg:text-base">
-        Learn more about Semantic Table Interpretation
-      </p>
-      <Button href="https://doi.org/10.5281/zenodo.7014472" variant="secondary">
-        Description
+      <p class="mt-4 mb-4 md:text-base lg:text-base"></p>
+      <Button href="/sti-website/description" variant="secondary">
+        Learn more about STI
       </Button>
+      <section>
+        <h2
+          class="text-3xl font-semibold bg-gradient-to-r from-[#9E0974] to-[#6665E9] inline-block text-transparent bg-clip-text mt-10"
+        >
+          ISWC 2024 TUTORIAL
+        </h2>
+        <p class="mb-6 mt-4 md:text-base lg:text-base">
+          Discover the comprehensive world of Semantic Table Interpretation
+          (STI) in this tutorial, which covers both theoretical and practical
+          aspects, and trace the evolution of STI from heuristic-based methods
+          to machine learning (ML) techniques and the latest large language
+          model (LLM) innovations. By examining the unique characteristics,
+          advantages, and limitations of each approach you will understand their
+          optimal contexts of use.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <Button href="/sti-website/tutorial" variant="secondary">
+            Learn more about the ISWC2024 Tutorial
+          </Button>
+          <Button
+            href="https://iswc2024.semanticweb.org/event/3715c6fc-e2d7-47eb-8c01-5fe4ac589a52/summary"
+            variant="secondary"
+            className="md:ml-4"
+          >
+            ISWC 2024
+            <img src={logoISWC.src} class="ms-2 w-6 h-6" />
+          </Button>
+        </div>
+      </section>
     </Section>
-    <Section title="ISWC 2024 TUTORIAL">
-      <p class="mb-6 mt-4 md:text-base lg:text-base">
-        Discover the comprehensive world of Semantic Table Interpretation (STI)
-        in this tutorial, which covers both theoretical and practical aspects,
-        and trace the evolution of STI from heuristic-based methods to machine
-        learning (ML) techniques and the latest large language model (LLM)
-        innovations. By examining the unique characteristics, advantages, and
-        limitations of each approach you will understand their optimal contexts
-        of use.
-      </p>
-      <p class="mb-4 mt-4 md:text-base lg:text-base pr-10">
-       Learn more about the ISW2024 Tutorial</p>
-      <Button href="https://doi.org/10.5281/zenodo.7014472" variant="secondary">
-        Go to Tutorial
-      </Button>
-    </Section>
-    <Section title="Our Datasets">
-      <h3 class="mt-2 text-2xl font-semibold text-purple-400">Mammotab</h3>
-      <p class="mb-6 mt-4 md:text-base lg:text-base">
-        MammoTab is a unique dataset consisting of 1 million Wikipedia tables,
-        extracted from over 20 million Wikipedia pages, and annotated using
-        Wikidata. This dataset fills a gap in the current state-of-the-art
-        resources, making it an excellent tool for testing and training Semantic
-        Table Interpretation approaches. MammoTab is specifically designed to
-        address several key challenges, including disambiguation, homonymy, and
-        NIL-mentions, providing a comprehensive resource for advancing STI
-        research and applications.
-      </p>
-      <p class="mt-4 mb-6 md:text-base lg:text-base">
-        Learn more about Mammotab
-      </p>
-      <Button href="https://doi.org/10.5281/zenodo.7014472" variant="secondary">
-        Check out Mammotab
-      </Button>
+
+    <Section title="" className="pt-20">
+      <h2
+        class="text-3xl font-semibold bg-gradient-to-r from-[#9E0974] to-[#6665E9] inline-block text-transparent bg-clip-text mt-10"
+      >
+        Our Datasets
+      </h2>
+      <div class="flex flex-wrap lg:flex-nowrap mt-8">
+        <div>
+          <img
+            src={mammoth.src}
+            alt="table illustration"
+            class="lg:mt-0 lg:col-span-4 max-w-48 object-fit-cover lg:mr-8"
+          />
+        </div>
+        <div>
+          <h3 class="mt-2 text-2xl font-semibold text-orange-">Mammotab</h3>
+          <p class="mb-6 mt-4 md:text-base lg:text-base">
+            MammoTab is a unique dataset consisting of 1 million Wikipedia
+            tables, extracted from over 20 million Wikipedia pages, and
+            annotated using Wikidata. This dataset fills a gap in the current
+            state-of-the-art resources, making it an excellent tool for testing
+            and training Semantic Table Interpretation approaches. MammoTab is
+            specifically designed to address several key challenges, including
+            disambiguation, homonymy, and NIL-mentions, providing a
+            comprehensive resource for advancing STI research and applications.
+          </p>
+          <p class="mt-4 mb-6 md:text-base lg:text-base"></p>
+          <Button href="/sti-website/mammotab" variant="secondary">
+            Check out Mammotab
+          </Button>
+        </div>
+      </div>
     </Section>
   </main>
 </Layout>
