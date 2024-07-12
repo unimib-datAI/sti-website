@@ -3,7 +3,7 @@ import { type ColumnMeta, type RowData } from '@tanstack/react-table'
 
 declare module '@tanstack/react-table' {
   interface ColumnMeta<TData extends RowData, TValue> {
-    width: string,
+    width?: string,
     class?: string
   }
 }
@@ -18,7 +18,7 @@ export interface IColumns {
   technique: string
   domain: string
   type: string
-  tasks: ITask[]
+  tasks: ITask
   steps: ISteps
   "user revision": IUserRevision
   validation?: string
@@ -31,10 +31,10 @@ export interface IColumns {
 }
 
 export interface ITask {
-  cta?: boolean
-  cpa?: boolean
-  cea?: boolean
-  cnea?: boolean
+  cta: boolean
+  cpa: boolean
+  cea: boolean
+  cnea: boolean
 }
 
 export interface ISteps {
