@@ -23,9 +23,11 @@
             "cnea": false
         },
         "steps": {
-            "data-preparation": "",
-            "spell-checker": "",
-            "units-of-measurements": "",
+            "data-preparation": {
+                "description": "",
+                "spell-checker": "",
+                "units-of-measurements": ""
+            },
             "subject-detection": "",
             "column-analysis": "Datatypes for each column are collected.The approach uses features of values defined in the ontology for numeric types to recognize the type of numeric columns, and the terms from the taxonomies of the symbolic types to recognize the type of symbolic columns. Column titles are also used to compute the score and choose the type of the column.",
             "type-annotation": "The approach links each cell in symbolic columns to its corresponding type in the ontology, using cosine similarity between weighted vectors. A set of candidate types is defined and a proportion is used to obtain the definitive cell type. Numeric cells' type is obtained by assigning a score to each possible numeric type, according to the cell content, and choosing the highest scoring.",

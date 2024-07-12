@@ -1,5 +1,5 @@
 import React from "react"
-import { type IColumns, type IDomain, type IEntityLinking, type IKg, type IMethod, type ITitle, type IUserRevision } from "./types"
+import { type IColumns, type IDataPreparation, type IDomain, type IEntityLinking, type IKg, type IMethod, type ITitle, type IUserRevision } from "./types"
 import { type ColumnDef } from "@tanstack/react-table"
 import { cn } from "@/lib/utils"
 import { Check, ExternalLink, Info, X } from "lucide-react"
@@ -59,7 +59,7 @@ export const columns: ColumnDef<IColumns>[] = [
     header: "Main Method",
     cell: (cell) => {
       const method = cell.getValue() as IMethod;
-      const color = method.type === "sup" ? "bg-green-500" : method.type === "unsup" ? "bg-red-500" : "bg-blue-500";
+      const color = method.type === "sup" ? "bg-teal-500" : method.type === "unsup" ? "bg-pink-500" : "bg-sky-600";
       return <span><span className={cn(color, "py-0.5 px-1.5 rounded-full text-[0.7rem]")}>{method.type}</span><span className="ml-2">{method.technique}</span></span>
     },
     meta: {
@@ -71,7 +71,7 @@ export const columns: ColumnDef<IColumns>[] = [
     header: "Domain",
     cell: (cell) => {
       const domain = cell.getValue() as IDomain;
-      const color = domain.type === "dependent" ? "bg-green-500" : "bg-red-500";
+      const color = domain.type === "dependent" ? "bg-teal-500" : "bg-sky-600";
       return <span><span className={cn(color, "py-0.5 px-1.5 rounded-full text-[0.7rem]")}>{domain.domain}</span><span className="ml-2">{domain.type}</span></span>
     },
   },
@@ -117,11 +117,11 @@ export const columns: ColumnDef<IColumns>[] = [
         accessorKey: "steps.data-preparation",
         header: "Data Preparation",
         cell: (cell) => {
-          const value = cell.getValue() as string;
+          const dataPreparation = cell.getValue() as IDataPreparation;
 
-          return value ? (
+          return dataPreparation.description ? (
             <div className="flex justify-center">
-              <span className="inline-flex text-white items-center bg-green-400 rounded-full px-0.5 cursor-help" title={value}>
+              <span className="inline-flex text-white items-center rounded-full px-0.5 cursor-help" title={`${dataPreparation.description}\n\nDATA CLEANING: ${dataPreparation["data-cleaning"]}\nUNITS OF MEASUREMENTS: ${dataPreparation["units-of-measurements"]}`}>
               <Check className="h-5 w-5 text-green-400" />
               <Info className="text-tableText ml-1 h-4 w-4" />
               </span>
@@ -129,38 +129,7 @@ export const columns: ColumnDef<IColumns>[] = [
           ) : (<span className="flex justify-center"><X className="text-red-400 h-5 w-5" /></span>)
         },
       },
-      {
-        accessorKey: "steps.spell-checker",
-        header: "Spell Checker",
-        cell: (cell) => {
-          const value = cell.getValue() as string;
 
-          return value ? (
-            <div className="flex justify-center">
-              <span className="inline-flex text-white items-center bg-green-400 rounded-full px-0.5 cursor-help" title={value}>
-              <Check className="h-5 w-5 text-green-400" />
-              <Info className="text-tableText ml-1 h-4 w-4" />
-              </span>
-            </div>
-          ) : (<span className="flex justify-center"><X className="text-red-400 h-5 w-5" /></span>)
-        },
-      },
-      {
-        accessorKey: "steps.units-of-measurements",
-        header: "Units of Measurements",
-        cell: (cell) => {
-          const value = cell.getValue() as string;
-
-          return value ? (
-            <div className="flex justify-center">
-              <span className="inline-flex text-white items-center bg-green-400 rounded-full px-0.5 cursor-help" title={value}>
-              <Check className="h-5 w-5 text-green-400" />
-              <Info className="text-tableText ml-1 h-4 w-4" />
-              </span>
-            </div>
-          ) : (<span className="flex justify-center"><X className="text-red-400 h-5 w-5" /></span>)
-        },
-      },
       {
         accessorKey: "steps.subject-detection",
         header: "Subject Detection",
@@ -280,7 +249,7 @@ export const columns: ColumnDef<IColumns>[] = [
     header: "User Revision",
     cell: (cell) => {
       const userRevision = cell.getValue() as IUserRevision;
-      const color = userRevision.type === "Fully-automated" ? "bg-green-500" : userRevision.type === "Semi-automated" ? "bg-blue-500" : "bg-red-500";
+      const color = userRevision.type === "Fully-automated" ? "bg-teal-500" : userRevision.type === "Semi-automated" ? "bg-sky-600" : "bg-pink-500";
       return userRevision.description ? (
           <span className={cn(color,"py-0.5 pl-1.5 pr-0.5 rounded-full text-[0.7rem] cursor-help inline-flex")} title={userRevision.description}>{userRevision.type}{userRevision.description && <Info className="text-tableText ml-1 h-4 w-4" />}</span>
       ) : (

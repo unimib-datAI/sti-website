@@ -50,9 +50,7 @@ export interface ITasks {
 }
 
 export interface ISteps {
-  "data-preparation": string
-  "spell-checker": string
-  "units-of-measurements": string
+  "data-preparation": IDataPreparation
   "subject-detection": string
   "column-analysis": string
   "type-annotation": string
@@ -62,9 +60,15 @@ export interface ISteps {
   "nil-annotation": string
 }
 
+export interface IDataPreparation {
+  "description": string
+  "data-cleaning": string
+  "units-of-measurements": string
+}
+
 export interface IEntityLinking {
   "description": string,
-  "candidate-generation": string
+  "candidate-generation": string,
   "entity-disambiguation": string
 }
 
