@@ -1,5 +1,5 @@
 import React from "react"
-import { type IColumns, type ITask } from "./types"
+import { type IColumns } from "./types"
 import { type ColumnDef } from "@tanstack/react-table"
 
 export const columns: ColumnDef<IColumns>[] = [
@@ -7,14 +7,14 @@ export const columns: ColumnDef<IColumns>[] = [
     accessorKey: "author",
     header: "Author",
     meta: {
-      width: "w-[250px]"
+      width: "w-[100px]"
     }
   },
   {
     accessorKey: "year",
     header: "Year",
     meta: {
-      width: "w-[150px]",
+      width: "w-[50px]",
       class: "item-center"
     }
   },
@@ -26,37 +26,46 @@ export const columns: ColumnDef<IColumns>[] = [
     }
   },
   {
-    accessorKey: "conference journal",
+    accessorKey: "conference-journal",
     header: "Conference Journal",
     meta: {
       width: "w-[250px]"
     }
   },
   {
-    accessorKey: "name of approach",
+    accessorKey: "name-of-approach",
     header: "Name of Approach",
     meta: {
       width: "w-[300px]"
     }
   },
   {
-    accessorKey: "main method",
+    accessorKey: "main-method",
     header: "Main Method",
     meta: {
-      width: "w-[250px]"
+      width: "w-[100px]"
     }
   },
   {
     accessorKey: "technique",
     header: "Technique",
+    meta: {
+      width: "w-[100px]"
+    }
   },
   {
     accessorKey: "domain",
     header: "Domain",
+    meta: {
+      width: "w-[100px]"
+    }
   },
   {
     accessorKey: "type",
     header: "Type",
+    meta: {
+      width: "w-[200px]"
+    }
   },
   {
     header: "Tasks",
@@ -91,69 +100,125 @@ export const columns: ColumnDef<IColumns>[] = [
   },
   {
     header: "Steps",
+    meta: {
+      width: "w-auto",
+      class: "justify-center"
+    },
     columns: [
       {
-        accessorKey: "steps.data preparation",
+        accessorKey: "steps.data-preparation",
         header: "Data Preparation",
+        meta: {
+          width: "w-[65ch]"
+        }
       },
       {
-        accessorKey: "steps.spell checker",
+        accessorKey: "steps.spell-checker",
         header: "Spell Checker",
       },
       {
-        accessorKey: "steps.units of measurements",
+        accessorKey: "steps.units-of-measurements",
         header: "Units of Measurements",
       },
       {
-        accessorKey: "steps.subject detection",
+        accessorKey: "steps.subject-detection",
         header: "Subject Detection",
+        meta: {
+          width: "w-[65ch]"
+        }
       },
       {
-        accessorKey: "steps.column analysis",
+        accessorKey: "steps.column-analysis",
         header: "Column Analysis",
+        meta: {
+          width: "w-[65ch]"
+        }
       },
       {
-        accessorKey: "steps.type annotation",
+        accessorKey: "steps.type-annotation",
         header: "Type Annotation",
+        meta: {
+          width: "w-[65ch]"
+        }
       },
       {
-        accessorKey: "steps.predicate annotation",
+        accessorKey: "steps.predicate-annotation",
         header: "Predicate Annotation",
+        meta: {
+          width: "w-[65ch]"
+        }
       },
       {
-        accessorKey: "steps.datatype annotation",
+        accessorKey: "steps.datatype-annotation",
         header: "Datatype Annotation",
+        meta: {
+          width: "w-[65ch]"
+        }
       },
       {
-        accessorKey: "steps.entity linking",
         header: "Entity Linking",
+        meta: {
+          width: "w-auto",
+          class: "justify-center"
+        },
         columns: [
           {
-            accessorKey: "steps.entity linking.candidate generation",
+            accessorKey: "steps.entity-linking.candidate-generation",
             header: "Candidate Generation",
+            meta: {
+              width: "w-[200px]"
+            }
           },
           {
-            accessorKey: "steps.entity linking.entity disambiguation",
+            accessorKey: "steps.entity-linking.entity-disambiguation",
             header: "Entity Disambiguation",
+            meta: {
+              width: "w-[200px]"
+            }
           },
         ],
       },
       {
-        accessorKey: "steps.nil annotation",
+        accessorKey: "steps.nil-annotation",
         header: "Nil Annotation",
+        meta: {
+          width: "w-[65ch]"
+        }
       },
     ],
   },
   {
-    accessorKey: "user revision",
     header: "User Revision",
+    meta: {
+      width: "w-auto",
+      class: "justify-center"
+    },
+    columns: [
+      {
+        accessorKey: "user-revision.type",
+        header: "Type",
+        meta: {
+          width: "w-[150px]"
+        }
+      },
+      {
+        accessorKey: "user-revision.description",
+        header: "Description",
+        meta: {
+          width: "w-[65ch]"
+        }
+      },
+    ],
   },
   {
     accessorKey: "validation",
     header: "Validation",
+    meta: {
+      width: "w-[150px]"
+    }
   },
   {
-    accessorKey: "code availability",
+    accessorKey: "code-availability",
     header: "Code Availability",
   },
   {
@@ -161,14 +226,46 @@ export const columns: ColumnDef<IColumns>[] = [
     header: "Licence",
   },
   {
-    accessorKey: "repository link",
+    accessorKey: "repository-link",
   },
   {
-    accessorKey: "inputs",
     header: "Inputs",
+    meta: {
+      width: "w-auto",
+      class: "justify-center"
+    },
+    columns: [
+      {
+        accessorKey: "inputs.type-of-table",
+        header: "Type of table",
+        meta: {
+          width: "w-[150px]"
+        }
+      },
+      {
+        header: "Knowledge Graph",
+        meta: {
+          width: "w-auto",
+          class: "justify-center"
+        },
+        columns: [
+          {
+            accessorKey: "inputs.kg.triple-store",
+            header: "Triple store",
+          },
+          {
+            accessorKey: "inputs.kg.index",
+            header: "Index",
+            meta: {
+              width: "w-[150px]"
+            }
+          },
+        ],
+      },
+    ],
   },
   {
-    accessorKey: "output format",
+    accessorKey: "output-format",
     header: "Output Format",
   }
 ]
