@@ -248,7 +248,7 @@ export const columns: ColumnDef<IColumns>[] = [
 
           return entityLinking.description ? (
             <div className="flex justify-center">
-              <span className="inline-flex text-white items-center rounded-full px-0.5 cursor-help" title={`${entityLinking.description}\nCANDIDATE GENERATION: ${entityLinking["candidate-generation"]}\n\nENTITY DISAMBIGUATION: ${entityLinking["entity-disambiguation"]}`}>
+              <span className="inline-flex text-white items-center rounded-full px-0.5 cursor-help" title={`${entityLinking.description}\n\nCANDIDATE GENERATION: ${entityLinking["candidate-generation"]}\nENTITY DISAMBIGUATION: ${entityLinking["entity-disambiguation"]}`}>
               <Check className="h-5 w-5 text-green-400" />
               <Info className="ml-1 h-4 w-4" />
               </span>
