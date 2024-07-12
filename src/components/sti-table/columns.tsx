@@ -258,7 +258,7 @@ export const columns: ColumnDef<IColumns>[] = [
       },
       {
         accessorKey: "steps.nil-annotation",
-        header: "Nil Annotation",
+        header: "NIL Annotation",
         cell: (cell) => {
           const value = cell.getValue() as string;
 
