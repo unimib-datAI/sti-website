@@ -11,23 +11,35 @@ declare module '@tanstack/react-table' {
 export interface IColumns {
   author: string
   year: number
-  title: string
+  title: ITitle
   "conference-journal": string
   "name-of-approach": string
-  "main-method": string
-  technique: string
-  domain: string
-  type: string
+  "main-method": IMethod
+  domain: IDomain
   tasks: ITasks
   steps: ISteps
-  "user-revision": UserRevision
+  "user-revision": IUserRevision
   validation?: string
   "code-availability": string
   licence: string
-  "repository-link": string
   inputs: IInputs
   "output-format": string
   "validation (gs)"?: string
+}
+
+export interface ITitle {
+  text: string;
+  link: string;
+}
+
+export interface IMethod {
+  type: string
+  technique: string
+}
+
+export interface IDomain {
+  domain: string;
+  type: string;
 }
 
 export interface ITasks {
@@ -51,11 +63,12 @@ export interface ISteps {
 }
 
 export interface IEntityLinking {
+  "description": string,
   "candidate-generation": string
   "entity-disambiguation": string
 }
 
-export interface UserRevision {
+export interface IUserRevision {
   type: string
   description: string
 }

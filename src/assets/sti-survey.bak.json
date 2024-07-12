@@ -1,0 +1,1060 @@
+[
+    {
+        "author": "Hignette",
+        "year": 2007,
+        "title": "An Ontology-Driven Annotation of Data Tables",
+        "conference-journal": "WISE",
+        "name-of-approach": "",
+        "main-method": "unsupervised",
+        "technique": "similarity",
+        "domain": "independent",
+        "type": "",
+        "tasks": {
+            "cta": true,
+            "cpa": true,
+            "cea": false,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": "",
+            "spell-checker": "",
+            "units-of-measurements": "",
+            "subject-detection": "",
+            "column-analysis": "Datatypes for each column are collected. The approach uses features of values defined in the ontology for numeric types to recognize the type of numeric columns, and the terms from the taxonomies of the symbolic types to recognize the type of symbolic columns. Column titles are also used to compute the score and choose the type of the column.",
+            "type-annotation": "The approach links each cell in symbolic columns to its corresponding type in the ontology, using cosine similarity between weighted vectors. A set of candidate types is defined and a proportion is used to obtain the definitive cell type. Numeric cells' type is obtained by assigning a score to each possible numeric type, according to the cell content, and choosing the highest scoring.",
+            "predicate-annotation": "The approach identifies relations by computing a similarity score for each predicate/relation in the ontology according to the table title and the column types.  ",
+            "datatype-annotation": "The approach uses a set of manually defined rules to identify each cell's datatype as numeric, symbolic or unknown. A column is classified as symbolic if there are more cells classified as symbolic than numeric, numeric otherwise.",
+            "entity-linking": {
+                "candidate-generation": "",
+                "entity-disambiguation": ""
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "",
+        "code-availability": "no",
+        "licence": "NotSpecified",
+        "repository-link": "",
+        "inputs": {
+            "type-of-table": "web table",
+            "kg": {
+                "triple-store": "Personal ontologies",
+                "index": ""
+            }
+        },
+        "output-format": ""
+    },
+    {
+        "author": "Hignette",
+        "year": 2009,
+        "title": "Fuzzy Annotation of Web Data Tables Driven by a Domain Ontology",
+        "conference-journal": "ESWC",
+        "name-of-approach": "",
+        "main-method": "unsupervised",
+        "technique": "similarity",
+        "domain": "independent",
+        "type": "",
+        "tasks": {
+            "cta": true,
+            "cpa": true,
+            "cea": false,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": "",
+            "spell-checker": "",
+            "units-of-measurements": "",
+            "subject-detection": "",
+            "column-analysis": "Datatypes for each column are collected; the approach computes a score of each symbolic type of the ontology for the column. This score is a combination of the score of the type for the column according to the column contents and the score of the type for the column according to the column title.",
+            "type-annotation": "The approach links each cell in symbolic columns to its corresponding type in the ontology, using cosine similarity between weighted vectors. A set of candidate types is defined and a proportion is used to obtain the definitive cell type. Numeric cells' type is obtained by assigning a score to each possible numeric type, according to the cell content, and choosing the highest scoring.",
+            "predicate-annotation": "The approach identifies relations by computing a similarity score for each predicate/relation in the ontology according to the table title and the column types.  ",
+            "datatype-annotation": "The approach uses a set of manually defined rules to identify each cell's datatype as numeric, symbolic or unknown. A column is classified as symbolic if there are more cells classified as symbolic than numeric, numeric otherwise.",
+            "entity-linking": {
+                "candidate-generation": "",
+                "entity-disambiguation": ""
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "",
+        "code-availability": "no",
+        "licence": "NotSpecified",
+        "repository-link": "",
+        "inputs": {
+            "type-of-table": "Web table (XML)",
+            "kg": {
+                "triple-store": "Personal ontologies",
+                "index": ""
+            }
+        },
+        "output-format": "RDF"
+    },
+    {
+        "author": "Tao",
+        "year": 2009,
+        "title": "Automatic hidden-web table interpretation, conceptualization, and semantic annotation",
+        "conference-journal": "DKE",
+        "name-of-approach": "TISP ++",
+        "main-method": {
+            "type": "unsupervised",
+            "technique": "pattern"
+        },
+        "domain": "independent",
+        "type": "",
+        "tasks": {
+            "cta": false,
+            "cpa": false,
+            "cea": false,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": "",
+            "spell-checker": "",
+            "units-of-measurements": "",
+            "subject-detection": "",
+            "column-analysis": "",
+            "type-annotation": "",
+            "predicate-annotation": "",
+            "datatype-annotation": "Step carried out",
+            "entity-linking": {
+                "candidate-generation": "",
+                "entity-disambiguation": ""
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "",
+        "code-availability": "no",
+        "licence": "NotSpecified",
+        "repository-link": "",
+        "inputs": {
+            "type-of-table": "HTML tables",
+            "kg": {
+                "triple-store": "Personal ontologies",
+                "index": ""
+            }
+        },
+        "output-format": "RDF"
+    },
+    {
+        "author": "Limaye",
+        "year": 2010,
+        "title": "Annotating and Searching Web Tables Using Entities, Types and Relationships",
+        "conference-journal": "VLDB",
+        "name-of-approach": "",
+        "main-method": "unsupervised",
+        "technique": "features",
+        "domain": "independent",
+        "type": "",
+        "tasks": {
+            "cta": true,
+            "cpa": true,
+            "cea": true,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": "",
+            "spell-checker": "",
+            "units-of-measurements": "",
+            "subject-detection": "",
+            "column-analysis": "",
+            "type-annotation": "The approach defines a vector of features composed by TFIDF cosine similarity between label in the header and label of concept",
+            "predicate-annotation": "The approach defines a vector of features related to the presence and the frequency of the relation between the entities [C/R]",
+            "datatype-annotation": "",
+            "entity-linking": {
+                "candidate-generation": "lookup, YAGO catalog",
+                "entity-disambiguation": "features, similarity"
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "fully-automated",
+            "description": "It mesures the compatibility of the annotations using a new set features: inverse document frequency (IDF), similarity/distance between E and T."
+        },
+        "validation (gs)": "",
+        "code-availability": "no",
+        "licence": "NotSpecified",
+        "repository-link": "",
+        "inputs": {
+            "type-of-table": "Web Table",
+            "kg": {
+                "triple-store": "Yago",
+                "index": ""
+            }
+        },
+        "output-format": ""
+    },
+    {
+        "author": "Mulwad",
+        "year": 2010,
+        "title": "T2LD: Interpreting and Representing Tables as Linked Data⋆",
+        "conference-journal": "ISWC",
+        "name-of-approach": "T2LD",
+        "main-method": "supervised",
+        "technique": "SVM",
+        "domain": "independent",
+        "type": "",
+        "tasks": {
+            "cta": true,
+            "cpa": true,
+            "cea": true,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": "",
+            "spell-checker": "",
+            "units-of-measurements": "",
+            "subject-detection": "",
+            "column-analysis": "",
+            "type-annotation": "KBs are queried (e.g. Wikitology, DBpedia) to identify the best classes for each column",
+            "predicate-annotation": "The approach generates a set of candidate relations from the relations that exist between the strings in each row of the columns. ",
+            "datatype-annotation": "",
+            "entity-linking": {
+                "candidate-generation": "lookup, wikitology",
+                "entity-disambiguation": "features, ML"
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "",
+        "code-availability": "no",
+        "licence": "NotSpecified",
+        "repository-link": "",
+        "inputs": {
+            "type-of-table": "Web tables",
+            "kg": {
+                "triple-store": "Wikitology",
+                "index": ""
+            }
+        },
+        "output-format": "N3"
+    },
+    {
+        "author": "Syed",
+        "year": 2010,
+        "title": "Exploting a Web of Semantic Data for Interpreting Tables",
+        "conference-journal": "WSC",
+        "name-of-approach": "Wikitology",
+        "main-method": "unsupervised",
+        "technique": "lookup",
+        "domain": "independent",
+        "type": "",
+        "tasks": {
+            "cta": true,
+            "cpa": true,
+            "cea": true,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": "",
+            "spell-checker": "",
+            "units-of-measurements": "",
+            "subject-detection": "The column with the 'title' label is assumed as subject",
+            "column-analysis": "",
+            "type-annotation": "The class for the column is obtained from the entities class",
+            "predicate-annotation": "A set of relations between a pair of entities is returned by Wikitology. The relation that appears most often in the column is selected.",
+            "datatype-annotation": "",
+            "entity-linking": {
+                "candidate-generation": "lookup, Wikitology",
+                "entity-disambiguation": "features, contextual inf"
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "",
+        "code-availability": "no",
+        "licence": "NotSpecified",
+        "repository-link": "",
+        "inputs": {
+            "type-of-table": "Wikipedia tables",
+            "kg": {
+                "triple-store": "Wikitology",
+                "index": "Lucene for concepts"
+            }
+        },
+        "output-format": ""
+    },
+    {
+        "author": "Mulwad",
+        "year": 2011,
+        "title": "Automatically Generating Government Linked Data from Tables",
+        "conference-journal": "AAAI",
+        "name-of-approach": "",
+        "main-method": "supervised",
+        "technique": "Markov Network + PGM",
+        "domain": "independent",
+        "type": "",
+        "tasks": {
+            "cta": true,
+            "cpa": true,
+            "cea": true,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": "",
+            "spell-checker": "",
+            "units-of-measurements": "",
+            "subject-detection": "",
+            "column-analysis": "",
+            "type-annotation": "The algorithm determines the class for a table column based on the class of the individual strings in the column [C]",
+            "predicate-annotation": "The relation between entities that gets majority vote is chosen as the relation between the columns [R]",
+            "datatype-annotation": "",
+            "entity-linking": {
+                "candidate-generation": "lookup, wikitology",
+                "entity-disambiguation": "features, ML"
+            },
+            "nil-annotation": "These feature vectors are ranked using an SVM-Rank classifier. If the evidence is not strong enough, it suggests that the table cell represents a new entity not present in the \\ac{kg}, which is useful for discovering new entities in the table."
+        },
+        "user-revision": {
+            "type": "semi-automated",
+            "description": "Human in the loop"
+        },
+        "validation": "Custom GS, 15 tables",
+        "code-availability": "no",
+        "licence": "NotSpecified",
+        "repository-link": "",
+        "inputs": {
+            "type-of-table": "CSV, XML",
+            "kg": {
+                "triple-store": "DBpedia,Freebase,WordNet,Yago",
+                "index": ""
+            }
+        },
+        "output-format": "N3"
+    },
+    {
+        "author": "Venetis",
+        "year": 2011,
+        "title": "Recovering Semantics of Tables on the Web",
+        "conference-journal": "VLDB",
+        "name-of-approach": "",
+        "main-method": "unsupervised",
+        "technique": "lookup",
+        "domain": "independent",
+        "type": "",
+        "tasks": {
+            "cta": true,
+            "cpa": true,
+            "cea": false,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": "",
+            "spell-checker": "",
+            "units-of-measurements": "",
+            "subject-detection": "Using the SVM method we were able to identify the subject column in 94% of the tables.",
+            "column-analysis": "",
+            "type-annotation": "The column label is retrieved based on the isA database (instance, class). The boundaries of potential class label in the text are obtained by using the TnT POS tagger; To find the best class for a column, they maximize the probbaility of the values given the class label for the column.",
+            "predicate-annotation": "Given two columns, they look for corresponding pairs of values in the columns. If the relation R is extracted for many rows, then R is a likely relation represented by the column. They use TextRunner to extract triples to build a relation database. ",
+            "datatype-annotation": "",
+            "entity-linking": {
+                "candidate-generation": "",
+                "entity-disambiguation": ""
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "semi-automated",
+            "description": "To create a gold standard for labeling tables, a random sample of tables was taken. Tables without any class or relation labels assigned by the Majority algorithm with a permissive labeling threshold of 10% (R10) were removed. Tables with incorrectly identified subject columns or lacking meaningful concepts were manually eliminated. The remaining 168 tables were presented to human annotators along with the labels generated by the R10 algorithm"
+        },
+        "validation": "Custom GS",
+        "code-availability": "no",
+        "licence": "NotSpecified",
+        "repository-link": "",
+        "inputs": {
+            "type-of-table": "HTML tables",
+            "kg": {
+                "triple-store": "Yago",
+                "index": ""
+            }
+        },
+        "output-format": ""
+    },
+    {
+        "author": "Goel",
+        "year": 2012,
+        "title": "Exploiting Structure within Data for Accurate Labeling using Conditional Random Fields",
+        "conference-journal": "ICAI",
+        "name-of-approach": "",
+        "main-method": "supervised",
+        "technique": "CRF",
+        "domain": "dependent",
+        "type": "Weather forecast, flight status and geocoding",
+        "tasks": {
+            "cta": true,
+            "cpa": true,
+            "cea": false,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": "Strings are split at whitespaces and the resulting tokens are split so that the resultant parts are purely alphabetic, numeric or a single simbol character.",
+            "spell-checker": "",
+            "units-of-measurements": "",
+            "subject-detection": "",
+            "column-analysis": "",
+            "type-annotation": "The approach uses a contitional random field CRM to learn the labeling function, usign a graph structure of the features of every token. To predict the most likely label assignment to the field nodes they use Viterbi Algorithm.",
+            "predicate-annotation": "The accuracy also increases when we exploit the relationship between the field labels and the token labels.",
+            "datatype-annotation": "",
+            "entity-linking": {
+                "candidate-generation": "",
+                "entity-disambiguation": ""
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "",
+        "code-availability": "no",
+        "licence": "NotSpecified",
+        "repository-link": "",
+        "inputs": {
+            "type-of-table": "Web tables",
+            "kg": {
+                "triple-store": "",
+                "index": ""
+            }
+        },
+        "output-format": ""
+    },
+    {
+        "author": "Knoblock",
+        "year": 2012,
+        "title": "Semi-automatically Mapping Structured Sources into the Semantic Web",
+        "conference-journal": "ESWC",
+        "name-of-approach": "Karma",
+        "main-method": "supervised",
+        "technique": "CRF",
+        "domain": "independent",
+        "type": "",
+        "tasks": {
+            "cta": true,
+            "cpa": true,
+            "cea": false,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": "",
+            "spell-checker": "",
+            "units-of-measurements": "",
+            "subject-detection": "",
+            "column-analysis": "",
+            "type-annotation": "The approach uses a contitional random field CRF to learn the labeling function. It uses a feature vector that characterizes the syntactic structure of the column name and the value.",
+            "predicate-annotation": "Using the concept annotation, it creates different nodes. For each pair of nodes, it extracts the relation between them from the KG. To identify the right predicate,they use a Stiner Tree Algorithm for computing the minimal tree.",
+            "datatype-annotation": "",
+            "entity-linking": {
+                "candidate-generation": "",
+                "entity-disambiguation": ""
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "semi-automated",
+            "description": "The user can select the correct annotation using the UI. The system  considers the changes oparated by the users."
+        },
+        "validation": "",
+        "code-availability": "yes",
+        "licence": "Apache 2.0",
+        "repository-link": "https://github.com/usc-isi-i2/Web-Karma ",
+        "inputs": {
+            "type-of-table": "Data sources, Ontologies, Semantic Types (training dataset)",
+            "kg": {
+                "triple-store": "Personal ontologies",
+                "index": ""
+            }
+        },
+        "output-format": "Source model (used to generate RDF)"
+    },
+    {
+        "author": "Pimplikar",
+        "year": 2012,
+        "title": "Answering Table Queries on the Web using Column Keywords",
+        "conference-journal": "VLDB",
+        "name-of-approach": "",
+        "main-method": "unsupervised",
+        "technique": "probabilistic graphical model",
+        "domain": "independent",
+        "type": "",
+        "tasks": {
+            "cta": false,
+            "cpa": false,
+            "cea": false,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": "",
+            "spell-checker": "",
+            "units-of-measurements": "",
+            "subject-detection": "",
+            "column-analysis": "",
+            "type-annotation": "A unified approach based on graphical models to jointly label columns is proposed. Each column has to be labeled with one of the keywords in the query; a similarity score is computed between the keywords and the header tokens/the context of the table. The TF-IDF weighted cosine similarity is computed between the query term and the header. The sum of the soft-maxed match reliability of each term in the query weighted by the TF-IDF score of the term is the similarity between the term and the rest of the table.",
+            "predicate-annotation": "",
+            "datatype-annotation": "",
+            "entity-linking": {
+                "candidate-generation": "",
+                "entity-disambiguation": ""
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "",
+        "code-availability": "no",
+        "licence": "NotSpecified",
+        "repository-link": "",
+        "inputs": {
+            "type-of-table": "HTML tables",
+            "kg": {
+                "triple-store": "",
+                "index": ""
+            }
+        },
+        "output-format": ""
+    },
+    {
+        "author": "Wang",
+        "year": 2012,
+        "title": "Understanding Tables on the Web",
+        "conference-journal": "ER",
+        "name-of-approach": "",
+        "main-method": "unsupervised",
+        "technique": "pattern matching",
+        "domain": "independent",
+        "type": "",
+        "tasks": {
+            "cta": true,
+            "cpa": true,
+            "cea": true,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": "",
+            "spell-checker": "",
+            "units-of-measurements": "",
+            "subject-detection": "",
+            "column-analysis": "For each column, a concept is derived based on the assumption that entities in a column should belong to the same concept. A candidate schema is generated according to the header of each column; for each schema in the candidate schema list, they enumerate every column and compute a confidence score (they use Probase)",
+            "type-annotation": "For a given concept, Probase is used to find its entities and its attributes and viceversa",
+            "predicate-annotation": "pattern includes two main factors: the relation between entity and concept, and the relation between attribute and concept.",
+            "datatype-annotation": "",
+            "entity-linking": {
+                "candidate-generation": "pattern matching",
+                "entity-disambiguation": "features"
+            },
+            "nil-annotation": "we can expand Probase by incorporating this new evidence in the same way as we encounter a new Hearst’s pattern."
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "Custom, 200 wikipedia tables",
+        "code-availability": "no",
+        "licence": "NotSpecified",
+        "repository-link": "",
+        "inputs": {
+            "type-of-table": "HTML tables",
+            "kg": {
+                "triple-store": "",
+                "index": ""
+            }
+        },
+        "output-format": ""
+    },
+    {
+        "author": "Buche",
+        "year": 2013,
+        "title": "Fuzzy Web Data Tables Integration Guided by an Ontological and Terminological Resource",
+        "conference-journal": "IEEE",
+        "name-of-approach": "ONDINE",
+        "main-method": "unsupervised",
+        "technique": "lookup",
+        "domain": "independent",
+        "type": "microbial risk, chemical risk, aeronautics",
+        "tasks": {
+            "cta": true,
+            "cpa": true,
+            "cea": false,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": "",
+            "spell-checker": "",
+            "units-of-measurements": "",
+            "subject-detection": "",
+            "column-analysis": "Distinction between symbolic and numerical columns",
+            "type-annotation": "A score for each column is computed leveraging: 1. The column title; 2. The column content (computed as term similarity between the terms in the column and the terms in the OTR). wrt the concepts that appear in the signature of the relations belonging to the OTR.",
+            "predicate-annotation": "Each relation in the OTR is scored, using a proportion of simple concepts in the signature of the relation which are represented by columns in the table.",
+            "datatype-annotation": "Symbolic and numerical columns are distinguished, using knowledge in an Ontological and Terminological Resource (OTR) i.e., unit concepts. ",
+            "entity-linking": {
+                "candidate-generation": "",
+                "entity-disambiguation": ""
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "Custom, 90 tables",
+        "code-availability": "no",
+        "licence": "NotSpecified",
+        "repository-link": "",
+        "inputs": {
+            "type-of-table": "Domain specific web tables",
+            "kg": {
+                "triple-store": "",
+                "index": ""
+            }
+        },
+        "output-format": "XML documents representing data tables; RDF annotations"
+    },
+    {
+        "author": "Cruz",
+        "year": 2013,
+        "title": "GIVA: A Semantic Framework for Geospatial and Temporal Data Integration, Visualization, and Analytics",
+        "conference-journal": "SIGSPATIAL",
+        "name-of-approach": "Giva",
+        "main-method": "supervised",
+        "technique": "AgreementMaker",
+        "domain": "dependent",
+        "type": "",
+        "tasks": {
+            "cta": false,
+            "cpa": true,
+            "cea": false,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": "They translate the data into a common spatial data format. ",
+            "spell-checker": "",
+            "units-of-measurements": "",
+            "subject-detection": "",
+            "column-analysis": "They use string matching on the column header and perform random sampling on the values to find pattern similarities (to identify the column that contains spatial data).",
+            "type-annotation": "",
+            "predicate-annotation": "Geospatial classification schemes can be modeles using a part-of or is-a relationship",
+            "datatype-annotation": "",
+            "entity-linking": {
+                "candidate-generation": "",
+                "entity-disambiguation": ""
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "",
+        "code-availability": "no",
+        "licence": "NotSpecified",
+        "repository-link": "",
+        "inputs": {
+            "type-of-table": "GML, KML, Shapefile, MapInfo TAB, HTML table",
+            "kg": {
+                "triple-store": "",
+                "index": ""
+            }
+        },
+        "output-format": ""
+    },
+    {
+        "author": "Deng",
+        "year": 2013,
+        "title": "Scalable Column Concept Determination for Web Tables Using Large Knowledge Bases",
+        "conference-journal": "VLDB",
+        "name-of-approach": "",
+        "main-method": "unsupervised",
+        "technique": "lookup",
+        "domain": "independent",
+        "type": "",
+        "tasks": {
+            "cta": true,
+            "cpa": false,
+            "cea": false,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": "",
+            "spell-checker": "",
+            "units-of-measurements": "",
+            "subject-detection": "",
+            "column-analysis": "",
+            "type-annotation": "A similarity score between the column and the identified types is computed. They extend the MapReduce-based similarity joins to support scalable column concept determination. 1. For each column, the list of types that share at least one entity/cell  value with the column; 2. Compute top-k types of every column; 3. Compute the overlap similarity. Both exact-matching and fuzzy-matching similarity functions are employed.",
+            "predicate-annotation": "",
+            "datatype-annotation": "",
+            "entity-linking": {
+                "candidate-generation": "",
+                "entity-disambiguation": ""
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "",
+        "code-availability": "no",
+        "licence": "NotSpecified",
+        "repository-link": "",
+        "inputs": {
+            "type-of-table": "Web",
+            "kg": {
+                "triple-store": "DBpedia,Freebase,Yago",
+                "index": ""
+            }
+        },
+        "output-format": ""
+    },
+    {
+        "author": "Ermilov",
+        "year": 2013,
+        "title": "User-driven Semantic Mapping of Tabular Data",
+        "conference-journal": "I-SEMANTICS",
+        "name-of-approach": "",
+        "main-method": "unsupervised",
+        "technique": "pattern",
+        "domain": "independent",
+        "type": "",
+        "tasks": {
+            "cta": false,
+            "cpa": false,
+            "cea": false,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": "",
+            "spell-checker": "",
+            "units-of-measurements": "",
+            "subject-detection": "",
+            "column-analysis": "",
+            "type-annotation": "",
+            "predicate-annotation": "",
+            "datatype-annotation": "",
+            "entity-linking": {
+                "candidate-generation": "",
+                "entity-disambiguation": ""
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "semi-automated",
+            "description": "The RDF mapping obtained from Sparqlify-CSV a page is created for each resource on the mappings wiki, which uses the Semantic MediaWiki extension to allow for semantic annotations over the content of such pages. "
+        },
+        "validation": "",
+        "code-availability": "no",
+        "licence": "NotSpecified",
+        "repository-link": "",
+        "inputs": {
+            "type-of-table": "CSV, TSV, XLS, XLSX",
+            "kg": {
+                "triple-store": "",
+                "index": ""
+            }
+        },
+        "output-format": "RDF"
+    },
+    {
+        "author": "Mulwad",
+        "year": 2013,
+        "title": "Semantic Message Passing for Generating Linked Data from Tables",
+        "conference-journal": "ISWC",
+        "name-of-approach": "",
+        "main-method": "supervised",
+        "technique": "Markov Network",
+        "domain": "independent",
+        "type": "",
+        "tasks": {
+            "cta": true,
+            "cpa": true,
+            "cea": true,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": "Acronyms are expanded and stylized literal values (e.g. phone numbers) are recognized",
+            "spell-checker": "",
+            "units-of-measurements": "",
+            "subject-detection": "",
+            "column-analysis": "The query and rank module identifies a list of possible candidate assignments using data from DBpedia, YAGO and Wikitology. The column potential classes are the union of the classes of its cells (from DBpedia and YAGO).",
+            "type-annotation": "The initial entities assigned to a column’s cell values perform a majority voting over the YAGO and DBpedia class set to pick the top YAGO and DBpedia class. Each entity votes and increments the score of a class; the YAGO and DBpedia sets are then ordered and the top classes are considered. Each class is assigned a confidence score; if the score is below a certain threshold, the column header is assigned to NO-ANNOTATION",
+            "predicate-annotation": "The approach uses the links between pairs of entities to generate candidate relations. For a pair of cell values in the same row between two columns, the candidate entity sets for both cells are obtained. For each possible pairing, YAGO and DBpedia are queried to obtain relations in either direction. Also, relations between columns are considered.",
+            "datatype-annotation": "We use a regular expression to distinguish string mentions, which probably refer to entities, and literal constants such as numbers and measurements, which probably do not. If the cell value is a literal constant,candidate entities are not generated and the cell is mapped to no-annotation.",
+            "entity-linking": {
+                "candidate-generation": "lookup, wikitology",
+                "entity-disambiguation": "features, ML"
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "Web Manual, Web Relation, Wiki Manual ,Wiki Links",
+        "code-availability": "no",
+        "licence": "NotSpecified",
+        "repository-link": "",
+        "inputs": {
+            "type-of-table": "Web and Wikipedia HTML tables",
+            "kg": {
+                "triple-store": "DBpedia,Yago,Wikitology",
+                "index": ""
+            }
+        },
+        "output-format": "RDF"
+    },
+    {
+        "author": "Munoz",
+        "year": 2013,
+        "title": "Triplifying Wikipedia’s Tables",
+        "conference-journal": "LD4IE",
+        "name-of-approach": "",
+        "main-method": "unsupervised",
+        "technique": "exact match",
+        "domain": "independent",
+        "type": "",
+        "tasks": {
+            "cta": false,
+            "cpa": true,
+            "cea": true,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": "Each page Wikipedia containing HTML tables is cleaned and canonicalized before extracting tables fixing syntax mistakes using CyberNeko",
+            "spell-checker": "",
+            "units-of-measurements": "",
+            "subject-detection": "",
+            "column-analysis": "",
+            "type-annotation": "",
+            "predicate-annotation": "DBpedia is queried for relationships that exist between entities in cells of the same row. All pairs are queried. An additional query is performed to find the relation between entities in a row and the subject of the page the table belongs to. They look for relations that hold in either direction. ",
+            "datatype-annotation": "",
+            "entity-linking": {
+                "candidate-generation": "no candidate since the purpose is to extract rdf triples",
+                "entity-disambiguation": "redirects"
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "They extract 250 triples from the set and manually annotate them to produce a GS to test the approach on.",
+        "code-availability": "no",
+        "licence": "NotSpecified",
+        "repository-link": "",
+        "inputs": {
+            "type-of-table": "Wikipedia tables",
+            "kg": {
+                "triple-store": "DBpedia",
+                "index": ""
+            }
+        },
+        "output-format": "RDF"
+    },
+    {
+        "author": "Quercini",
+        "year": 2013,
+        "title": "Entity Discovery and Annotation in Tables",
+        "conference-journal": "EDBT",
+        "name-of-approach": "",
+        "main-method": "unsupervised",
+        "technique": "lookup",
+        "domain": "independent",
+        "type": "",
+        "tasks": {
+            "cta": false,
+            "cpa": false,
+            "cea": true,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": "Spatial data are broken down into their components via the Google Geocoding API. To train the multiclass classifier they convert snippets to lowercase and tokenize. Then they remove stopwords and stem the reimainders with the Porter algorithm. Each token is then associated with its normalized frequency",
+            "spell-checker": "",
+            "units-of-measurements": "",
+            "subject-detection": "",
+            "column-analysis": "Cells are scanned so as to eliminate those that are not likely to contain the names of entities of a given type. They look at the syntactic properties of the contents of each cell. They use regex to identify patterns of e.g. phone numbers, URLs, emails, or leverage GFT types to rule out the cells containing a specific type of information that is not necessary to identify a pre-determined type (e.g. cells that match the email pattern are excluded when identifying cells belonging to the restaurant type). ",
+            "type-annotation": "They perform type (concepts in ontology) annotation at cell-level, so that each column can contain more than one type. Once the table has been annotated, based on the assumption that data types in a column are homogenous in well-formed tables, incorrect annotations are discarded",
+            "predicate-annotation": "",
+            "datatype-annotation": "regex",
+            "entity-linking": {
+                "candidate-generation": "",
+                "entity-disambiguation": ""
+            },
+            "nil-annotation": "Information about unknown entities is found on the Web so as to annotate them with the correct type. They use the content of the cell to query the Web and use the obtained results (which are links to Web pages+snippet) to determine whether the cell contains the name of an entity of a certain type. The result of a query is a snippet and they use a text classifier to determine whether the snippet describes an entity of a certain type. "
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "",
+        "code-availability": "no",
+        "licence": "NotSpecified",
+        "repository-link": "",
+        "inputs": {
+            "type-of-table": "Google Fusion Tables",
+            "kg": {
+                "triple-store": "DBpedia",
+                "index": ""
+            }
+        },
+        "output-format": ""
+    },
+    {
+        "author": "Zhang",
+        "year": 2013,
+        "title": "InfoGather+: Semantic Matching and Annotation of Numeric and Time-Varying Attributes in Web Tables",
+        "conference-journal": "SIGMOD",
+        "name-of-approach": "InfoGather+",
+        "main-method": "unsupervised",
+        "technique": "features",
+        "domain": "independent",
+        "type": "",
+        "tasks": {
+            "cta": true,
+            "cpa": false,
+            "cea": false,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": "YES",
+            "spell-checker": "",
+            "units-of-measurements": "We assume that the set of conversion rules are known up- front. They are specified by the system administrator (or domain experts) using a simple, rule specification language. Each rule has 3 components: a left-hand side (LHS), a con- version factor (θ) and a right-hand side (RHS). The LHS and RHS are strings describing units and scales. For exam- ple, for the rule Euro = 1.3 × USD, the LHS is Euro, θ is 1.3 and the RHS is USD. Figure 3(a) shows more examples of rules.",
+            "subject-detection": "",
+            "column-analysis": "",
+            "type-annotation": "They infer label information from semantically matching columns of other Web tables. Given a set of pre-defined rules and: Case 1: a set of unit/scale descriptors (eg USD, EUR etc), they annotate the column with the value if it (or one of its synonyms) either appears in the header or column values.  Case 2: a set of years strings, they annotate the column with the value if it occurs in the header or in the context of the table.",
+            "predicate-annotation": "",
+            "datatype-annotation": "",
+            "entity-linking": {
+                "candidate-generation": "",
+                "entity-disambiguation": ""
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "semi-automated",
+            "description": ""
+        },
+        "validation": "Experiments conducted on three real-life datasets of web tables,extracted from a recent snapshot of Microsoft Bing search engine",
+        "code-availability": "no",
+        "licence": "NotSpecified",
+        "repository-link": "",
+        "inputs": {
+            "type-of-table": "EAB (entity-attribute binary relationships) HTML Web tables ",
+            "kg": {
+                "triple-store": "",
+                "index": ""
+            }
+        },
+        "output-format": ""
+    },
+    {
+        "author": "Zwicklbauer",
+        "year": 2013,
+        "title": "Towards Disambiguating Web Tables",
+        "conference-journal": "ISWC",
+        "name-of-approach": "",
+        "main-method": "unsupervised",
+        "technique": "features",
+        "domain": "independent",
+        "type": "",
+        "tasks": {
+            "cta": true,
+            "cpa": false,
+            "cea": false,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": "",
+            "spell-checker": "",
+            "units-of-measurements": "",
+            "subject-detection": "",
+            "column-analysis": "",
+            "type-annotation": "majority voting",
+            "predicate-annotation": "",
+            "datatype-annotation": "",
+            "entity-linking": {
+                "candidate-generation": "",
+                "entity-disambiguation": ""
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "Subset of Limaye",
+        "code-availability": "no",
+        "licence": "NotSpecified",
+        "repository-link": "",
+        "inputs": {
+            "type-of-table": "",
+            "kg": {
+                "triple-store": "DBpedia",
+                "index": ""
+            }
+        },
+        "output-format": ""
+    },
+    {
+        "author": "",
+        "year": 2009,
+        "title": "",
+        "conference-journal": "",
+        "name-of-approach": "",
+        "main-method": "",
+        "technique": "",
+        "domain": "",
+        "type": "",
+        "tasks": {
+            "cta": false,
+            "cpa": false,
+            "cea": false,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": "",
+            "spell-checker": "",
+            "units-of-measurements": "",
+            "subject-detection": "",
+            "column-analysis": "",
+            "type-annotation": "",
+            "predicate-annotation": "",
+            "datatype-annotation": "",
+            "entity-linking": {
+                "candidate-generation": "",
+                "entity-disambiguation": ""
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "",
+            "description": ""
+        },
+        "validation": "",
+        "code-availability": "",
+        "licence": "",
+        "repository-link": "",
+        "inputs": {
+            "type-of-table": "",
+            "kg": {
+                "triple-store": "",
+                "index": ""
+            }
+        },
+        "output-format": ""
+    }
+]

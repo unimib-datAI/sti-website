@@ -1,71 +1,78 @@
 import React from "react"
-import { type IColumns } from "./types"
+import { type IColumns, type IDomain, type IEntityLinking, type IKg, type IMethod, type ITitle, type IUserRevision } from "./types"
 import { type ColumnDef } from "@tanstack/react-table"
+import { cn } from "@/lib/utils"
+import { Check, ExternalLink, Info, X } from "lucide-react"
 
 export const columns: ColumnDef<IColumns>[] = [
   {
-    accessorKey: "author",
-    header: "Author",
-    meta: {
-      width: "w-[100px]"
-    }
-  },
-  {
     accessorKey: "year",
     header: "Year",
+    enableHiding: false,
     meta: {
       width: "w-[50px]",
       class: "item-center"
     }
   },
   {
+    accessorKey: "author",
+    header: "First author",
+    enableHiding: false,
+    meta: {
+      width: "w-[110px]"
+    }
+  },
+  {
     accessorKey: "title",
     header: "Title",
+    enableHiding: false,
+    cell: (cell) => {
+      const title = cell.getValue() as ITitle
+      return (
+        <a
+          href={title.link}
+          target="_blank"
+          >{title.text}</a>
+      )
+    },
     meta: {
       width: "w-[450px]"
     }
   },
   {
     accessorKey: "conference-journal",
-    header: "Conference Journal",
+    header: "Conf. / Journal",
     meta: {
-      width: "w-[250px]"
+      width: "w-[120px]"
     }
   },
   {
     accessorKey: "name-of-approach",
     header: "Name of Approach",
     meta: {
-      width: "w-[300px]"
+      width: "w-[150px]"
     }
   },
   {
     accessorKey: "main-method",
     header: "Main Method",
+    cell: (cell) => {
+      const method = cell.getValue() as IMethod;
+      const color = method.type === "sup" ? "bg-green-500" : method.type === "unsup" ? "bg-red-500" : "bg-blue-500";
+      return <span><span className={cn(color, "py-0.5 px-1.5 rounded-full text-[0.7rem]")}>{method.type}</span><span className="ml-2">{method.technique}</span></span>
+    },
     meta: {
-      width: "w-[100px]"
-    }
-  },
-  {
-    accessorKey: "technique",
-    header: "Technique",
-    meta: {
-      width: "w-[100px]"
+      width: "w-[120px]"
     }
   },
   {
     accessorKey: "domain",
     header: "Domain",
-    meta: {
-      width: "w-[100px]"
-    }
-  },
-  {
-    accessorKey: "type",
-    header: "Type",
-    meta: {
-      width: "w-[200px]"
-    }
+    cell: (cell) => {
+      const domain = cell.getValue() as IDomain;
+      const color = domain.type === "dependent" ? "bg-green-500" : "bg-red-500";
+      return <span><span className={cn(color, "py-0.5 px-1.5 rounded-full text-[0.7rem]")}>{domain.domain}</span><span className="ml-2">{domain.type}</span></span>
+    },
   },
   {
     header: "Tasks",
@@ -77,24 +84,24 @@ export const columns: ColumnDef<IColumns>[] = [
       {
         accessorKey: "tasks.cta",
         header: "CTA",
-        cell: (cell) => <span className="text-center">{cell.getValue() ? "✅" : "❌"}</span>,
+        cell: (cell) => <span className="flex justify-center">{cell.getValue() ? <Check className="text-green-400 h-5 w-5" /> : <X className="text-red-400 h-5 w-5" />}</span>,
       },
       {
         accessorKey: "tasks.cpa",
         header: "CPA",
-        cell: cell => cell.getValue() ? "✅" : "❌",
+        cell: cell => <span className="flex justify-center">{cell.getValue() ? <Check className="text-green-400 h-5 w-5" /> : <X className="text-red-400 h-5 w-5" />}</span>,
 
       },
       {
         accessorKey: "tasks.cea",
         header: "CEA",
-        cell: cell => cell.getValue() ? "✅" : "❌",
+        cell: cell => <span className="flex justify-center">{cell.getValue() ? <Check className="text-green-400 h-5 w-5" /> : <X className="text-red-400 h-5 w-5" />}</span>,
 
       },
       {
         accessorKey: "tasks.cnea",
         header: "CNEA",
-        cell: cell => cell.getValue() ? "✅" : "❌",
+        cell: cell => <span className="flex justify-center">{cell.getValue() ? <Check className="text-green-400 h-5 w-5" /> : <X className="text-red-400 h-5 w-5" />}</span>,
       },
     ],
   },
@@ -108,107 +115,177 @@ export const columns: ColumnDef<IColumns>[] = [
       {
         accessorKey: "steps.data-preparation",
         header: "Data Preparation",
-        meta: {
-          width: "w-[65ch]"
-        }
+        cell: (cell) => {
+          const value = cell.getValue() as string;
+
+          return value ? (
+            <div className="flex justify-center">
+              <span className="inline-flex text-white items-center bg-green-400 rounded-full px-0.5 cursor-help" title={value}>
+              <Check className="h-5 w-5 text-green-400" />
+              <Info className="ml-1 h-4 w-4" />
+              </span>
+            </div>
+          ) : (<span className="flex justify-center"><X className="text-red-400 h-5 w-5" /></span>)
+        },
       },
       {
         accessorKey: "steps.spell-checker",
         header: "Spell Checker",
+        cell: (cell) => {
+          const value = cell.getValue() as string;
+
+          return value ? (
+            <div className="flex justify-center">
+              <span className="inline-flex text-white items-center bg-green-400 rounded-full px-0.5 cursor-help" title={value}>
+              <Check className="h-5 w-5 text-green-400" />
+              <Info className="ml-1 h-4 w-4" />
+              </span>
+            </div>
+          ) : (<span className="flex justify-center"><X className="text-red-400 h-5 w-5" /></span>)
+        },
       },
       {
         accessorKey: "steps.units-of-measurements",
         header: "Units of Measurements",
+        cell: (cell) => {
+          const value = cell.getValue() as string;
+
+          return value ? (
+            <div className="flex justify-center">
+              <span className="inline-flex text-white items-center bg-green-400 rounded-full px-0.5 cursor-help" title={value}>
+              <Check className="h-5 w-5 text-green-400" />
+              <Info className="ml-1 h-4 w-4" />
+              </span>
+            </div>
+          ) : (<span className="flex justify-center"><X className="text-red-400 h-5 w-5" /></span>)
+        },
       },
       {
         accessorKey: "steps.subject-detection",
         header: "Subject Detection",
-        meta: {
-          width: "w-[65ch]"
-        }
+        cell: (cell) => {
+          const value = cell.getValue() as string;
+
+          return value ? (
+            <div className="flex justify-center">
+              <span className="inline-flex text-white items-center bg-green-400 rounded-full px-0.5 cursor-help" title={value}>
+              <Check className="h-5 w-5 text-green-400" />
+              <Info className="ml-1 h-4 w-4" />
+              </span>
+            </div>
+          ) : (<span className="flex justify-center"><X className="text-red-400 h-5 w-5" /></span>)
+        },
       },
       {
         accessorKey: "steps.column-analysis",
         header: "Column Analysis",
-        meta: {
-          width: "w-[65ch]"
-        }
+        cell: (cell) => {
+          const value = cell.getValue() as string;
+
+          return value ? (
+            <div className="flex justify-center">
+              <span className="inline-flex text-white items-center rounded-full px-0.5 cursor-help" title={value}>
+              <Check className="h-5 w-5 text-green-400" />
+              <Info className="ml-1 h-4 w-4" />
+              </span>
+            </div>
+          ) : (<span className="flex justify-center"><X className="text-red-400 h-5 w-5" /></span>)
+        },
       },
       {
         accessorKey: "steps.type-annotation",
         header: "Type Annotation",
-        meta: {
-          width: "w-[65ch]"
-        }
+        cell: (cell) => {
+          const value = cell.getValue() as string;
+
+          return value ? (
+            <div className="flex justify-center">
+              <span className="inline-flex text-white items-center rounded-full px-0.5 cursor-help" title={value}>
+              <Check className="h-5 w-5 text-green-400" />
+              <Info className="ml-1 h-4 w-4" />
+              </span>
+            </div>
+          ) : (<span className="flex justify-center"><X className="text-red-400 h-5 w-5" /></span>)
+        },
       },
       {
         accessorKey: "steps.predicate-annotation",
         header: "Predicate Annotation",
-        meta: {
-          width: "w-[65ch]"
-        }
+        cell: (cell) => {
+          const value = cell.getValue() as string;
+
+          return value ? (
+            <div className="flex justify-center">
+              <span className="inline-flex text-white items-center rounded-full px-0.5 cursor-help" title={value}>
+              <Check className="h-5 w-5 text-green-400" />
+              <Info className="ml-1 h-4 w-4" />
+              </span>
+            </div>
+          ) : (<span className="flex justify-center"><X className="text-red-400 h-5 w-5" /></span>)
+        },
       },
       {
         accessorKey: "steps.datatype-annotation",
         header: "Datatype Annotation",
-        meta: {
-          width: "w-[65ch]"
-        }
+        cell: (cell) => {
+          const value = cell.getValue() as string;
+
+          return value ? (
+            <div className="flex justify-center">
+              <span className="inline-flex text-white items-center rounded-full px-0.5 cursor-help" title={value}>
+              <Check className="h-5 w-5 text-green-400" />
+              <Info className="ml-1 h-4 w-4" />
+              </span>
+            </div>
+          ) : (<span className="flex justify-center"><X className="text-red-400 h-5 w-5" /></span>)
+        },
       },
       {
+        accessorKey: "steps.entity-linking",
         header: "Entity Linking",
-        meta: {
-          width: "w-auto",
-          class: "justify-center"
+        cell: (cell) => {
+          const entityLinking = cell.getValue() as IEntityLinking;
+
+          return entityLinking.description ? (
+            <div className="flex justify-center">
+              <span className="inline-flex text-white items-center rounded-full px-0.5 cursor-help" title={`${entityLinking.description}\nCANDIDATE GENERATION: ${entityLinking["candidate-generation"]}\n\nENTITY DISAMBIGUATION: ${entityLinking["entity-disambiguation"]}`}>
+              <Check className="h-5 w-5 text-green-400" />
+              <Info className="ml-1 h-4 w-4" />
+              </span>
+            </div>
+          ) : (<span className="flex justify-center"><X className="text-red-400 h-5 w-5" /></span>)
         },
-        columns: [
-          {
-            accessorKey: "steps.entity-linking.candidate-generation",
-            header: "Candidate Generation",
-            meta: {
-              width: "w-[200px]"
-            }
-          },
-          {
-            accessorKey: "steps.entity-linking.entity-disambiguation",
-            header: "Entity Disambiguation",
-            meta: {
-              width: "w-[200px]"
-            }
-          },
-        ],
       },
       {
         accessorKey: "steps.nil-annotation",
         header: "Nil Annotation",
-        meta: {
-          width: "w-[65ch]"
-        }
+        cell: (cell) => {
+          const value = cell.getValue() as string;
+
+          return value ? (
+            <div className="flex justify-center">
+              <span className="inline-flex text-white items-center rounded-full px-0.5 cursor-help" title={value}>
+              <Check className="h-5 w-5 text-green-400" />
+              <Info className="ml-1 h-4 w-4" />
+              </span>
+            </div>
+          ) : (<span className="flex justify-center"><X className="text-red-400 h-5 w-5" /></span>)
+        },
       },
     ],
   },
   {
+    accessorKey: "user-revision",
     header: "User Revision",
-    meta: {
-      width: "w-auto",
-      class: "justify-center"
+    cell: (cell) => {
+      const userRevision = cell.getValue() as IUserRevision;
+      const color = userRevision.type === "Fully-automated" ? "bg-green-500" : userRevision.type === "Semi-automated" ? "bg-blue-500" : "bg-red-500";
+      return userRevision.description ? (
+          <span className={cn(color,"py-0.5 pl-1.5 pr-0.5 rounded-full text-[0.7rem] cursor-help inline-flex")} title={userRevision.description}>{userRevision.type}{userRevision.description && <Info className="ml-1 h-4 w-4" />}</span>
+      ) : (
+          <span className={cn(color, "py-0.5 px-1.5 rounded-full text-[0.7rem]")}>{userRevision.type}</span>
+      )
     },
-    columns: [
-      {
-        accessorKey: "user-revision.type",
-        header: "Type",
-        meta: {
-          width: "w-[150px]"
-        }
-      },
-      {
-        accessorKey: "user-revision.description",
-        header: "Description",
-        meta: {
-          width: "w-[65ch]"
-        }
-      },
-    ],
   },
   {
     accessorKey: "validation",
@@ -220,13 +297,14 @@ export const columns: ColumnDef<IColumns>[] = [
   {
     accessorKey: "code-availability",
     header: "Code Availability",
+    cell: (cell) => {
+      const codeAvailability = cell.getValue() as string;
+      return <span className="flex justify-center">{codeAvailability ? <a href={codeAvailability}><ExternalLink className="h-5 w-5" /></a> : <X className="text-red-400 h-5 w-5" />}</span>
+    }
   },
   {
     accessorKey: "licence",
     header: "Licence",
-  },
-  {
-    accessorKey: "repository-link",
   },
   {
     header: "Inputs",
@@ -243,24 +321,15 @@ export const columns: ColumnDef<IColumns>[] = [
         }
       },
       {
+        accessorKey: "inputs.kg",
         header: "Knowledge Graph",
-        meta: {
-          width: "w-auto",
-          class: "justify-center"
+        cell: (cell) => {
+          const kg = cell.getValue() as IKg;
+          return <span className="flex justify-center">{kg["triple-store"]}{kg.index && ` - ${kg.index}`}</span>
         },
-        columns: [
-          {
-            accessorKey: "inputs.kg.triple-store",
-            header: "Triple store",
-          },
-          {
-            accessorKey: "inputs.kg.index",
-            header: "Index",
-            meta: {
-              width: "w-[150px]"
-            }
-          },
-        ],
+        meta: {
+          width: "w-[150px]"
+        }
       },
     ],
   },
