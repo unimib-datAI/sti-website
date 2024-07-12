@@ -62,7 +62,7 @@ export interface ISteps {
 
 export interface IDataPreparation {
   "description": string
-  "data-cleaning": string
+  "spell-checker": string
   "units-of-measurements": string
 }
 
