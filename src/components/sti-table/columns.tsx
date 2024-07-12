@@ -42,6 +42,7 @@ export const columns: ColumnDef<IColumns>[] = [
   {
     accessorKey: "conference-journal",
     header: "Conf. / Journal",
+    cell: (cell) => <span className="flex justify-center">{cell.getValue() as string}</span>,
     meta: {
       width: "w-[120px]"
     }
