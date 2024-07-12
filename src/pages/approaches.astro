@@ -1,13 +1,26 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import Bgblur from "@components/Bgblur.astro";
-import Hero from "@components/Hero.astro";
-import Timeline from "@components/Timeline.astro";
+import Section from "@components/Section.astro";
 ---
 
 <Layout title="Approaches">
   <main class="px-4">
-    <Hero />
-    <Timeline />
+    <Section>
+      <div class="flex items-center">
+        <h1
+          class="py-4 text-4xl font-bold bg-gradient-to-r from-[#9E0974] to-[#6665E9] inline-block text-transparent bg-clip-text"
+        >
+          Approaches
+        </h1>
+        <span
+          class="px-3 py-1 text-sm rounded-full ml-4 bg-gradient-to-r from-[#9E0974] to-[#6665E9]"
+          >Cooming soon</span
+        >
+      </div>
+      <p>
+        In this page, a comparative analysis of all STI approaches will be
+        included.
+      </p>
+    </Section>
   </main>
 </Layout>
