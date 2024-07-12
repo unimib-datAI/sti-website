@@ -64,8 +64,8 @@ export const Table = (props: Props) => {
           )
         })}
       </div>
-    <div className='mt-5 overflow-x-auto'>
-      <table className='rounded-lg overflow-hidden text-xs'>
+    <div className='mt-5 overflow-x-auto rounded-lg border border-slate-600'>
+      <table className='text-xs'>
         <thead>
           {table.getHeaderGroups().map(headerGroup => (
             <tr key={headerGroup.id} className={cn('bg-tableTop text-tableText')}>
