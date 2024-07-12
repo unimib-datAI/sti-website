@@ -305,6 +305,7 @@ export const columns: ColumnDef<IColumns>[] = [
   {
     accessorKey: "licence",
     header: "Licence",
+    cell: (cell) => <span className="py-0.5 px-1.5 rounded-full text-[0.7rem] bg-gray-600">{cell.getValue() as string}</span>
   },
   {
     header: "Inputs",
