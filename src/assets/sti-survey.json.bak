@@ -46,7 +46,7 @@
         },
         "validation": "",
         "code-availability": "",
-        "licence": "NotSpecified",
+        "license": "NotSpecified",
         "inputs": {
             "type-of-table": "web table",
             "kg": {
@@ -103,7 +103,7 @@
         },
         "validation": "",
         "code-availability": "",
-        "licence": "NotSpecified",
+        "license": "NotSpecified",
         "inputs": {
             "type-of-table": "web table",
             "kg": {
@@ -160,7 +160,7 @@
         },
         "validation": "",
         "code-availability": "",
-        "licence": "NotSpecified",
+        "license": "NotSpecified",
         "inputs": {
             "type-of-table": "web table",
             "kg": {

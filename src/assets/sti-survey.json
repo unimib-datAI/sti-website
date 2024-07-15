@@ -46,7 +46,7 @@
         },
         "validation": "",
         "code-availability": "",
-        "licence": "NotSpecified",
+        "license": "NotSpecified",
         "inputs": {
             "type-of-table": "web table",
             "kg": {
@@ -103,7 +103,7 @@
         },
         "validation": "",
         "code-availability": "",
-        "licence": "NotSpecified",
+        "license": "NotSpecified",
         "inputs": {
             "type-of-table": "Web table (XML)",
             "kg": {
@@ -160,7 +160,7 @@
         },
         "validation": "",
         "code-availability": "",
-        "licence": "NotSpecified",
+        "license": "NotSpecified",
         "inputs": {
             "type-of-table": "HTML tables",
             "kg": {
@@ -217,7 +217,7 @@
         },
         "validation": "",
         "code-availability": "",
-        "licence": "NotSpecified",
+        "license": "NotSpecified",
         "inputs": {
             "type-of-table": "Web Table",
             "kg": {
@@ -274,7 +274,7 @@
         },
         "validation": "",
         "code-availability": "",
-        "licence": "NotSpecified",
+        "license": "NotSpecified",
         "inputs": {
             "type-of-table": "Web tables",
             "kg": {
@@ -331,7 +331,7 @@
         },
         "validation": "",
         "code-availability": "",
-        "licence": "NotSpecified",
+        "license": "NotSpecified",
         "inputs": {
             "type-of-table": "Wikipedia tables",
             "kg": {
@@ -388,7 +388,7 @@
         },
         "validation": "Custom GS, 15 tables",
         "code-availability": "",
-        "licence": "NotSpecified",
+        "license": "NotSpecified",
         "inputs": {
             "type-of-table": "CSV, XML",
             "kg": {
@@ -445,7 +445,7 @@
         },
         "validation": "Custom GS",
         "code-availability": "",
-        "licence": "NotSpecified",
+        "license": "NotSpecified",
         "inputs": {
             "type-of-table": "HTML tables",
             "kg": {
@@ -502,7 +502,7 @@
         },
         "validation": "",
         "code-availability": "",
-        "licence": "NotSpecified",
+        "license": "NotSpecified",
         "inputs": {
             "type-of-table": "Web tables",
             "kg": {
@@ -559,7 +559,7 @@
         },
         "validation": "",
         "code-availability": "https://github.com/usc-isi-i2/Web-Karma",
-        "licence": "Apache 2.0",
+        "license": "Apache 2.0",
         "inputs": {
             "type-of-table": "Data sources Ontologies Semantic Types (training dataset)",
             "kg": {
@@ -616,7 +616,7 @@
         },
         "validation": "",
         "code-availability": "",
-        "licence": "NotSpecified",
+        "license": "NotSpecified",
         "inputs": {
             "type-of-table": "HTML tables",
             "kg": {
@@ -673,7 +673,7 @@
         },
         "validation": "Custom, 200 wikipedia tables",
         "code-availability": "",
-        "licence": "NotSpecified",
+        "license": "NotSpecified",
         "inputs": {
             "type-of-table": "HTML tables",
             "kg": {
@@ -730,7 +730,7 @@
         },
         "validation": "Custom, 90 tables",
         "code-availability": "",
-        "licence": "NotSpecified",
+        "license": "NotSpecified",
         "inputs": {
             "type-of-table": "Domain specific web tables",
             "kg": {
@@ -787,7 +787,7 @@
         },
         "validation": "",
         "code-availability": "",
-        "licence": "NotSpecified",
+        "license": "NotSpecified",
         "inputs": {
             "type-of-table": "GML, KML, Shapefile, MapInfo TAB, HTML table",
             "kg": {
@@ -844,7 +844,7 @@
         },
         "validation": "",
         "code-availability": "",
-        "licence": "NotSpecified",
+        "license": "NotSpecified",
         "inputs": {
             "type-of-table": "Web",
             "kg": {
@@ -901,7 +901,7 @@
         },
         "validation": "",
         "code-availability": "",
-        "licence": "NotSpecified",
+        "license": "NotSpecified",
         "inputs": {
             "type-of-table": "CSV, TSV, XLS, XLSX",
             "kg": {
@@ -958,7 +958,7 @@
         },
         "validation": "Web Manual, Web Relation, Wiki Manual, Wiki Links",
         "code-availability": "",
-        "licence": "NotSpecified",
+        "license": "NotSpecified",
         "inputs": {
             "type-of-table": "Web and Wikipedia HTML tables",
             "kg": {
@@ -1015,7 +1015,7 @@
         },
         "validation": "They extract 250 triples from the set and manually annotate them to produce a GS to test the approach on.",
         "code-availability": "",
-        "licence": "NotSpecified",
+        "license": "NotSpecified",
         "inputs": {
             "type-of-table": "Wikipedia tables",
             "kg": {
@@ -1072,7 +1072,7 @@
         },
         "validation": "",
         "code-availability": "",
-        "licence": "NotSpecified",
+        "license": "NotSpecified",
         "inputs": {
             "type-of-table": "Google Fusion Tables",
             "kg": {
@@ -1129,7 +1129,7 @@
         },
         "validation": "Experiments conducted on three real-life datasets of web tables,extracted from a recent snapshot of Microsoft Bing search engine",
         "code-availability": "",
-        "licence": "NotSpecified",
+        "license": "NotSpecified",
         "inputs": {
             "type-of-table": "EAB (entity-attribute binary relationships) HTML Web tables ",
             "kg": {
@@ -1186,7 +1186,7 @@
         },
         "validation": "Subset of Limaye",
         "code-availability": "",
-        "licence": "NotSpecified",
+        "license": "NotSpecified",
         "inputs": {
             "type-of-table": "DBpedia",
             "kg": {
@@ -1243,7 +1243,7 @@
         },
         "validation": "ClueWeb09 dataset",
         "code-availability": "",
-        "licence": "NotSpecified",
+        "license": "NotSpecified",
         "inputs": {
             "type-of-table": "",
             "kg": {
@@ -1300,7 +1300,7 @@
         },
         "validation": "We evaluated our approach on a dataset of 29 museum data sources",
         "code-availability": "",
-        "licence": "NotSpecified",
+        "license": "NotSpecified",
         "inputs": {
             "type-of-table": "Multiple sources modeled using the EDM, AAC, SKOS, Dublin Core Metadata Terms, FOAF, ORE, and ElementsGr2 ontologies",
             "kg": {
@@ -1357,7 +1357,7 @@
         },
         "validation": "TabEL",
         "code-availability": "http://websail-fe.cs.northwestern.edu/TabEL/ ",
-        "licence": "CCA 4.0",
+        "license": "CCA 4.0",
         "inputs": {
             "type-of-table": "Web table (XML)",
             "kg": {
@@ -1414,7 +1414,7 @@
         },
         "validation": "we used data from the museum domain consisting of 29 data sources in diverse formats from various art museums in the U.S. Semantic labels",
         "code-availability": "https://github.com/usc-isi-i2/eswc-2015-semantic-typing",
-        "licence": "Apache 2.0",
+        "license": "Apache 2.0",
         "inputs": {
             "type-of-table": "CSV",
             "kg": {
@@ -1471,7 +1471,7 @@
         },
         "validation": "T2D",
         "code-availability": "https://github.com/olehmberg/T2KMatch",
-        "licence": "Apache 2.0",
+        "license": "Apache 2.0",
         "inputs": {
             "type-of-table": "Web Table (HTML)",
             "kg": {
@@ -1528,7 +1528,7 @@
         },
         "validation": "Improved T2D",
         "code-availability": "https://github.com/dice-group/TAIPAN",
-        "licence": "GPL 3.0",
+        "license": "GPL 3.0",
         "inputs": {
             "type-of-table": "Not specified, they mention only tables. DBpedia Table Dataset (DBD)",
             "kg": {
@@ -1585,7 +1585,7 @@
         },
         "validation": "by splitting the DBpedia data into a test and training dataset.",
         "code-availability": "https://github.com/sebneu/number_labelling",
-        "licence": "Apache 2.0",
+        "license": "Apache 2.0",
         "inputs": {
             "type-of-table": "CSV",
             "kg": {
@@ -1642,7 +1642,7 @@
         },
         "validation": "T2D",
         "code-availability": "https://github.com/minhptx/iswc-2016-semantic-labeling",
-        "licence": "Apache 2.0",
+        "license": "Apache 2.0",
         "inputs": {
             "type-of-table": "The input of our system is an unlabeled attribute and a set of labeled attributes as domain data.",
             "kg": {
@@ -1699,7 +1699,7 @@
         },
         "validation": "Museum data, eventhough they say that the use some tables of museum data from the gold standard it does not mention which GS they use. The link to the datasets https://github.com/taheriyan/jws-knowledge-graphs-2015",
         "code-availability": "https://github.com/usc-isi-i2/Web-Karma",
-        "licence": "Apache 2.0",
+        "license": "Apache 2.0",
         "inputs": {
             "type-of-table": "XML files and JSON files. They can also import the domain ontologies they want to use for modeling the data. The system then automatically suggests a semantic model for the loaded source.",
             "kg": {
@@ -1756,7 +1756,7 @@
         },
         "validation": "",
         "code-availability": "https://github.com/usc-isi-i2/Web-Karma",
-        "licence": "Apache 2.0",
+        "license": "Apache 2.0",
         "inputs": {
             "type-of-table": "CSV, XML and JSON",
             "kg": {
@@ -1813,7 +1813,7 @@
         },
         "validation": "TD2, Limaye, Wikipedia (a GS constructed by the authors created by extracting the hyperlinks of existing Wikipedia tables to Wikipedia pages, which we have replaced with annotations to the corresponding entities from the October 2015 version of DBpedia.) Since the header rows in Wikipedia tables are not linked to properties, our gold standard does not contain schema-level mappings.",
         "code-availability": "http://www.cs.toronto.edu/~oktie/webtables/",
-        "licence": "NotSpecified",
+        "license": "NotSpecified",
         "inputs": {
             "type-of-table": "Web tables",
             "kg": {

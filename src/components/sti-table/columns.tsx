@@ -30,7 +30,7 @@ export const columns: ColumnDef<IColumns>[] = [
     sortingFn: "datetime",
     meta: {
       width: "w-[80px]",
-      class: "item-center",
+      class: "item-center sticky left-0 z-10",
     },
   },
   {
@@ -40,6 +40,7 @@ export const columns: ColumnDef<IColumns>[] = [
     enableSorting: false,
     meta: {
       width: "w-[110px]",
+      class: "sticky left-[81px] z-10",
     },
   },
   {
@@ -57,6 +58,7 @@ export const columns: ColumnDef<IColumns>[] = [
     },
     meta: {
       width: "w-[450px]",
+      class: "sticky left-[192px] z-10 border-r-4",
     },
   },
   {
@@ -323,7 +325,7 @@ export const columns: ColumnDef<IColumns>[] = [
     },
     meta: {
       width: "w-auto",
-      class: "justify-center",
+      innerClass: "justify-center",
     },
     columns: [
       {
@@ -385,11 +387,12 @@ export const columns: ColumnDef<IColumns>[] = [
     ],
   },
   {
+    id: "steps",
     header: "Steps",
     enableSorting: false,
     meta: {
       width: "w-auto",
-      class: "justify-center",
+      innerClass: "justify-center",
     },
     columns: [
       {
@@ -677,7 +680,7 @@ export const columns: ColumnDef<IColumns>[] = [
     enableSorting: false,
   },
   {
-    accessorKey: "licence",
+    accessorKey: "license",
     cell: (cell) => (
       <span className="py-0.5 px-1.5 rounded-full text-[0.7rem] bg-gray-600">
         {cell.getValue() as string}
@@ -687,21 +690,21 @@ export const columns: ColumnDef<IColumns>[] = [
       const { table } = props;
       const options = extractUniqueValue({
         table,
-        columnId: "licence",
+        columnId: "license",
       });
 
       return (
         <ComboboxPopover
           options={options}
           emptyText="No results found"
-          label="Licence"
+          label="license"
           placeholder="Search..."
-          value={(table.getColumn("licence")?.getFilterValue() as string) ?? ""}
+          value={(table.getColumn("license")?.getFilterValue() as string) ?? ""}
           setValue={(value: string) => {
-            table.getColumn("licence")?.setFilterValue(value);
+            table.getColumn("license")?.setFilterValue(value);
           }}
           triggerClassName="text-xs -ml-2 data-[state=open]:bg-slate-800"
-          triggerText="Licence"
+          triggerText="license"
           containerClassName="bg-slate-800"
         />
       );
@@ -709,11 +712,12 @@ export const columns: ColumnDef<IColumns>[] = [
     enableSorting: false,
   },
   {
+    id: "inputs",
     header: "Inputs",
     enableSorting: false,
     meta: {
       width: "w-auto",
-      class: "justify-center",
+      innerClass: "justify-center",
     },
     columns: [
       {
