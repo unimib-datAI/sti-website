@@ -4,13 +4,15 @@ import { type ColumnDef } from "@tanstack/react-table"
 import { cn } from "@/lib/utils"
 import { Check, ExternalLink, Info, X } from "lucide-react"
 
+
 export const columns: ColumnDef<IColumns>[] = [
   {
     accessorKey: "year",
-    header: "Year",
     enableHiding: false,
+    header: "Year",
+    sortingFn: "datetime",
     meta: {
-      width: "w-[50px]",
+      width: "w-[80px]",
       class: "item-center"
     }
   },
@@ -18,6 +20,7 @@ export const columns: ColumnDef<IColumns>[] = [
     accessorKey: "author",
     header: "First author",
     enableHiding: false,
+    enableSorting: false,
     meta: {
       width: "w-[110px]"
     }
@@ -26,6 +29,7 @@ export const columns: ColumnDef<IColumns>[] = [
     accessorKey: "title",
     header: "Title",
     enableHiding: false,
+    enableSorting: false,
     cell: (cell) => {
       const title = cell.getValue() as ITitle
       return (
@@ -42,6 +46,7 @@ export const columns: ColumnDef<IColumns>[] = [
   {
     accessorKey: "conference-journal",
     header: "Conf. / Journal",
+    enableSorting: false,
     cell: (cell) => <span className="flex justify-center">{cell.getValue() as string}</span>,
     meta: {
       width: "w-[120px]"
@@ -50,6 +55,7 @@ export const columns: ColumnDef<IColumns>[] = [
   {
     accessorKey: "name-of-approach",
     header: "Name of Approach",
+    enableSorting: false,
     meta: {
       width: "w-[150px]"
     }
@@ -62,6 +68,7 @@ export const columns: ColumnDef<IColumns>[] = [
       const color = method.type === "sup" ? "bg-teal-500" : method.type === "unsup" ? "bg-pink-500" : "bg-sky-600";
       return <span><span className={cn(color, "py-0.5 px-1.5 rounded-full text-[0.7rem]")}>{method.type}</span><span className="ml-2">{method.technique}</span></span>
     },
+    enableSorting: false,
     meta: {
       width: "w-[120px]"
     }
@@ -74,9 +81,11 @@ export const columns: ColumnDef<IColumns>[] = [
       const color = domain.type === "dependent" ? "bg-teal-500" : "bg-sky-600";
       return <span><span className={cn(color, "py-0.5 px-1.5 rounded-full text-[0.7rem]")}>{domain.domain}</span><span className="ml-2">{domain.type}</span></span>
     },
+    enableSorting: false,
   },
   {
     header: "Tasks",
+    enableSorting: false,
     meta: {
       width: "w-auto",
       class: "justify-center"
@@ -85,29 +94,34 @@ export const columns: ColumnDef<IColumns>[] = [
       {
         accessorKey: "tasks.cta",
         header: "CTA",
+        enableSorting: false,
         cell: (cell) => <span className="flex justify-center">{cell.getValue() ? <Check className="text-green-400 h-5 w-5" /> : <X className="text-red-400 h-5 w-5" />}</span>,
       },
       {
         accessorKey: "tasks.cpa",
         header: "CPA",
+        enableSorting: false,
         cell: cell => <span className="flex justify-center">{cell.getValue() ? <Check className="text-green-400 h-5 w-5" /> : <X className="text-red-400 h-5 w-5" />}</span>,
 
       },
       {
         accessorKey: "tasks.cea",
         header: "CEA",
+        enableSorting: false,
         cell: cell => <span className="flex justify-center">{cell.getValue() ? <Check className="text-green-400 h-5 w-5" /> : <X className="text-red-400 h-5 w-5" />}</span>,
 
       },
       {
         accessorKey: "tasks.cnea",
         header: "CNEA",
+        enableSorting: false,
         cell: cell => <span className="flex justify-center">{cell.getValue() ? <Check className="text-green-400 h-5 w-5" /> : <X className="text-red-400 h-5 w-5" />}</span>,
       },
     ],
   },
   {
     header: "Steps",
+    enableSorting: false,
     meta: {
       width: "w-auto",
       class: "justify-center"
@@ -128,6 +142,7 @@ export const columns: ColumnDef<IColumns>[] = [
             </div>
           ) : (<span className="flex justify-center"><X className="text-red-400 h-5 w-5" /></span>)
         },
+        enableSorting: false,
       },
 
       {
@@ -145,6 +160,7 @@ export const columns: ColumnDef<IColumns>[] = [
             </div>
           ) : (<span className="flex justify-center"><X className="text-red-400 h-5 w-5" /></span>)
         },
+        enableSorting: false,
       },
       {
         accessorKey: "steps.column-analysis",
@@ -161,6 +177,7 @@ export const columns: ColumnDef<IColumns>[] = [
             </div>
           ) : (<span className="flex justify-center"><X className="text-red-400 h-5 w-5" /></span>)
         },
+        enableSorting: false,
       },
       {
         accessorKey: "steps.type-annotation",
@@ -177,6 +194,7 @@ export const columns: ColumnDef<IColumns>[] = [
             </div>
           ) : (<span className="flex justify-center"><X className="text-red-400 h-5 w-5" /></span>)
         },
+        enableSorting: false,
       },
       {
         accessorKey: "steps.predicate-annotation",
@@ -193,6 +211,7 @@ export const columns: ColumnDef<IColumns>[] = [
             </div>
           ) : (<span className="flex justify-center"><X className="text-red-400 h-5 w-5" /></span>)
         },
+        enableSorting: false,
       },
       {
         accessorKey: "steps.datatype-annotation",
@@ -209,6 +228,7 @@ export const columns: ColumnDef<IColumns>[] = [
             </div>
           ) : (<span className="flex justify-center"><X className="text-red-400 h-5 w-5" /></span>)
         },
+        enableSorting: false,
       },
       {
         accessorKey: "steps.entity-linking",
@@ -225,6 +245,7 @@ export const columns: ColumnDef<IColumns>[] = [
             </div>
           ) : (<span className="flex justify-center"><X className="text-red-400 h-5 w-5" /></span>)
         },
+        enableSorting: false,
       },
       {
         accessorKey: "steps.nil-annotation",
@@ -241,6 +262,7 @@ export const columns: ColumnDef<IColumns>[] = [
             </div>
           ) : (<span className="flex justify-center"><X className="text-red-400 h-5 w-5" /></span>)
         },
+        enableSorting: false,
       },
     ],
   },
@@ -256,10 +278,12 @@ export const columns: ColumnDef<IColumns>[] = [
           <span className={cn(color, "py-0.5 px-1.5 rounded-full text-[0.7rem]")}>{userRevision.type}</span>
       )
     },
+    enableSorting: false,
   },
   {
     accessorKey: "validation",
     header: "Validation",
+    enableSorting: false,
     meta: {
       width: "w-[150px]"
     }
@@ -270,15 +294,18 @@ export const columns: ColumnDef<IColumns>[] = [
     cell: (cell) => {
       const codeAvailability = cell.getValue() as string;
       return <span className="flex justify-center">{codeAvailability ? <a href={codeAvailability}><ExternalLink className="h-5 w-5" /></a> : <X className="text-red-400 h-5 w-5" />}</span>
-    }
+    },
+    enableSorting: false,
   },
   {
     accessorKey: "licence",
     header: "Licence",
-    cell: (cell) => <span className="py-0.5 px-1.5 rounded-full text-[0.7rem] bg-gray-600">{cell.getValue() as string}</span>
+    cell: (cell) => <span className="py-0.5 px-1.5 rounded-full text-[0.7rem] bg-gray-600">{cell.getValue() as string}</span>,
+    enableSorting: false,
   },
   {
     header: "Inputs",
+    enableSorting: false,
     meta: {
       width: "w-auto",
       class: "justify-center"
@@ -287,6 +314,7 @@ export const columns: ColumnDef<IColumns>[] = [
       {
         accessorKey: "inputs.type-of-table",
         header: "Type of table",
+        enableSorting: false,
         meta: {
           width: "w-[150px]"
         }
@@ -294,6 +322,7 @@ export const columns: ColumnDef<IColumns>[] = [
       {
         accessorKey: "inputs.kg",
         header: "Knowledge Graph",
+        enableSorting: false,
         cell: (cell) => {
           const kg = cell.getValue() as IKg;
           return <span className="flex justify-center">{kg["triple-store"]}{kg.index && ` - ${kg.index}`}</span>
@@ -307,5 +336,6 @@ export const columns: ColumnDef<IColumns>[] = [
   {
     accessorKey: "output-format",
     header: "Output Format",
+    enableSorting: false,
   }
 ]

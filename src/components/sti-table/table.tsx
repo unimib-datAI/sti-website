@@ -12,6 +12,7 @@ import {
 } from '@tanstack/react-table'
 import type { IColumns } from './types';
 import { cn } from '@/lib/utils';
+import { ArrowDownWideNarrow, ArrowUpNarrowWide } from 'lucide-react';
 
 type Props = {
   data: IColumns[]
@@ -23,16 +24,33 @@ export const Table = (props: Props) => {
   const columns = React.useMemo<ColumnDef<IColumns>[]>(() => col, [])
 
   const [columnVisibility, setColumnVisibility] = React.useState({})
+  const [sorting, setSorting] = React.useState<SortingState>([
+    {
+      id: 'year',
+      desc: true,
+    }
+  ]);
 
   const table = useReactTable({
     columns,
     data,
     getCoreRowModel: getCoreRowModel(),
+    getSortedRowModel: getSortedRowModel(),
     state: {
       columnVisibility,
+      sorting
     },
     onColumnVisibilityChange: setColumnVisibility,
+    onSortingChange: setSorting,
+    enableSortingRemoval: false,
   })
+
+  /**
+   * TODO: Implement sorting by year
+   * TODO: Implement filtering by conf, method, domain, tasks, user revision and licence
+   * TODO: Implement hiding columns
+   * TODO: Implement fullscreen mode
+   */
 
   return (
     <>
@@ -74,6 +92,16 @@ export const Table = (props: Props) => {
                   <th key={header.id} colSpan={header.colSpan} className='py-1 border-r border-slate-600 last:border-r-0'>
                     {header.isPlaceholder ? null : (
                       <div
+                        onClick={header.column.getCanSort() ? header.column.getToggleSortingHandler() : undefined}
+                        title={
+                          header.column.getCanSort()
+                            ? header.column.getNextSortingOrder() === 'asc'
+                              ? 'Sort ascending'
+                              : header.column.getNextSortingOrder() === 'desc'
+                                ? 'Sort descending'
+                                : 'Clear sort'
+                            : undefined
+                        }
                         className={cn(
                           header.column.getCanSort()
                             ? 'cursor-pointer select-none'
@@ -86,6 +114,10 @@ export const Table = (props: Props) => {
                           header.column.columnDef.header,
                           header.getContext()
                         )}
+                        {{
+                          asc: <ArrowUpNarrowWide className='h-4 w-4 ml-2' />,
+                          desc: <ArrowDownWideNarrow className='h-4 w-4 ml-2' />,
+                        }[header.column.getIsSorted() as string] ?? null}
                       </div>
                     )}
                   </th>

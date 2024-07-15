@@ -1,0 +1,231 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "author": {
+                "type": "string"
+            },
+            "year": {
+                "type": "integer"
+            },
+            "title": {
+                "type": "object",
+                "properties": {
+                    "text": {
+                        "type": "string"
+                    },
+                    "link": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "text",
+                    "link"
+                ]
+            },
+            "conference-journal": {
+                "type": "string"
+            },
+            "name-of-approach": {
+                "type": "string"
+            },
+            "main-method": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string"
+                    },
+                    "technique": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "type",
+                    "technique"
+                ]
+            },
+            "domain": {
+                "type": "object",
+                "properties": {
+                    "domain": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "domain",
+                    "type"
+                ]
+            },
+            "tasks": {
+                "type": "object",
+                "properties": {
+                    "cta": {
+                        "type": "boolean"
+                    },
+                    "cpa": {
+                        "type": "boolean"
+                    },
+                    "cea": {
+                        "type": "boolean"
+                    },
+                    "cnea": {
+                        "type": "boolean"
+                    }
+                },
+                "required": [
+                    "cta",
+                    "cpa",
+                    "cea",
+                    "cnea"
+                ]
+            },
+            "steps": {
+                "type": "object",
+                "properties": {
+                    "data-preparation": {
+                        "type": "object",
+                        "properties": {
+                            "description": {
+                                "type": "string"
+                            },
+                            "spell-checker": {
+                                "type": "string"
+                            },
+                            "units-of-measurements": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "description",
+                            "spell-checker",
+                            "units-of-measurements"
+                        ]
+                    },
+                    "subject-detection": {
+                        "type": "string"
+                    },
+                    "column-analysis": {
+                        "type": "string"
+                    },
+                    "type-annotation": {
+                        "type": "string"
+                    },
+                    "predicate-annotation": {
+                        "type": "string"
+                    },
+                    "datatype-annotation": {
+                        "type": "string"
+                    },
+                    "entity-linking": {
+                        "type": "object",
+                        "properties": {
+                            "description": {
+                                "type": "string"
+                            },
+                            "candidate-generation": {
+                                "type": "string"
+                            },
+                            "entity-disambiguation": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "description",
+                            "candidate-generation",
+                            "entity-disambiguation"
+                        ]
+                    },
+                    "nil-annotation": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "data-preparation",
+                    "subject-detection",
+                    "column-analysis",
+                    "type-annotation",
+                    "predicate-annotation",
+                    "datatype-annotation",
+                    "entity-linking",
+                    "nil-annotation"
+                ]
+            },
+            "user-revision": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "type",
+                    "description"
+                ]
+            },
+            "validation": {
+                "type": "string"
+            },
+            "code-availability": {
+                "type": "string"
+            },
+            "licence": {
+                "type": "string"
+            },
+            "inputs": {
+                "type": "object",
+                "properties": {
+                    "type-of-table": {
+                        "type": "string"
+                    },
+                    "kg": {
+                        "type": "object",
+                        "properties": {
+                            "triple-store": {
+                                "type": "string"
+                            },
+                            "index": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "triple-store",
+                            "index"
+                        ]
+                    }
+                },
+                "required": [
+                    "type-of-table",
+                    "kg"
+                ]
+            },
+            "output-format": {
+                "type": "string"
+            }
+        },
+        "required": [
+            "author",
+            "year",
+            "title",
+            "conference-journal",
+            "name-of-approach",
+            "main-method",
+            "domain",
+            "tasks",
+            "steps",
+            "user-revision",
+            "validation",
+            "code-availability",
+            "licence",
+            "inputs",
+            "output-format"
+        ]
+    }
+}
