@@ -24,18 +24,15 @@ import logoISWC from "@/assets/logoISWC.png";
         What's Semantic Table Interpretation?
       </h2>
       <p class="mt-4 mb-6 md:text-base lg:text-base">
-        Semantic Table Interpretation, as defined by the widely accepted
-        formalisation from the SemTab challenge, involves annotating relational
+        Semantic Table Interpretation, as defined by the the <a href="https://sem-tab-challenge.github.io/2023/">SemTab challenge</a>, involves annotating relational
         tables with information from a Knowledge Graph (KG). This process
         includes associating each column in a table with one or more KG types,
         known as Column Type Annotation (CTA). Additionally, Cell Entity
-        Annotation (CEA) is applied to annotate each cell in "entity columns"
-        with a KG entity or mark it as NIL if it does not exist in the KG.
-        Column Property Annotation (CPA) involves annotating pairs of columns
-        with a binary KG property. The result of this annotation process is a
-        table enriched with semantic information, which can introduce new
-        elements to the KG
-      </p>
+        Annotation (CEA) is applied to annotate each cell in named entity columns
+        with a KG entity or mark it as Not In Lexicon (NIL) if it does not exist in the KG.
+        Columns Property Annotation (CPA) involves annotating pairs of columns
+        with a KG property. The result of this annotation process is a
+        table enriched with semantic information
       <p class="mt-4 mb-4 md:text-base lg:text-base"></p>
       <Button href="/sti-website/description" variant="secondary">
         Learn more about STI
