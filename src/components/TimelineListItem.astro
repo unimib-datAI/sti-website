@@ -17,15 +17,7 @@ const { icon, title, info, published, approach, item, features } = Astro.props;
     <div
       class="z-10 flex items-center justify-center w-6 h-6 bg-purple-600 rounded-full ring-0 ring-purple-500 sm:ring-8 shrink-0"
     >
-      <svg
-        class="w-2.5 h-2.5 text-white"
-        aria-hidden="true"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="currentColor"
-        viewBox="0 0 20 20"
-      >
-        <path d={icon}></path>
-      </svg>
+  <slot/>
     </div>
     <div class="hidden sm:flex w-full bg-purple-500 h-0.5"></div>
   </div>
@@ -38,7 +30,7 @@ const { icon, title, info, published, approach, item, features } = Astro.props;
     <p class="block mb-2 text-sm font-normal leading-none text-gray-500">
       {info}
     </p>
-    <p class="text-base font-semibold text-purple-500 mt-3">
+    <p class="text-base font-semibold text-purple-500">
       {published}
     </p>
     <ul class="marker:text-purple-500 list-outside list-disc ml-6">
@@ -46,7 +38,7 @@ const { icon, title, info, published, approach, item, features } = Astro.props;
         {item}
       </li>
     </ul>
-    <p class="text-base font-normal text-foreground mt-3">{approach}</p>
-    <p class="text-base font-semibold text-foreground mt-3">{features}</p>
+    <p class="text-base font-normal text-foreground mt-2">{approach}</p>
+    <p class="text-base font-semibold text-foreground mt-2">{features}</p>
   </div>
 </li>
