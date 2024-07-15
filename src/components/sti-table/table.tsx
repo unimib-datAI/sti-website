@@ -49,7 +49,6 @@ export const Table = (props: Props) => {
   });
 
   /**
-   * TODO: Implement hiding columns
    * TODO: Implement fullscreen mode
    */
 

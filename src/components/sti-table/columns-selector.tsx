@@ -61,6 +61,7 @@ export function ColumnsSelector<TData>(props: Props<TData>) {
         <DropdownMenuCheckboxItem
           checked={showAll}
           onCheckedChange={setShowAll}
+          onSelect={(e: Event) => e.preventDefault()}
         >
           Show all columns
         </DropdownMenuCheckboxItem>
@@ -96,6 +97,7 @@ export function ColumnsSelector<TData>(props: Props<TData>) {
               key={column.id}
               checked={checked}
               onCheckedChange={setChecked}
+              onSelect={(e: Event) => e.preventDefault()}
             >
               {labels[column.id]}
             </DropdownMenuCheckboxItem>
