@@ -12,7 +12,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { ColumnVisibility, type Table } from "@tanstack/react-table";
+import { type Table } from "@tanstack/react-table";
 import { ListFilter } from "lucide-react";
 
 type Checked = DropdownMenuCheckboxItemProps["checked"];
