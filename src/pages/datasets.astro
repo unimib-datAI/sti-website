@@ -1,16 +1,23 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import Section from "@components/Section.astro";
+import DatasetGraph from "@components/DatasetGraph.astro";
+import StiTable from "@components/sti-table";
+
+import statistics from "@/assets/statistics.json";
+const { approaches } = statistics;
+
+import data from "@/assets/sti-survey.json";
 ---
 
-<Layout title="Approaches">
+<Layout title="Dataset">
   <main class="px-4">
     <Section>
       <div class="flex items-center">
         <h1
           class="py-4 text-4xl font-bold bg-gradient-to-r from-[#9E0974] to-[#6665E9] inline-block text-transparent bg-clip-text"
         >
-          Approaches
+          Datasets
         </h1>
         <span
           class="px-3 py-1 text-sm rounded-full ml-4 bg-gradient-to-r from-[#9E0974] to-[#6665E9]"
@@ -18,7 +25,7 @@ import Section from "@components/Section.astro";
         >
       </div>
       <p>
-        In this page, a comparative analysis of all STI approaches will be
+        In this page, a comparative analysis of all STI datasets will be
         included.
       </p>
     </Section>

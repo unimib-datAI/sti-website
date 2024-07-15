@@ -12,6 +12,7 @@ import {
 } from '@tanstack/react-table'
 import type { IColumns } from './types';
 import { cn } from '@/lib/utils';
+import { ArrowDownWideNarrow, ArrowUpNarrowWide } from 'lucide-react';
 
 type Props = {
   data: IColumns[]
@@ -22,35 +23,76 @@ export const Table = (props: Props) => {
 
   const columns = React.useMemo<ColumnDef<IColumns>[]>(() => col, [])
 
+  const [columnVisibility, setColumnVisibility] = React.useState({})
+  const [sorting, setSorting] = React.useState<SortingState>([
+    {
+      id: 'year',
+      desc: true,
+    }
+  ]);
 
   const table = useReactTable({
     columns,
     data,
     getCoreRowModel: getCoreRowModel(),
-    debugTable: true,
+    getSortedRowModel: getSortedRowModel(),
+    state: {
+      columnVisibility,
+      sorting
+    },
+    onColumnVisibilityChange: setColumnVisibility,
+    onSortingChange: setSorting,
+    enableSortingRemoval: false,
   })
 
+  /**
+   * TODO: Implement sorting by year
+   * TODO: Implement filtering by conf, method, domain, tasks, user revision and licence
+   * TODO: Implement hiding columns
+   * TODO: Implement fullscreen mode
+   */
+
   return (
-    <div className='mt-5 overflow-x-auto'>
-      <table className='rounded-lg overflow-hidden'>
+    <>
+    <div className="flex border border-black shadow rounded">
+        <div className="px-1 border-b border-black">
+          <label>
+            <input
+                type='checkbox'
+                checked={table.getIsAllColumnsVisible()}
+                onChange={table.getToggleAllColumnsVisibilityHandler()}
+            />
+            Toggle All
+          </label>
+        </div>
+        {table.getAllLeafColumns().map(column => {
+          if (!column.getCanHide()) return;
+
+          return (
+            <div key={column.id} className="px-1">
+              <label>
+                <input
+                    type='checkbox'
+                    checked={column.getIsVisible()}
+                    onChange={column.getToggleVisibilityHandler()}
+                />
+                {column.id}
+              </label>
+            </div>
+          )
+        })}
+      </div>
+    <div className='mt-5 overflow-x-auto rounded-lg border border-slate-600'>
+      <table className='text-xs'>
         <thead>
           {table.getHeaderGroups().map(headerGroup => (
-            <tr key={headerGroup.id} className='bg-tableTop text-tableText'>
+            <tr key={headerGroup.id} className={cn('bg-tableTop text-tableText')}>
               {headerGroup.headers.map(header => {
                 return (
-                  <th key={header.id} colSpan={header.colSpan}>
+                  <th key={header.id} colSpan={header.colSpan} className='py-1 border-r border-slate-600 last:border-r-0'>
                     {header.isPlaceholder ? null : (
                       <div
-                        className={cn([
-                          header.column.getCanSort()
-                            ? 'cursor-pointer select-none'
-                            : '',
-                            header.column.columnDef.meta?.width,
-                          'flex items-center justfy-start px-4 py-2',
-                          header.column.columnDef.meta?.class,
-                        ])}
-
-                        onClick={header.column.getToggleSortingHandler()}
+                        onClick={header.column.getCanSort() ? header.column.getToggleSortingHandler() : undefined}
                         title={
                           header.column.getCanSort()
                             ? header.column.getNextSortingOrder() === 'asc'
@@ -60,14 +102,21 @@ export const Table = (props: Props) => {
                                 : 'Clear sort'
                             : undefined
                         }
-                      >
+                        className={cn(
+                          header.column.getCanSort()
+                            ? 'cursor-pointer select-none'
+                            : '',
+                            header.column.columnDef.meta?.width,
+                          'flex items-center justify-start text-left px-4',
+                          header.column.columnDef.meta?.class,
+                        )}>
                         {flexRender(
                           header.column.columnDef.header,
                           header.getContext()
                         )}
                         {{
-                          asc: ' 🔼',
-                          desc: ' 🔽',
+                          asc: <ArrowUpNarrowWide className='h-4 w-4 ml-2' />,
+                          desc: <ArrowDownWideNarrow className='h-4 w-4 ml-2' />,
                         }[header.column.getIsSorted() as string] ?? null}
                       </div>
                     )}
@@ -89,7 +138,7 @@ export const Table = (props: Props) => {
                       <td key={cell.id} className={
                         cn([
                           cell.column.columnDef.meta?.width,
-                          'px-4 py-2',
+                          'px-4 py-2 border-r border-slate-600 last:border-r-0',
                           cell.column.columnDef.meta?.class,
                         ])
 
@@ -107,5 +156,6 @@ export const Table = (props: Props) => {
         </tbody>
       </table>
     </div>
+    </>
   )
 };

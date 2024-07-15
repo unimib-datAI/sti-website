@@ -11,26 +11,38 @@ declare module '@tanstack/react-table' {
 export interface IColumns {
   author: string
   year: number
-  title: string
-  "conference journal": string
-  "name of approach": string
-  "main method": string
-  technique: string
-  domain: string
-  type: string
-  tasks: ITask
+  title: ITitle
+  "conference-journal": string
+  "name-of-approach": string
+  "main-method": IMethod
+  domain: IDomain
+  tasks: ITasks
   steps: ISteps
-  "user revision": IUserRevision
+  "user-revision": IUserRevision
   validation?: string
-  "code availability": string
+  "code-availability": string
   licence: string
-  "repository link": string
-  inputs: IInput[]
-  "output format": string
+  inputs: IInputs
+  "output-format": string
   "validation (gs)"?: string
 }
 
-export interface ITask {
+export interface ITitle {
+  text: string;
+  link: string;
+}
+
+export interface IMethod {
+  type: string
+  technique: string
+}
+
+export interface IDomain {
+  domain: string;
+  type: string;
+}
+
+export interface ITasks {
   cta: boolean
   cpa: boolean
   cea: boolean
@@ -38,21 +50,26 @@ export interface ITask {
 }
 
 export interface ISteps {
-  "data preparation": string
-  "spell checker": string
-  "units of measurements": string
-  "subject detection": string
-  "column analysis": string
-  "type annotation": string
-  "predicate annotation": string
-  "datatype annotation": string
-  "entity linking": IEntityLinking[]
-  "nil annotation": string
+  "data-preparation": IDataPreparation
+  "subject-detection": string
+  "column-analysis": string
+  "type-annotation": string
+  "predicate-annotation": string
+  "datatype-annotation": string
+  "entity-linking": IEntityLinking
+  "nil-annotation": string
+}
+
+export interface IDataPreparation {
+  "description": string
+  "spell-checker": string
+  "units-of-measurements": string
 }
 
 export interface IEntityLinking {
-  "candidate generation"?: string
-  "entity disambiguation"?: string
+  "description": string,
+  "candidate-generation": string,
+  "entity-disambiguation": string
 }
 
 export interface IUserRevision {
@@ -60,12 +77,12 @@ export interface IUserRevision {
   description: string
 }
 
-export interface IInput {
-  "type of table"?: string
-  kg?: IKg[]
+export interface IInputs {
+  "type-of-table": string
+  kg: IKg
 }
 
 export interface IKg {
-  "triple store"?: string
-  index?: string
+  "triple-store": string
+  index: string
 }
