@@ -14,7 +14,6 @@ const { title, href } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/$/, "");
 
 let slug = Astro.url.pathname;
-slug = slug.replace(/\/$/, "");
 
 const destination = base + href;
 ---
