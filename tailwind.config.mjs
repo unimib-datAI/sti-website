@@ -40,6 +40,7 @@ export default {
         orange: "#E99E57",
         purple: {
           500: "#6665E9",
+          600: "#353496",
         },
         cardBackground: "#0C0C2F",
         sectionBackground: "#0C0C2F",
