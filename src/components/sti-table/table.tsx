@@ -5,6 +5,7 @@ import {
   type ColumnDef,
   flexRender,
   getCoreRowModel,
+  getFilteredRowModel,
   getSortedRowModel,
   type SortingFn,
   type SortingState,
@@ -36,9 +37,10 @@ export const Table = (props: Props) => {
     data,
     getCoreRowModel: getCoreRowModel(),
     getSortedRowModel: getSortedRowModel(),
+    getFilteredRowModel: getFilteredRowModel(),
     state: {
       columnVisibility,
-      sorting
+      sorting,
     },
     onColumnVisibilityChange: setColumnVisibility,
     onSortingChange: setSorting,
@@ -46,7 +48,6 @@ export const Table = (props: Props) => {
   })
 
   /**
-   * TODO: Implement sorting by year
    * TODO: Implement filtering by conf, method, domain, tasks, user revision and licence
    * TODO: Implement hiding columns
    * TODO: Implement fullscreen mode
@@ -129,8 +130,7 @@ export const Table = (props: Props) => {
         <tbody>
           {table
             .getRowModel()
-            .rows.slice(0, 10)
-            .map((row, index) => {
+            .rows.map((row, index) => {
               return (
                 <tr key={row.id} className={index % 2 ? 'bg-tableAlt' : 'tableBottom' }>
                   {row.getVisibleCells().map(cell => {
