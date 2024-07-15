@@ -1,0 +1,52 @@
+---
+type Props = {
+  icon?: string;
+  title?: string;
+  info?: string;
+  published?: string;
+  item?: string;
+  approach?: string;
+  features?: string;
+};
+
+const { icon, title, info, published, approach, item, features } = Astro.props;
+---
+
+<li class="relative mb-6 sm:mb-0 sm:w-1/4">
+  <div class="flex items-center">
+    <div
+      class="z-10 flex items-center justify-center w-6 h-6 bg-purple-600 rounded-full ring-0 ring-purple-500 sm:ring-8 shrink-0"
+    >
+      <svg
+        class="w-2.5 h-2.5 text-white"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+      >
+        <path d={icon}></path>
+      </svg>
+    </div>
+    <div class="hidden sm:flex w-full bg-purple-500 h-0.5"></div>
+  </div>
+  <div class="mt-3 sm:pe-8 max-w-full">
+    <a href="#"
+      ><h3 class="text-lg font-semibold text-foreground">
+        {title}
+      </h3>
+    </a>
+    <p class="block mb-2 text-sm font-normal leading-none text-gray-500">
+      {info}
+    </p>
+    <p class="text-base font-semibold text-purple-500 mt-3">
+      {published}
+    </p>
+    <ul class="marker:text-purple-500 list-outside list-disc ml-6">
+      <li class="text-base font-normal text-foreground">
+        {item}
+      </li>
+    </ul>
+    <p class="text-base font-normal text-foreground mt-3">{approach}</p>
+    <p class="text-base font-semibold text-foreground mt-3">{features}</p>
+  </div>
+</li>

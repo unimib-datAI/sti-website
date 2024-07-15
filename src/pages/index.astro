@@ -5,6 +5,7 @@ import Section from "@components/Section.astro";
 import Button from "@components/Button.astro";
 import mammoth from "@/assets/geometric-mammoth.png";
 import logoISWC from "@/assets/logoISWC.png";
+import HorizontalTimeline from "@components/HorizontalTimeline.astro";
 ---
 
 <Layout title="STI resources">
@@ -66,6 +67,15 @@ import logoISWC from "@/assets/logoISWC.png";
           </Button>
         </div>
       </section>
+    </Section>
+
+    <Section className="pt-20">
+      <h2
+        class="text-3xl font-semibold bg-gradient-to-r from-[#9E0974] to-[#6665E9] inline-block text-transparent bg-clip-text mt-10"
+      >
+        Our Approaches
+      </h2>
+      <HorizontalTimeline />
     </Section>
 
     <Section title="" className="pt-20">
