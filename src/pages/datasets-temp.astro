@@ -17,7 +17,7 @@ import data from "@/assets/sti-survey.json";
         <h1
           class="py-4 text-4xl mt-8 font-bold bg-gradient-to-r from-[#9E0974] to-[#6665E9] inline-block text-transparent bg-clip-text"
         >
-          Dataset
+          Datasets infographic
         </h1>
         <div
           class="bg-cardBackground p-10 pl-2 pb-0 rounded-lg inline-block max-h-[800px] overflow-y-auto mt-5"
@@ -25,8 +25,403 @@ import data from "@/assets/sti-survey.json";
           <DatasetGraph data={approaches} />
         </div>
       </div>
-    </Section>
+      <h2
+        class="text-3xl font-semibold bg-gradient-to-r from-[#9E0974] to-[#6665E9] inline-block text-transparent bg-clip-text mt-10"
+      >
+        Datasets
+      </h2>
+      <div class="flex flex-col gap-2 items-start mt-4">
+        <div class="inline-block rounded-lg overflow-x-auto max-w-full">
+          <table class="text-sm text-left rtl:text-right text-tableText">
+            <thead class="text-xs text-tableText uppercase bg-tableTop">
+              <tr>
+                <th scope="col" class="p-3 min-w-40"> GS </th>
+                <th scope="col" class="p-3 min-w-24"> Tables </th>
+                <th scope="col" class="p-3 min-w-24">
+                  <div class="flex flex-col w-full items-center">
+                    <span>cols</span>
+                    <span>(min|max|x)</span>
+                  </div>
+                </th>
+                <th scope="col" class="p-3 min-w-24">
+                  <div class="flex flex-col w-full items-center">
+                    <span>rows</span>
+                    <span>(min|max|x)</span>
+                  </div>
+                </th>
+                <th scope="col" class="p-3 min-w-24"> Classes </th>
+                <th scope="col" class="p-3 min-w-24"> Entities </th>
+                <th scope="col" class="p-3 min-w-24"> Pred. </th>
+                <th scope="col" class="p-3 min-w-24"> KG </th>
+                <th scope="col" class="p-3 min-w-24">
+                  Used for validation by
+                </th>
+              </tr>
+            </thead>
+            <tbody class="text-foreground">
+              <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+                <th
+                  scope="row"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                  >T2Dv2 [<a href="">112</a>]</th
+                >
+                <td class="p-3 min-w-24"> 234 </td>
+                <td class="p-3 min-w-24">
+                  <div class="flex flex-col w-full items-center">
+                    <span>1,2K</span>
+                    <span>(1|30|4,52)</span>
+                  </div>
+                </td>
+                <td class="p-3 min-w-24">
+                  <div class="flex flex-col w-full items-center">
+                    <span>2,8K</span>
+                    <span>(1|5K|84,55)</span>
+                  </div>
+                </td>
+                <td class="p-3 min-w-24"> 39 </td>
+                <td class="p-3 min-w-24"> - </td>
+                <td class="p-3 min-w-24"> 154 </td>
+                <td class="p-3 min-w-24"> DBpedia </td>
+                <td class="p-3 min-w-24">
+                  [<a href="">21</a>, <a href="">22</a>, <a href="">30</a>, <a
+                    href="">37</a
+                  >, <a href="">40</a>, <a href="">43</a>, <a href="">44</a>
+                  , <a href="">48</a>, <a href="">56</a>, <a href="">69</a>, <a
+                    href="">78</a
+                  >, <a href="">84</a>, <a href="">105</a>, <a href="">113</a>,
+                  <a href="">144</a>, <a href="">148</a>]</td
+                >
+              </tr>
 
-    <StiTable data={data} client:load />
+              <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+                <th
+                  scope="row"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                  >WebTableStitching [<a href="">112</a>]</th
+                >
+                <td class="p-3 min-w-24"> 50 </td>
+                <td class="p-3 min-w-24">
+                  <div class="flex flex-col w-full items-center">
+                    <span>300</span>
+                    <span>(6|6|6)</span>
+                  </div>
+                </td>
+                <td class="p-3 min-w-24">
+                  <div class="flex flex-col w-full items-center">
+                    <span>717</span>
+                    <span>(3|83|14,84)</span>
+                  </div>
+                </td>
+                <td class="p-3 min-w-24"> 9 </td>
+                <td class="p-3 min-w-24"> 400 </td>
+                <td class="p-3 min-w-24"> 6 </td>
+                <td class="p-3 min-w-24"> DBpedia </td>
+                <td class="p-3 min-w-24"> [<a href="">112</a>]</td>
+              </tr>
+
+              <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+                <th
+                  scope="row"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                  >Limaye [<a href="">82</a>]</th
+                >
+                <td class="p-3 min-w-24">6,5K</td>
+                <td class="p-3 min-w-24">- </td>
+                <td class="p-3 min-w-24">- </td>
+                <td class="p-3 min-w-24"> 747 </td>
+                <td class="p-3 min-w-24"> 143K </td>
+                <td class="p-3 min-w-24"> 90 </td>
+                <td class="p-3 min-w-24"> Wikipedia, Yago </td>
+                <td class="p-3 min-w-24"
+                  >[<a href="">21</a>, <a href="">22</a>, <a href="">30</a>, <a
+                    href="">40</a
+                  >, <a href="">44</a>, <a href="">48</a>, <a href="">69</a>, <a
+                    href="">84</a
+                  >, <a href="">149</a>, <a href="">152</a>]</td
+                >
+              </tr>
+
+              <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+                <th
+                  scope="row"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                  >LimayeAll [<a href="">149</a>]</th
+                >
+                <td class="p-3 min-w-24">6,3K</td>
+                <td class="p-3 min-w-24">28,5K</td>
+                <td class="p-3 min-w-24">136K</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">227K</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24"> Freebase</td>
+                <td class="p-3 min-w-24">-</td>
+              </tr>
+
+              <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+                <th
+                  scope="row"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                  >Limaye200 [<a href="">149</a>]</th
+                >
+                <td class="p-3 min-w-24">200</td>
+                <td class="p-3 min-w-24">903</td>
+                <td class="p-3 min-w-24">4,1K</td>
+                <td class="p-3 min-w-24">615</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">361</td>
+                <td class="p-3 min-w-24"> Freebase</td>
+                <td class="p-3 min-w-24">[<a href="">149</a>]</td>
+              </tr>
+
+              <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+                <th
+                  scope="row"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                  >MusicBrainz [<a href="">149</a>]</th
+                >
+                <td class="p-3 min-w-24">1,4K</td>
+                <td class="p-3 min-w-24">9,8K</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">93,3K</td>
+                <td class="p-3 min-w-24">7K</td>
+                <td class="p-3 min-w-24"> Freebase</td>
+                <td class="p-3 min-w-24">[<a href="">149</a>]</td>
+              </tr>
+
+              <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+                <th
+                  scope="row"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                  >IMDB [<a href="">149</a>]</th
+                >
+                <td class="p-3 min-w-24">7,4K</td>
+                <td class="p-3 min-w-24">7,4K</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">92,3K</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">Freebase</td>
+                <td class="p-3 min-w-24">[<a href="">149</a>]</td>
+              </tr>
+
+              <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+                <th
+                  scope="row"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                  >Taheriyan[<a href="">129</a>]</th
+                >
+                <td class="p-3 min-w-24">29</td>
+                <td class="p-3 min-w-24"
+                  ><div class="flex flex-col w-full items-center">
+                    <span>2,5K</span>
+                    <span>(3|71,3K|529K)</span>
+                  </div></td
+                >
+                <td class="p-3 min-w-24"
+                  ><div class="flex flex-col w-full items-center">
+                    <span>16K</span>
+                    <span>(1|13,8K|937)</span>
+                  </div></td
+                >
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">Schema.org</td>
+                <td class="p-3 min-w-24">[<a href="">129</a>]</td>
+              </tr>
+
+              <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+                <th
+                  scope="row"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                  >Tough Table (2T) [<a href="">32</a>]</th
+                >
+                <td class="p-3 min-w-24">180</td>
+                <td class="p-3 min-w-24"
+                  ><div class="flex flex-col w-full items-center">
+                    <span>194K</span>
+                    <span>(1|8|4,46)</span>
+                  </div></td
+                >
+                <td class="p-3 min-w-24"
+                  ><div class="flex flex-col w-full items-center">
+                    <span>802</span>
+                    <span>(6|15,5K|108K)</span>
+                  </div></td
+                >
+                <td class="p-3 min-w-24">540</td>
+                <td class="p-3 min-w-24">667K</td>
+                <td class="p-3 min-w-24">0</td>
+                <td class="p-3 min-w-24">Wikidata, DBpedia</td>
+                <td class="p-3 min-w-24">-</td>
+              </tr>
+
+              <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+                <th
+                  scope="row"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                  >MammoTab[<a href="">87</a>]</th
+                >
+                <td class="p-3 min-w-24">980K</td>
+                <td class="p-3 min-w-24">5,6M</td>
+                <td class="p-3 min-w-24">2,3M</td>
+                <td class="p-3 min-w-24">2M</td>
+                <td class="p-3 min-w-24">2,8M</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">Wikidata</td>
+                <td class="p-3 min-w-24">-</td>
+              </tr>
+
+              <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+                <th
+                  scope="row"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                  >SOTAB[<a href="">77</a>]</th
+                >
+                <td class="p-3 min-w-24">108K</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">91</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">176</td>
+                <td class="p-3 min-w-24">Schema.org</td>
+                <td class="p-3 min-w-24">-</td>
+              </tr>
+
+              <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+                <th
+                  scope="row"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                  >Wikary[<a href="">89</a>]</th
+                >
+                <td class="p-3 min-w-24">81,7K</td>
+                <td class="p-3 min-w-24">22,5K</td>
+                <td class="p-3 min-w-24">63,9K</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">30,6K</td>
+                <td class="p-3 min-w-24">188</td>
+                <td class="p-3 min-w-24">Wikidata</td>
+                <td class="p-3 min-w-24">-</td>
+              </tr>
+
+              <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+                <th
+                  scope="row"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                  >GitTables[<a href="">55</a>]</th
+                >
+                <td class="p-3 min-w-24">962K</td>
+                <td class="p-3 min-w-24">11,5M</td>
+                <td class="p-3 min-w-24">13,6M</td>
+                <td class="p-3 min-w-24">2,4K</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">Schema.org, DBpedia</td>
+                <td class="p-3 min-w-24">-</td>
+              </tr>
+
+              <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+                <th
+                  scope="row"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                  >RedTab [<a href="">119</a>]</th
+                >
+                <td class="p-3 min-w-24">9K</td>
+                <td class="p-3 min-w-24"
+                  ><div class="flex flex-col w-full items-center">
+                    <span>44,6K</span>
+                    <span>(1|11|4,86)</span>
+                  </div></td
+                >
+                <td class="p-3 min-w-24"
+                  ><div class="flex flex-col w-full items-center">
+                    <span>148K</span>
+                    <span>(1|353|17,09)</span>
+                  </div></td
+                >
+                <td class="p-3 min-w-24">70</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">23</td>
+                <td class="p-3 min-w-24">Music, Literature</td>
+                <td class="p-3 min-w-24">-</td>
+              </tr>
+
+              <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+                <th
+                  scope="row"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                  >TURL[<a href="">37</a>]</th
+                >
+                <td class="p-3 min-w-24">484K</td>
+                <td class="p-3 min-w-24">2,8M</td>
+                <td class="p-3 min-w-24">7,9M</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">1,2M</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">DBpedia</td>
+                <td class="p-3 min-w-24">[<a href="">37</a>]</td>
+              </tr>
+
+              <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+                <th
+                  scope="row"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                  >BiodivTab [<a href="">5</a>]</th
+                >
+                <td class="p-3 min-w-24">50</td>
+                <td class="p-3 min-w-24"
+                  ><div class="flex flex-col w-full items-center">
+                    <span>1,2K</span>
+                    <span>(1|43|23,96)</span>
+                  </div></td
+                >
+                <td class="p-3 min-w-24"
+                  ><div class="flex flex-col w-full items-center">
+                    <span>12,9K</span>
+                    <span>(26|4,9K|261)</span>
+                  </div></td
+                >
+                <td class="p-3 min-w-24">84</td>
+                <td class="p-3 min-w-24">1,2K</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">Wikidata</td>
+                <td class="p-3 min-w-24">[<a href="">5</a>]</td>
+              </tr>
+
+              <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+                <th
+                  scope="row"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                  >TSOTSACorpus[<a href="">64</a>]</th
+                >
+                <td class="p-3 min-w-24">16K</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">200</td>
+                <td class="p-3 min-w-24">60K</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">Food Data</td>
+                <td class="p-3 min-w-24">-</td>
+              </tr>
+
+              <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+                <th
+                  scope="row"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"></th>
+                <td class="p-3 min-w-24">484K</td>
+                <td class="p-3 min-w-24">2,8M</td>
+                <td class="p-3 min-w-24">7,9M</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">1,2M</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">DBpedia</td>
+                <td class="p-3 min-w-24">[<a href="">37</a>]</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </Section>
   </main>
 </Layout>
