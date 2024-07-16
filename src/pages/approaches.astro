@@ -1,26 +1,19 @@
 ---
 import Layout from "@/layouts/Layout.astro";
 import Section from "@components/Section.astro";
+import data from "@/assets/sti-survey.json";
+import StiTable from "@components/sti-table";
 ---
 
 <Layout title="STI resources - Approaches">
   <main class="px-4">
     <Section>
-      <div class="flex items-center">
-        <h1
-          class="py-4 text-4xl font-bold bg-gradient-to-r from-[#9E0974] to-[#6665E9] inline-block text-transparent bg-clip-text"
-        >
-          Approaches
-        </h1>
-        <span
-          class="px-3 py-1 text-sm rounded-full ml-4 bg-gradient-to-r from-[#9E0974] to-[#6665E9]"
-          >Cooming soon</span
-        >
-      </div>
-      <p>
-        In this page, a comparative analysis of all STI approaches will be
-        included.
-      </p>
+      <h1
+        class="py-4 text-4xl font-bold bg-gradient-to-r from-[#9E0974] to-[#6665E9] inline-block text-transparent bg-clip-text"
+      >
+        Approaches
+      </h1>
     </Section>
+    <StiTable data={data} client:load />
   </main>
 </Layout>
