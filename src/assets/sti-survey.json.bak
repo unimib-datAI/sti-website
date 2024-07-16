@@ -1,0 +1,173 @@
+[
+    {
+        "author": "Hignette",
+        "year": 2007,
+        "title": {
+            "text": "An Ontology-Driven Annotation of Data Tables",
+            "link": ""
+        },
+        "conference-journal": "WISE",
+        "name-of-approach": "",
+        "main-method": {
+            "type": "unsup",
+            "technique": "pattern"
+        },
+        "domain": {
+            "domain": "independent",
+            "type": ""
+        },
+        "tasks": {
+            "cta": true,
+            "cpa": true,
+            "cea": false,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": {
+                "description": "",
+                "spell-checker": "",
+                "units-of-measurements": ""
+            },
+            "subject-detection": "",
+            "column-analysis": "Datatypes for each column are collected.The approach uses features of values defined in the ontology for numeric types to recognize the type of numeric columns, and the terms from the taxonomies of the symbolic types to recognize the type of symbolic columns. Column titles are also used to compute the score and choose the type of the column.",
+            "type-annotation": "The approach links each cell in symbolic columns to its corresponding type in the ontology, using cosine similarity between weighted vectors. A set of candidate types is defined and a proportion is used to obtain the definitive cell type. Numeric cells' type is obtained by assigning a score to each possible numeric type, according to the cell content, and choosing the highest scoring.",
+            "predicate-annotation": "The approach identifies relations by computing a similarity score for each predicate/relation in the ontology according to the table title and the column types.  ",
+            "datatype-annotation": "The approach uses a set of manually defined rules to identify each cell's datatype as numeric, symbolic or unknown. A column is classified as symbolic if there are more cells classified as symbolic than numeric, numeric otherwise.",
+            "entity-linking": {
+                "description": "Datatypes for each column are collected.The approach uses features of values defined in the ontology for numeric types to recognize the type of numeric columns, and the terms from the taxonomies of the symbolic types to recognize the type of symbolic columns. Column titles are also used to compute the score and choose the type of the column.",
+                "candidate-generation": "lookup, YAGO catalog",
+                "entity-disambiguation": "features, similarity"
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "",
+        "code-availability": "",
+        "license": "NotSpecified",
+        "inputs": {
+            "type-of-table": "web table",
+            "kg": {
+                "triple-store": "Personal ontologies",
+                "index": ""
+            }
+        },
+        "output-format": ""
+    },
+    {
+        "author": "Hignette",
+        "year": 2010,
+        "title": {
+            "text": "An Ontology-Driven Annotation of Data Tables",
+            "link": ""
+        },
+        "conference-journal": "WISE",
+        "name-of-approach": "",
+        "main-method": {
+            "type": "unsup",
+            "technique": "pattern"
+        },
+        "domain": {
+            "domain": "independent",
+            "type": ""
+        },
+        "tasks": {
+            "cta": true,
+            "cpa": true,
+            "cea": false,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": {
+                "description": "",
+                "spell-checker": "",
+                "units-of-measurements": ""
+            },
+            "subject-detection": "",
+            "column-analysis": "Datatypes for each column are collected.The approach uses features of values defined in the ontology for numeric types to recognize the type of numeric columns, and the terms from the taxonomies of the symbolic types to recognize the type of symbolic columns. Column titles are also used to compute the score and choose the type of the column.",
+            "type-annotation": "The approach links each cell in symbolic columns to its corresponding type in the ontology, using cosine similarity between weighted vectors. A set of candidate types is defined and a proportion is used to obtain the definitive cell type. Numeric cells' type is obtained by assigning a score to each possible numeric type, according to the cell content, and choosing the highest scoring.",
+            "predicate-annotation": "The approach identifies relations by computing a similarity score for each predicate/relation in the ontology according to the table title and the column types.  ",
+            "datatype-annotation": "The approach uses a set of manually defined rules to identify each cell's datatype as numeric, symbolic or unknown. A column is classified as symbolic if there are more cells classified as symbolic than numeric, numeric otherwise.",
+            "entity-linking": {
+                "description": "Datatypes for each column are collected.The approach uses features of values defined in the ontology for numeric types to recognize the type of numeric columns, and the terms from the taxonomies of the symbolic types to recognize the type of symbolic columns. Column titles are also used to compute the score and choose the type of the column.",
+                "candidate-generation": "lookup, YAGO catalog",
+                "entity-disambiguation": "features, similarity"
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "",
+        "code-availability": "",
+        "license": "NotSpecified",
+        "inputs": {
+            "type-of-table": "web table",
+            "kg": {
+                "triple-store": "Personal ontologies",
+                "index": ""
+            }
+        },
+        "output-format": ""
+    },
+    {
+        "author": "ignette",
+        "year": 2017,
+        "title": {
+            "text": "An Ontology-Driven Annotation of Data Tables",
+            "link": ""
+        },
+        "conference-journal": "WISE",
+        "name-of-approach": "",
+        "main-method": {
+            "type": "unsup",
+            "technique": "pattern"
+        },
+        "domain": {
+            "domain": "independent",
+            "type": ""
+        },
+        "tasks": {
+            "cta": true,
+            "cpa": true,
+            "cea": false,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": {
+                "description": "",
+                "spell-checker": "",
+                "units-of-measurements": ""
+            },
+            "subject-detection": "",
+            "column-analysis": "Datatypes for each column are collected.The approach uses features of values defined in the ontology for numeric types to recognize the type of numeric columns, and the terms from the taxonomies of the symbolic types to recognize the type of symbolic columns. Column titles are also used to compute the score and choose the type of the column.",
+            "type-annotation": "The approach links each cell in symbolic columns to its corresponding type in the ontology, using cosine similarity between weighted vectors. A set of candidate types is defined and a proportion is used to obtain the definitive cell type. Numeric cells' type is obtained by assigning a score to each possible numeric type, according to the cell content, and choosing the highest scoring.",
+            "predicate-annotation": "The approach identifies relations by computing a similarity score for each predicate/relation in the ontology according to the table title and the column types.  ",
+            "datatype-annotation": "The approach uses a set of manually defined rules to identify each cell's datatype as numeric, symbolic or unknown. A column is classified as symbolic if there are more cells classified as symbolic than numeric, numeric otherwise.",
+            "entity-linking": {
+                "description": "Datatypes for each column are collected.The approach uses features of values defined in the ontology for numeric types to recognize the type of numeric columns, and the terms from the taxonomies of the symbolic types to recognize the type of symbolic columns. Column titles are also used to compute the score and choose the type of the column.",
+                "candidate-generation": "lookup, YAGO catalog",
+                "entity-disambiguation": "features, similarity"
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "",
+        "code-availability": "",
+        "license": "NotSpecified",
+        "inputs": {
+            "type-of-table": "web table",
+            "kg": {
+                "triple-store": "Personal ontologies",
+                "index": ""
+            }
+        },
+        "output-format": ""
+    }
+]

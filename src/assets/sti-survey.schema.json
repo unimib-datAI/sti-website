@@ -176,7 +176,7 @@
             "code-availability": {
                 "type": "string"
             },
-            "licence": {
+            "license": {
                 "type": "string"
             },
             "inputs": {
@@ -223,7 +223,7 @@
             "user-revision",
             "validation",
             "code-availability",
-            "licence",
+            "license",
             "inputs",
             "output-format"
         ]
