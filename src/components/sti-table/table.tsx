@@ -15,6 +15,7 @@ import type { IColumns } from "./types";
 import { cn } from "@/lib/utils";
 import { ArrowDownWideNarrow, ArrowUpNarrowWide } from "lucide-react";
 import { ColumnsSelector } from "./columns-selector";
+import { FullScreen } from "./full-screen";
 
 type Props = {
   data: IColumns[];
@@ -54,13 +55,20 @@ export const Table = (props: Props) => {
 
   return (
     <>
-      <ColumnsSelector
-        table={table}
-        columnVisibility={columnVisibility}
-        setColumnVisibility={setColumnVisibility}
-      />
-      <div className="mt-5 overflow-x-auto rounded-lg border border-slate-600">
-        <table className="text-xs border-separate border-spacing-0">
+      <div className="flex justify-between items-center">
+        <ColumnsSelector
+          table={table}
+          columnVisibility={columnVisibility}
+          setColumnVisibility={setColumnVisibility}
+        />
+        <FullScreen
+          table={table}
+          columnVisibility={columnVisibility}
+          setColumnVisibility={setColumnVisibility}
+        />
+      </div>
+      <div className="mt-5 overflow-x-auto">
+        <table className="text-xs border-separate border-spacing-0 rounded-lg border border-slate-600">
           <thead>
             {table.getHeaderGroups().map((headerGroup) => (
               <tr key={headerGroup.id}>

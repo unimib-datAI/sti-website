@@ -29,7 +29,7 @@
                 "units-of-measurements": ""
             },
             "subject-detection": "",
-            "column-analysis": "Datatypes for each column are collected.The approach uses features of values defined in the ontology for numeric types to recognize the type of numeric columns, and the terms from the taxonomies of the symbolic types to recognize the type of symbolic columns. Column titles are also used to compute the score and choose the type of the column.",
+            "column-analysis": "Datatypes for each column are collected. The approach uses features of values defined in the ontology for numeric types to recognize the type of numeric columns, and the terms from the taxonomies of the symbolic types to recognize the type of symbolic columns. Column titles are also used to compute the score and choose the type of the column.",
             "type-annotation": "The approach links each cell in symbolic columns to its corresponding type in the ontology, using cosine similarity between weighted vectors. A set of candidate types is defined and a proportion is used to obtain the definitive cell type. Numeric cells' type is obtained by assigning a score to each possible numeric type, according to the cell content, and choosing the highest scoring.",
             "predicate-annotation": "The approach identifies relations by computing a similarity score for each predicate/relation in the ontology according to the table title and the column types.  ",
             "datatype-annotation": "The approach uses a set of manually defined rules to identify each cell's datatype as numeric, symbolic or unknown. A column is classified as symbolic if there are more cells classified as symbolic than numeric, numeric otherwise.",
@@ -54,7 +54,8 @@
                 "index": ""
             }
         },
-        "output-format": ""
+        "output-format": "",
+        "checked-by-author": true
     },
     {
         "author": "Hignette",
@@ -111,7 +112,8 @@
                 "index": ""
             }
         },
-        "output-format": "RDF"
+        "output-format": "RDF",
+        "checked-by-author": false
     },
     {
         "author": "Tao",
@@ -168,7 +170,8 @@
                 "index": ""
             }
         },
-        "output-format": "RDF"
+        "output-format": "RDF",
+        "checked-by-author": false
     },
     {
         "author": "Limaye",
@@ -225,7 +228,8 @@
                 "index": ""
             }
         },
-        "output-format": ""
+        "output-format": "",
+        "checked-by-author": false
     },
     {
         "author": "Mulwad",
@@ -282,7 +286,8 @@
                 "index": ""
             }
         },
-        "output-format": "N3"
+        "output-format": "N3",
+        "checked-by-author": false
     },
     {
         "author": "Syed",
@@ -339,7 +344,8 @@
                 "index": "Lucene for concepts"
             }
         },
-        "output-format": ""
+        "output-format": "",
+        "checked-by-author": false
     },
     {
         "author": "Mulwad",
@@ -396,7 +402,8 @@
                 "index": ""
             }
         },
-        "output-format": "N3"
+        "output-format": "N3",
+        "checked-by-author": false
     },
     {
         "author": "Venetis",
@@ -453,7 +460,8 @@
                 "index": ""
             }
         },
-        "output-format": ""
+        "output-format": "",
+        "checked-by-author": false
     },
     {
         "author": "Goel",
@@ -510,7 +518,8 @@
                 "index": ""
             }
         },
-        "output-format": ""
+        "output-format": "",
+        "checked-by-author": false
     },
     {
         "author": "Knoblock",
@@ -567,7 +576,8 @@
                 "index": ""
             }
         },
-        "output-format": "Source model (used to generate RDF)"
+        "output-format": "Source model (used to generate RDF)",
+        "checked-by-author": false
     },
     {
         "author": "Pimplikar",
@@ -624,7 +634,8 @@
                 "index": ""
             }
         },
-        "output-format": ""
+        "output-format": "",
+        "checked-by-author": false
     },
     {
         "author": "Wang",
@@ -681,7 +692,8 @@
                 "index": ""
             }
         },
-        "output-format": ""
+        "output-format": "",
+        "checked-by-author": false
     },
     {
         "author": "Buche",
@@ -738,7 +750,8 @@
                 "index": ""
             }
         },
-        "output-format": "XML documents representing data tables; RDF annotations"
+        "output-format": "XML documents representing data tables; RDF annotations",
+        "checked-by-author": false
     },
     {
         "author": "Cruz",
@@ -795,7 +808,8 @@
                 "index": ""
             }
         },
-        "output-format": ""
+        "output-format": "",
+        "checked-by-author": false
     },
     {
         "author": "Deng",
@@ -852,7 +866,8 @@
                 "index": ""
             }
         },
-        "output-format": ""
+        "output-format": "",
+        "checked-by-author": false
     },
     {
         "author": "Ermilov",
@@ -909,7 +924,8 @@
                 "index": ""
             }
         },
-        "output-format": "RDF"
+        "output-format": "RDF",
+        "checked-by-author": false
     },
     {
         "author": "Mulwad",
@@ -966,7 +982,8 @@
                 "index": ""
             }
         },
-        "output-format": "RDF"
+        "output-format": "RDF",
+        "checked-by-author": false
     },
     {
         "author": "Munoz",
@@ -1023,7 +1040,8 @@
                 "index": ""
             }
         },
-        "output-format": "RDF"
+        "output-format": "RDF",
+        "checked-by-author": false
     },
     {
         "author": "Quercini",
@@ -1080,7 +1098,8 @@
                 "index": ""
             }
         },
-        "output-format": ""
+        "output-format": "",
+        "checked-by-author": false
     },
     {
         "author": "Zhang",
@@ -1137,7 +1156,8 @@
                 "index": ""
             }
         },
-        "output-format": ""
+        "output-format": "",
+        "checked-by-author": false
     },
     {
         "author": "Zwicklbauer",
@@ -1194,7 +1214,8 @@
                 "index": ""
             }
         },
-        "output-format": ""
+        "output-format": "",
+        "checked-by-author": false
     },
     {
         "author": "Sekhavat",
@@ -1251,7 +1272,8 @@
                 "index": "Yago"
             }
         },
-        "output-format": ""
+        "output-format": "",
+        "checked-by-author": false
     },
     {
         "author": "Taheriyan",
@@ -1308,7 +1330,8 @@
                 "index": ""
             }
         },
-        "output-format": ""
+        "output-format": "",
+        "checked-by-author": false
     },
     {
         "author": "Bhagavatula",
@@ -1365,7 +1388,8 @@
                 "index": ""
             }
         },
-        "output-format": ""
+        "output-format": "",
+        "checked-by-author": false
     },
     {
         "author": "Ramnandan",
@@ -1422,7 +1446,8 @@
                 "index": "training data with Lucene, not KG data"
             }
         },
-        "output-format": ""
+        "output-format": "",
+        "checked-by-author": false
     },
     {
         "author": "Ritze",
@@ -1479,7 +1504,8 @@
                 "index": ""
             }
         },
-        "output-format": ""
+        "output-format": "",
+        "checked-by-author": false
     },
     {
         "author": "Ermilov",
@@ -1536,7 +1562,8 @@
                 "index": ""
             }
         },
-        "output-format": ""
+        "output-format": "",
+        "checked-by-author": false
     },
     {
         "author": "Neumaier",
@@ -1593,7 +1620,8 @@
                 "index": ""
             }
         },
-        "output-format": ""
+        "output-format": "",
+        "checked-by-author": false
     },
     {
         "author": "Pham",
@@ -1650,7 +1678,8 @@
                 "index": ""
             }
         },
-        "output-format": "The output is a set of top-k semantic types corresponding to the unlabeled attribute."
+        "output-format": "The output is a set of top-k semantic types corresponding to the unlabeled attribute.",
+        "checked-by-author": false
     },
     {
         "author": "Taheriyan",
@@ -1707,7 +1736,8 @@
                 "index": ""
             }
         },
-        "output-format": "RDF"
+        "output-format": "RDF",
+        "checked-by-author": false
     },
     {
         "author": "Taheriyan",
@@ -1764,7 +1794,8 @@
                 "index": ""
             }
         },
-        "output-format": "a semantic model expressing how the assigned labels are connected"
+        "output-format": "a semantic model expressing how the assigned labels are connected",
+        "checked-by-author": false
     },
     {
         "author": "Efthymiou",
@@ -1821,6 +1852,7 @@
                 "index": ""
             }
         },
-        "output-format": "JSON"
+        "output-format": "JSON",
+        "checked-by-author": false
     }
 ]
