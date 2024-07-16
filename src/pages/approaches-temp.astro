@@ -1,13 +1,11 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import Bgblur from "@components/Bgblur.astro";
-import Hero from "@components/Hero.astro";
-import Timeline from "@components/Timeline.astro";
+import data from "@/assets/sti-survey.json";
+import StiTable from "@components/sti-table";
 ---
 
 <Layout title="Approaches">
   <main class="px-4">
-    <Hero />
-    <Timeline />
+    <StiTable data={data} client:load />
   </main>
 </Layout>
