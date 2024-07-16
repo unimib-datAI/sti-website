@@ -7,13 +7,11 @@ import {
   Dialog,
   DialogContent,
   DialogDescription,
-  DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from "@components/ui/dialog";
 import { Button } from "@components/ui/button";
-import { ScrollArea } from "@components/ui/scroll-area";
 
 type Props<TData> = {
   table: Table<TData>;
@@ -33,6 +31,7 @@ export function FullScreen<TData>(props: Props<TData>) {
         </Button>
       </DialogTrigger>
       <DialogContent className="w-svh h-svh max-w-full p-0 gap-0 bg-tableTop">
+        <DialogTitle className="sr-only">Full screen</DialogTitle>
         <DialogHeader className="p-2">
           <DialogDescription>
             <ColumnsSelector
