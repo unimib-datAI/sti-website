@@ -756,4 +756,31 @@ export const columns: ColumnDef<IColumns>[] = [
       width: "w-[300px]",
     },
   },
+  {
+    accessorKey: "checked-by-author",
+    header: "Checked by author",
+    enableSorting: false,
+    cell: (cell) => {
+      const checked = cell.getValue() as boolean;
+
+      return checked ? (
+        <div className="flex justify-center">
+          <span
+            className="inline-flex text-white items-center rounded-full px-0.5 cursor-help"
+            title="The authors were contacted to validate the classification of their approach."
+          >
+            <Check className="h-5 w-5 text-green-400" />
+            <Info className="text-tableText ml-1 h-4 w-4" />
+          </span>
+        </div>
+      ) : (
+        <span className="flex justify-center">
+          <X className="text-red-400 h-5 w-5" />
+        </span>
+      );
+    },
+    meta: {
+      width: "w-[90px]",
+    },
+  },
 ];
