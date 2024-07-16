@@ -1,7 +1,7 @@
 import { flexRender, type Table } from "@tanstack/react-table";
 import { ColumnsSelector } from "./columns-selector";
 import { cn } from "@/lib/utils";
-import { ArrowDownWideNarrow, ArrowUpNarrowWide } from "lucide-react";
+import { ArrowDownWideNarrow, ArrowUpNarrowWide, Expand } from "lucide-react";
 
 import {
   Dialog,
@@ -27,10 +27,13 @@ export function FullScreen<TData>(props: Props<TData>) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline">Full screen</Button>
+        <Button variant="outline">
+          <Expand className="w-4 h-4 mr-2" />
+          Full screen
+        </Button>
       </DialogTrigger>
-      <DialogContent className="w-svh h-svh max-w-full p-0 gap-0">
-        <DialogHeader>
+      <DialogContent className="w-svh h-svh max-w-full p-0 gap-0 bg-tableTop">
+        <DialogHeader className="p-2">
           <DialogDescription>
             <ColumnsSelector
               table={table}
@@ -39,7 +42,7 @@ export function FullScreen<TData>(props: Props<TData>) {
             />
           </DialogDescription>
         </DialogHeader>
-        <div className="mt-5 overflow-auto">
+        <div className="overflow-auto">
           <table className="text-xs border-separate border-spacing-0 rounded-lg border border-slate-600">
             <thead className="sticky top-[-1px] z-20">
               {table.getHeaderGroups().map((headerGroup) => (
@@ -50,7 +53,7 @@ export function FullScreen<TData>(props: Props<TData>) {
                         key={header.id}
                         colSpan={header.colSpan}
                         className={cn(
-                          "py-1 border-r border-slate-600 last:border-r-0 bg-tableTop text-tableText",
+                          "py-1 border-r border-slate-600 last:border-r-0 bg-tableTop text-tableText border-separate",
                           header.column.columnDef.meta?.class
                         )}
                       >
