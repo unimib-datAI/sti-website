@@ -1,44 +1,51 @@
 ---
+import { string } from 'astro/zod';
+import { text } from 'd3';
+
 type Props = {
   icon?: string;
   title?: string;
   info?: string;
   published?: string;
-  item?: string;
   approach?: string;
   features?: string;
+  link: string;
+  pilltext?: string;
 };
 
-const { icon, title, info, published, approach, item, features } = Astro.props;
+const { icon, title, info, published, approach, features, link, pilltext } = Astro.props;
+const bgpills = () => {
+  if (pilltext === "Tool") return "bg-pink-700"; 
+  if (pilltext === "UI") return "bg-blue-700";
+  if (pilltext === "Approach") return "bg-green-700";
+  if (pilltext === "Dataset") return "bg-teal-700";
+}
 ---
 
 <li class="relative mb-6 sm:mb-0 sm:w-1/4">
   <div class="flex items-center">
     <div
-      class="z-10 flex items-center justify-center w-6 h-6 bg-purple-600 rounded-full ring-0 ring-purple-500 sm:ring-8 shrink-0"
+      class="flex items-center justify-center w-6 h-6 bg-purple-600 rounded-full ring-0 ring-purple-500 ring-8 shrink-0"
     >
   <slot/>
     </div>
     <div class="hidden sm:flex w-full bg-purple-500 h-0.5"></div>
   </div>
   <div class="mt-4 sm:pe-8 max-w-full">
-    <a href="#"
+    <div> 
+      <a href={link}
       ><h3 class="text-lg font-semibold text-foreground">
         {title}
       </h3>
     </a>
-    <p class="block mb-2 text-sm font-normal leading-none text-gray-500">
+    <span class:list={["text-xs font-medium me-2 px-2.5 py-0.5 rounded-full", bgpills()]}>{pilltext}</span>
+    </div>
+    <p class="block mt-2 mb-2 text-sm font-normal leading-none text-gray-500">
       {info}
     </p>
-    <p class="text-base font-semibold text-purple-500">
+    <p class="text-base font-bold text-purple-500">
       {published}
     </p>
-    <ul class="marker:text-purple-500 list-outside list-disc ml-6">
-      <li class="text-base font-normal text-foreground">
-        {item}
-      </li>
-    </ul>
-    <p class="text-base font-normal text-foreground text-gray-400 mt-2">{approach}</p>
-    <p class="text-base font-semibold text-foreground mt-2">{features}</p>
+    <p class="text-sm font-semibold text-foreground text-gray-400">{features}</p>
   </div>
 </li>
