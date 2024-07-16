@@ -402,13 +402,18 @@ export const columns: ColumnDef<IColumns>[] = [
           const dataPreparation = cell.getValue() as IDataPreparation;
 
           return dataPreparation.description ? (
+            // <div className="flex justify-center">
+            //   <span
+            //     className="inline-flex text-white items-center rounded-full px-0.5 cursor-help"
+            //     title={`${dataPreparation.description}\n\nSPELL CHECKER: ${dataPreparation["spell-checker"]}\nUNITS OF MEASUREMENTS: ${dataPreparation["units-of-measurements"]}`}
+            //   >
+            //     <Check className="h-5 w-5 text-green-400" />
+            //     <Info className="text-tableText ml-1 h-4 w-4" />
+            //   </span>
+            // </div>
             <div className="flex justify-center">
-              <span
-                className="inline-flex text-white items-center rounded-full px-0.5 cursor-help"
-                title={`${dataPreparation.description}\n\nSPELL CHECKER: ${dataPreparation["spell-checker"]}\nUNITS OF MEASUREMENTS: ${dataPreparation["units-of-measurements"]}`}
-              >
+              <span className="inline-flex text-white items-center rounded-full px-0.5 cursor-help">
                 <Check className="h-5 w-5 text-green-400" />
-                <Info className="text-tableText ml-1 h-4 w-4" />
               </span>
             </div>
           ) : (
@@ -426,13 +431,18 @@ export const columns: ColumnDef<IColumns>[] = [
           const value = cell.getValue() as string;
 
           return value ? (
+            // <div className="flex justify-center">
+            //   <span
+            //     className="inline-flex text-white items-center rounded-full px-0.5 cursor-help"
+            //     title={value}
+            //   >
+            //     <Check className="h-5 w-5 text-green-400" />
+            //     <Info className="text-tableText ml-1 h-4 w-4" />
+            //   </span>
+            // </div>
             <div className="flex justify-center">
-              <span
-                className="inline-flex text-white items-center rounded-full px-0.5 cursor-help"
-                title={value}
-              >
+              <span className="inline-flex text-white items-center rounded-full px-0.5 cursor-help">
                 <Check className="h-5 w-5 text-green-400" />
-                <Info className="text-tableText ml-1 h-4 w-4" />
               </span>
             </div>
           ) : (
@@ -450,13 +460,18 @@ export const columns: ColumnDef<IColumns>[] = [
           const value = cell.getValue() as string;
 
           return value ? (
+            // <div className="flex justify-center">
+            //   <span
+            //     className="inline-flex text-white items-center rounded-full px-0.5 cursor-help"
+            //     title={value}
+            //   >
+            //     <Check className="h-5 w-5 text-green-400" />
+            //     <Info className="text-tableText ml-1 h-4 w-4" />
+            //   </span>
+            // </div>
             <div className="flex justify-center">
-              <span
-                className="inline-flex text-white items-center rounded-full px-0.5 cursor-help"
-                title={value}
-              >
+              <span className="inline-flex text-white items-center rounded-full px-0.5 cursor-help">
                 <Check className="h-5 w-5 text-green-400" />
-                <Info className="text-tableText ml-1 h-4 w-4" />
               </span>
             </div>
           ) : (
@@ -474,13 +489,18 @@ export const columns: ColumnDef<IColumns>[] = [
           const value = cell.getValue() as string;
 
           return value ? (
+            // <div className="flex justify-center">
+            //   <span
+            //     className="inline-flex text-white items-center rounded-full px-0.5 cursor-help"
+            //     title={value}
+            //   >
+            //     <Check className="h-5 w-5 text-green-400" />
+            //     <Info className="text-tableText ml-1 h-4 w-4" />
+            //   </span>
+            // </div>
             <div className="flex justify-center">
-              <span
-                className="inline-flex text-white items-center rounded-full px-0.5 cursor-help"
-                title={value}
-              >
+              <span className="inline-flex text-white items-center rounded-full px-0.5 cursor-help">
                 <Check className="h-5 w-5 text-green-400" />
-                <Info className="text-tableText ml-1 h-4 w-4" />
               </span>
             </div>
           ) : (
@@ -498,13 +518,18 @@ export const columns: ColumnDef<IColumns>[] = [
           const value = cell.getValue() as string;
 
           return value ? (
+            // <div className="flex justify-center">
+            //   <span
+            //     className="inline-flex text-white items-center rounded-full px-0.5 cursor-help"
+            //     title={value}
+            //   >
+            //     <Check className="h-5 w-5 text-green-400" />
+            //     <Info className="text-tableText ml-1 h-4 w-4" />
+            //   </span>
+            // </div>
             <div className="flex justify-center">
-              <span
-                className="inline-flex text-white items-center rounded-full px-0.5 cursor-help"
-                title={value}
-              >
+              <span className="inline-flex text-white items-center rounded-full px-0.5 cursor-help">
                 <Check className="h-5 w-5 text-green-400" />
-                <Info className="text-tableText ml-1 h-4 w-4" />
               </span>
             </div>
           ) : (
@@ -522,13 +547,18 @@ export const columns: ColumnDef<IColumns>[] = [
           const value = cell.getValue() as string;
 
           return value ? (
+            // <div className="flex justify-center">
+            //   <span
+            //     className="inline-flex text-white items-center rounded-full px-0.5 cursor-help"
+            //     title={value}
+            //   >
+            //     <Check className="h-5 w-5 text-green-400" />
+            //     <Info className="text-tableText ml-1 h-4 w-4" />
+            //   </span>
+            // </div>
             <div className="flex justify-center">
-              <span
-                className="inline-flex text-white items-center rounded-full px-0.5 cursor-help"
-                title={value}
-              >
+              <span className="inline-flex text-white items-center rounded-full px-0.5 cursor-help">
                 <Check className="h-5 w-5 text-green-400" />
-                <Info className="text-tableText ml-1 h-4 w-4" />
               </span>
             </div>
           ) : (
@@ -546,13 +576,18 @@ export const columns: ColumnDef<IColumns>[] = [
           const entityLinking = cell.getValue() as IEntityLinking;
 
           return entityLinking.description ? (
+            // <div className="flex justify-center">
+            //   <span
+            //     className="inline-flex text-white items-center rounded-full px-0.5 cursor-help"
+            //     title={`${entityLinking.description}\n\nCANDIDATE GENERATION: ${entityLinking["candidate-generation"]}\nENTITY DISAMBIGUATION: ${entityLinking["entity-disambiguation"]}`}
+            //   >
+            //     <Check className="h-5 w-5 text-green-400" />
+            //     <Info className="text-tableText ml-1 h-4 w-4" />
+            //   </span>
+            // </div>
             <div className="flex justify-center">
-              <span
-                className="inline-flex text-white items-center rounded-full px-0.5 cursor-help"
-                title={`${entityLinking.description}\n\nCANDIDATE GENERATION: ${entityLinking["candidate-generation"]}\nENTITY DISAMBIGUATION: ${entityLinking["entity-disambiguation"]}`}
-              >
+              <span className="inline-flex text-white items-center rounded-full px-0.5 cursor-help">
                 <Check className="h-5 w-5 text-green-400" />
-                <Info className="text-tableText ml-1 h-4 w-4" />
               </span>
             </div>
           ) : (
@@ -570,13 +605,18 @@ export const columns: ColumnDef<IColumns>[] = [
           const value = cell.getValue() as string;
 
           return value ? (
+            // <div className="flex justify-center">
+            //   <span
+            //     className="inline-flex text-white items-center rounded-full px-0.5 cursor-help"
+            //     title={value}
+            //   >
+            //     <Check className="h-5 w-5 text-green-400" />
+            //     <Info className="text-tableText ml-1 h-4 w-4" />
+            //   </span>
+            // </div>
             <div className="flex justify-center">
-              <span
-                className="inline-flex text-white items-center rounded-full px-0.5 cursor-help"
-                title={value}
-              >
+              <span className="inline-flex text-white items-center rounded-full px-0.5 cursor-help">
                 <Check className="h-5 w-5 text-green-400" />
-                <Info className="text-tableText ml-1 h-4 w-4" />
               </span>
             </div>
           ) : (
