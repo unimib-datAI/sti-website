@@ -4,12 +4,12 @@ type Props = {
   title?: string;
   info?: string;
   published?: string;
-  item?: string;
   approach?: string;
   features?: string;
+  link: string;
 };
 
-const { icon, title, info, published, approach, item, features } = Astro.props;
+const { icon, title, info, published, approach, features, link } = Astro.props;
 ---
 
 <li class="relative mb-6 sm:mb-0 sm:w-1/4">
@@ -22,7 +22,7 @@ const { icon, title, info, published, approach, item, features } = Astro.props;
     <div class="hidden sm:flex w-full bg-purple-500 h-0.5"></div>
   </div>
   <div class="mt-4 sm:pe-8 max-w-full">
-    <a href="#"
+    <a href={link}
       ><h3 class="text-lg font-semibold text-foreground">
         {title}
       </h3>
@@ -33,11 +33,6 @@ const { icon, title, info, published, approach, item, features } = Astro.props;
     <p class="text-base font-semibold text-purple-500">
       {published}
     </p>
-    <ul class="marker:text-purple-500 list-outside list-disc ml-6">
-      <li class="text-base font-normal text-foreground">
-        {item}
-      </li>
-    </ul>
     <p class="text-base font-normal text-foreground text-gray-400 mt-2">{approach}</p>
     <p class="text-base font-semibold text-foreground mt-2">{features}</p>
   </div>
