@@ -25,7 +25,7 @@ const bgpills = () => {
 <li class="relative mb-6 sm:mb-0 sm:w-1/4">
   <div class="flex items-center">
     <div
-      class="z-10 flex items-center justify-center w-6 h-6 bg-purple-600 rounded-full ring-0 ring-purple-500 sm:ring-8 shrink-0"
+      class="flex items-center justify-center w-6 h-6 bg-purple-600 rounded-full ring-0 ring-purple-500 ring-8 shrink-0"
     >
   <slot/>
     </div>
@@ -43,9 +43,9 @@ const bgpills = () => {
     <p class="block mt-2 mb-2 text-sm font-normal leading-none text-gray-500">
       {info}
     </p>
-    <p class="text-base font-semibold text-purple-500">
+    <p class="text-base font-bold text-purple-500">
       {published}
     </p>
-    <p class="text-base font-semibold text-foreground text-gray-400 mt-2">{features}</p>
+    <p class="text-sm font-semibold text-foreground text-gray-400">{features}</p>
   </div>
 </li>
