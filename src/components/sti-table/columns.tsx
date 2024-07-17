@@ -50,10 +50,12 @@ export const columns: ColumnDef<IColumns>[] = [
     enableSorting: false,
     cell: (cell) => {
       const title = cell.getValue() as ITitle;
-      return (
+      return title.link ? (
         <a href={title.link} target="_blank">
           {title.text}
         </a>
+      ) : (
+        <span>{title.text}</span>
       );
     },
     meta: {
