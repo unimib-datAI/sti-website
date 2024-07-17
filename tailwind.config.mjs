@@ -44,8 +44,10 @@ export default {
         },
         cardBackground: "#0C0C2F",
         sectionBackground: "#0C0C2F",
+
         tableTop: "#38384C",
         tableBottom: "#1E1A26",
+        tableDark: "#19121C",
         tableAlt: "#282332",
         tableText: "#A5A0B5",
         iconBackground: {
