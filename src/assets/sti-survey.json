@@ -3305,5 +3305,1658 @@
         },
         "output-format": "",
         "checked-by-author": false
+    },
+    {
+        "author": "Guo",
+        "year": 2020,
+        "title": {
+            "text": "Web Table Column Type Detection Using Deep Learning and Probability Graph Model",
+            "link": ""
+        },
+        "conference-journal": "WISA",
+        "name-of-approach": "",
+        "main-method": {
+            "type": "sup",
+            "technique": "Neural Network + CRF"
+        },
+        "domain": {
+            "domain": "independent",
+            "type": ""
+        },
+        "tasks": {
+            "cta": true,
+            "cpa": false,
+            "cea": false,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": {
+                "description": "",
+                "spell-checker": "",
+                "units-of-measurements": ""
+            },
+            "subject-detection": "",
+            "column-analysis": "character or numeric",
+            "type-annotation": "For single column type annotation, it detects the semantic type based on the content of cells contained in the target column. For character columns uses a vector that combines character embedding and word embedding as input to the subsequent neural network model. (BiGRU-Attention hybrid NN model). \n For multi-column type detection, a linear-CRF model is used to improve the results of single-column classification by leveraging the relationships with other columns. ",
+            "predicate-annotation": " ",
+            "datatype-annotation": "An analysis is conducted to distinguish character columns from numerical columns, which can also include characters, by using a classification method based on statistical features. ",
+            "entity-linking": {
+                "description": "",
+                "candidate-generation": "",
+                "entity-disambiguation": ""
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "T2D, Limaye",
+        "code-availability": "",
+        "license": "NotSpecified",
+        "inputs": {
+            "type-of-table": "",
+            "kg": {
+                "triple-store": "",
+                "index": ""
+            }
+        },
+        "output-format": ""
+    },
+    {
+        "author": "Huynh",
+        "year": 2020,
+        "title": {
+            "text": "DAGOBAH: Enhanced Scoring Algorithms for Scalable Annotations of Tabular Data",
+            "link": ""
+        },
+        "conference-journal": "SemTab",
+        "name-of-approach": "DAGOBAH SL 2020",
+        "main-method": {
+            "type": "hybrid",
+            "technique": "features + embeddings, matching"
+        },
+        "domain": {
+            "domain": "independent",
+            "type": ""
+        },
+        "tasks": {
+            "cta": true,
+            "cpa": true,
+            "cea": true,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": {
+                "description": "Same as previous year (with improvements)",
+                "spell-checker": "",
+                "units-of-measurements": ""
+            },
+            "subject-detection": "",
+            "column-analysis": "Discriminate Columns with String, DateTime, Numerical with Unit, Numerical w/o Unit",
+            "type-annotation": "Same as previous year (with improvements)",
+            "predicate-annotation": "CPA is calculated from CEA by applying a majority voting techique (the most occuring relation between two cell annotations in two columns)",
+            "datatype-annotation": "The method uses the column type information (string or number) during the CPA step, but specific information of how they are obtained is not provided",
+            "entity-linking": {
+                "description": "Iterative {CEA, CTA, CPA} disambiguation",
+                "candidate-generation": "lookup, custom index",
+                "entity-disambiguation": "features, similarity, contextual inf"
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "Semtab2020",
+        "code-availability": "",
+        "license": "NotSpecified",
+        "inputs": {
+            "type-of-table": "CSV",
+            "kg": {
+                "triple-store": "Wikidata",
+                "index": "Spark dataframes"
+            }
+        },
+        "output-format": ""
+    },
+    {
+        "author": "Khurana",
+        "year": 2020,
+        "title": {
+            "text": "Semantic Annotation for Tabular Data",
+            "link": ""
+        },
+        "conference-journal": "CIKM",
+        "name-of-approach": "C²",
+        "main-method": {
+            "type": "sup",
+            "technique": "Maximum Likelihood Estimation (MLE) through ensembles"
+        },
+        "domain": {
+            "domain": "independent",
+            "type": ""
+        },
+        "tasks": {
+            "cta": true,
+            "cpa": false,
+            "cea": false,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": {
+                "description": "Inverted Entity Concept Count Index: This key-value inverted index lists the number of times a categorical entity has been mentioned under respective column names. \n Numerical interval tree: interval of numerical data are defined so that it is possible to exclude certain data types (when numerical values range from 10 to 140 it is unlikely that the column represents age). \n Composite Pattern Tree Index: This index deals with data that is neither categorical/string type nor the numeric type. Regex are employed in this case",
+                "spell-checker": "",
+                "units-of-measurements": ""
+            },
+            "subject-detection": "",
+            "column-analysis": " ",
+            "type-annotation": "The likelihood of all entities of a column belonging to concept is the joint probability of all its entities belonging to the concept at the same time. Also, the type of a column is the one that most likely explains all of its components. The type is determined by: \n- Using multiple data sources; \n - Smoothing \n - Analysing concept co-occurrence in the table; \n - Tuple validation and belief sharing wrt other data sources.",
+            "predicate-annotation": " ",
+            "datatype-annotation": "Datatype annotation is performed as a data preparation step",
+            "entity-linking": {
+                "description": "",
+                "candidate-generation": "",
+                "entity-disambiguation": ""
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "Limaye, Semantification, SemTab rounds from 1 to 4, T2Dv2, ISWC17",
+        "code-availability": "",
+        "license": "NotSpecified",
+        "inputs": {
+            "type-of-table": "",
+            "kg": {
+                "triple-store": "",
+                "index": ""
+            }
+        },
+        "output-format": ""
+    },
+    {
+        "author": "Kim",
+        "year": 2020,
+        "title": {
+            "text": "Generating Conceptual Subgraph from Tabular Data for Knowledge Graph Matching",
+            "link": ""
+        },
+        "conference-journal": "SemTab",
+        "name-of-approach": "SSL",
+        "main-method": {
+            "type": "unsup",
+            "technique": "features"
+        },
+        "domain": {
+            "domain": "independent",
+            "type": ""
+        },
+        "tasks": {
+            "cta": true,
+            "cpa": true,
+            "cea": true,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": {
+                "description": "",
+                "spell-checker": "Fix typos using Google Search Engine",
+                "units-of-measurements": ""
+            },
+            "subject-detection": "The first column is the Subject (assumption)",
+            "column-analysis": "Determine data type (text, number, date)",
+            "type-annotation": "Using 'instance of (P31)'",
+            "predicate-annotation": "Check predicates between cells",
+            "datatype-annotation": "",
+            "entity-linking": {
+                "description": "Candidate Generation \n Lookup: SPARQL query to identify SPO considering data type of the columns. \n Remove candidates considering the content unrelated to the annotation",
+                "candidate-generation": "lookup, SPARQL",
+                "entity-disambiguation": "features"
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "Semtab2020",
+        "code-availability": "",
+        "license": "NotSpecified",
+        "inputs": {
+            "type-of-table": "CSV",
+            "kg": {
+                "triple-store": "Wikidata",
+                "index": ""
+            }
+        },
+        "output-format": "CEA,CTA,CPA"
+    },
+    {
+        "author": "Li",
+        "year": 2020,
+        "title": {
+            "text": "Deep Entity Matching with Pre-Trained Language Models",
+            "link": ""
+        },
+        "conference-journal": "VLDB",
+        "name-of-approach": "Ditto",
+        "main-method": {
+            "type": "sup",
+            "technique": "BERT, DistilBERT, RoBERTa, XLNet"
+        },
+        "domain": {
+            "domain": "independent",
+            "type": ""
+        },
+        "tasks": {
+            "cta": false,
+            "cpa": false,
+            "cea": true,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": {
+                "description": "",
+                "spell-checker": "",
+                "units-of-measurements": ""
+            },
+            "subject-detection": "",
+            "column-analysis": " ",
+            "type-annotation": "",
+            "predicate-annotation": " ",
+            "datatype-annotation": "",
+            "entity-linking": {
+                "description": "",
+                "candidate-generation": "",
+                "entity-disambiguation": "features, LM"
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "Entity Resolution benchmark, the Magellan dataset, WDC product matching dataset",
+        "code-availability": "https://github.com/megagonlabs/ditto ",
+        "license": "Apache 2.0",
+        "inputs": {
+            "type-of-table": "",
+            "kg": {
+                "triple-store": "",
+                "index": ""
+            }
+        },
+        "output-format": ""
+    },
+    {
+        "author": "Nguyen",
+        "year": 2020,
+        "title": {
+            "text": "MTab4Wikidata at SemTab 2020: Tabular Data Annotation with Wikidata",
+            "link": ""
+        },
+        "conference-journal": "SemTab",
+        "name-of-approach": "Mtab4Wikidata",
+        "main-method": {
+            "type": "unsup",
+            "technique": "features"
+        },
+        "domain": {
+            "domain": "independent",
+            "type": ""
+        },
+        "tasks": {
+            "cta": true,
+            "cpa": true,
+            "cea": true,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": {
+                "description": "",
+                "spell-checker": "",
+                "units-of-measurements": ""
+            },
+            "subject-detection": "",
+            "column-analysis": " ",
+            "type-annotation": "majority types",
+            "predicate-annotation": "aggregate alla properties of statment candidates in the same row, then majority voting",
+            "datatype-annotation": "",
+            "entity-linking": {
+                "description": "Candidate Generation \n - fuzzy entity search and two cells in conjunction using fuzzy statement search  \n Disambiguation \n - compute context similarity taking the average of all statement similarities in the same row",
+                "candidate-generation": "lookup, custom index",
+                "entity-disambiguation": "features, contextual inf"
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "Semtab2020",
+        "code-availability": "",
+        "license": "NotSpecified",
+        "inputs": {
+            "type-of-table": "CSV",
+            "kg": {
+                "triple-store": "Wikidata",
+                "index": "HashTable + Sparse Matrix"
+            }
+        },
+        "output-format": "CEA,CTA,CPA"
+    },
+    {
+        "author": "Shigapov",
+        "year": 2020,
+        "title": {
+            "text": "bbw: Matching CSV to Wikidata via Meta-lookup",
+            "link": ""
+        },
+        "conference-journal": "SemTab",
+        "name-of-approach": "bbw (boosted by wiki)",
+        "main-method": {
+            "type": "unsup",
+            "technique": "features"
+        },
+        "domain": {
+            "domain": "independent",
+            "type": ""
+        },
+        "tasks": {
+            "cta": true,
+            "cpa": true,
+            "cea": true,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": {
+                "description": "Fix econding problems with ftfy",
+                "spell-checker": "",
+                "units-of-measurements": ""
+            },
+            "subject-detection": "",
+            "column-analysis": "Regex to predict number, time, name and string datatypes",
+            "type-annotation": "Find the most common class usign a special blazegraph query",
+            "predicate-annotation": "Most frequenty property",
+            "datatype-annotation": "",
+            "entity-linking": {
+                "description": "Candidate Generation \n - meta-look with SearX and then edit distance and then SPARQL query and then edit distance. Query using all the elements in a row or their types. \n Disambiguation \n Most frequenty entity",
+                "candidate-generation": "lookup, SearX, SPARQL",
+                "entity-disambiguation": "features"
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "Semtab2020",
+        "code-availability": "https://github.com/UB-Mannheim/bbw",
+        "license": "MIT",
+        "inputs": {
+            "type-of-table": "CSV",
+            "kg": {
+                "triple-store": "Wikidata",
+                "index": "SeerX metasearch API"
+            }
+        },
+        "output-format": "CEA,CTA,CPA"
+    },
+    {
+        "author": "Tyagi",
+        "year": 2020,
+        "title": {
+            "text": "LexMa: Tabular Data to Knowledge Graph Matching using Lexical Techniques",
+            "link": ""
+        },
+        "conference-journal": "SemTab",
+        "name-of-approach": "LexMa",
+        "main-method": {
+            "type": "unsup",
+            "technique": "lookup"
+        },
+        "domain": {
+            "domain": "independent",
+            "type": ""
+        },
+        "tasks": {
+            "cta": true,
+            "cpa": false,
+            "cea": true,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": {
+                "description": "trimming and uppercase",
+                "spell-checker": "",
+                "units-of-measurements": ""
+            },
+            "subject-detection": "",
+            "column-analysis": " ",
+            "type-annotation": "majority types",
+            "predicate-annotation": " ",
+            "datatype-annotation": "",
+            "entity-linking": {
+                "description": "Candate Generation \n - Wikidata lookup service \n Disambiguation \n - cosine similarity \nMissing value are searched in DBpedia and then converted into a Wikipedia entity",
+                "candidate-generation": "lookup, WKD API",
+                "entity-disambiguation": "features, similarity"
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "Semtab2020",
+        "code-availability": "https://github.com/shaliniktyagi/TabularData_to_Knowledge_graph",
+        "license": "NotSpecified",
+        "inputs": {
+            "type-of-table": "CSV",
+            "kg": {
+                "triple-store": "Wikidata",
+                "index": ""
+            }
+        },
+        "output-format": "CTA,CPA"
+    },
+    {
+        "author": "Yumusak",
+        "year": 2020,
+        "title": {
+            "text": "Knowledge graph matching with inter-service information transfer",
+            "link": ""
+        },
+        "conference-journal": "SemTab",
+        "name-of-approach": "TeamTR",
+        "main-method": {
+            "type": "unsup",
+            "technique": "features"
+        },
+        "domain": {
+            "domain": "independent",
+            "type": ""
+        },
+        "tasks": {
+            "cta": true,
+            "cpa": true,
+            "cea": false,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": {
+                "description": "",
+                "spell-checker": "Usign search enigines",
+                "units-of-measurements": ""
+            },
+            "subject-detection": "",
+            "column-analysis": " ",
+            "type-annotation": "Not enough information",
+            "predicate-annotation": "Simple sparql Query, eventually adding date datatype or threshold fot numeric values",
+            "datatype-annotation": "",
+            "entity-linking": {
+                "description": "",
+                "candidate-generation": "",
+                "entity-disambiguation": ""
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "Semtab2020",
+        "code-availability": "https://github.com/semihyumusak/semtab_teamtr_2020",
+        "license": "NotSpecified",
+        "inputs": {
+            "type-of-table": "CSV",
+            "kg": {
+                "triple-store": "Wikidata",
+                "index": ""
+            }
+        },
+        "output-format": "CTA,CPA"
+    },
+    {
+        "author": "Zhang",
+        "year": 2020,
+        "title": {
+            "text": "Novel Entity Discovery from Web Tables",
+            "link": ""
+        },
+        "conference-journal": "WWW",
+        "name-of-approach": "",
+        "main-method": {
+            "type": "sup",
+            "technique": "lexical + semantic features"
+        },
+        "domain": {
+            "domain": "independent",
+            "type": ""
+        },
+        "tasks": {
+            "cta": false,
+            "cpa": true,
+            "cea": true,
+            "cnea": true
+        },
+        "steps": {
+            "data-preparation": {
+                "description": "",
+                "spell-checker": "",
+                "units-of-measurements": ""
+            },
+            "subject-detection": "table is said to be linkable if the KB has a match- ing entity for any of the mentions in its core column, i.e., the subject column that contains most entity-based mentions [16, 34]",
+            "column-analysis": "Uses column header for a classification model trained on T2D",
+            "type-annotation": "Label similarity + values similarity",
+            "predicate-annotation": " ",
+            "datatype-annotation": "The KB values and tabular values in the column are classified as time, numerical, string, or other data types. We type ambiguous values, such as “1836”, as both “numerical” and “time”. We assign a type to column data type by majority voting",
+            "entity-linking": {
+                "description": "Candidate Generatiom\n- Wikipedia search API \nCandate Classification \n- lexical simlarity (Levenshtein, Jaccard, Letter Distance, Substring Indicator) \n- sematic similarity ? \nEntity Disambiguation \n- filter on type",
+                "candidate-generation": "lookup, Wikipedia API",
+                "entity-disambiguation": "features, ML"
+            },
+            "nil-annotation": "collects all tables with unlinked mentions and consider i) the number of linked mentions and ii) the linking rate. use linked entities and related information to search Wikipedia. Select the entities among the top k through a similarity measure. \n Natural Embedding \n Topical Space \n Lexical Space"
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "T2D, W2D, T2Dv2",
+        "code-availability": "https://zenodo.org/record/3627274",
+        "license": "CCA 4.0",
+        "inputs": {
+            "type-of-table": "CSV",
+            "kg": {
+                "triple-store": "DBpedia",
+                "index": ""
+            }
+        },
+        "output-format": ""
+    },
+    {
+        "author": "Abdelmageed",
+        "year": 2021,
+        "title": {
+            "text": "JenTab Meets SemTab 2021’s New Challenges",
+            "link": ""
+        },
+        "conference-journal": "SemTab",
+        "name-of-approach": "JenTab",
+        "main-method": {
+            "type": "unsup",
+            "technique": "features"
+        },
+        "domain": {
+            "domain": "independent",
+            "type": ""
+        },
+        "tasks": {
+            "cta": true,
+            "cpa": true,
+            "cea": true,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": {
+                "description": "datatype detection",
+                "spell-checker": "",
+                "units-of-measurements": ""
+            },
+            "subject-detection": "column position",
+            "column-analysis": "Datatypes (object, date, string, and number)",
+            "type-annotation": "See Abdelmageed2020",
+            "predicate-annotation": "See Abdelmageed2020",
+            "datatype-annotation": "See Abdelmageed2020",
+            "entity-linking": {
+                "description": "See Abdelmageed2020",
+                "candidate-generation": "lookup, SPARQL",
+                "entity-disambiguation": "features, similarity"
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "SemTab2021",
+        "code-availability": "https://github.com/fusion-jena/JenTab",
+        "license": "Apache 2.0",
+        "inputs": {
+            "type-of-table": "CSV",
+            "kg": {
+                "triple-store": "DBpedia,Wikidata",
+                "index": ""
+            }
+        },
+        "output-format": "CEA,CTA,CPA"
+    },
+    {
+        "author": "Abdelmageed",
+        "year": 2021,
+        "title": {
+            "text": "JenTab: A Toolkit for Semantic Table Annotations",
+            "link": ""
+        },
+        "conference-journal": "KGC",
+        "name-of-approach": "JenTab",
+        "main-method": {
+            "type": "unsup",
+            "technique": "features"
+        },
+        "domain": {
+            "domain": "independent",
+            "type": ""
+        },
+        "tasks": {
+            "cta": true,
+            "cpa": true,
+            "cea": true,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": {
+                "description": "datatype detection",
+                "spell-checker": "",
+                "units-of-measurements": ""
+            },
+            "subject-detection": "column position",
+            "column-analysis": "Datatypes (object, date, string, and number)",
+            "type-annotation": "See Abdelmageed2020",
+            "predicate-annotation": "See Abdelmageed2020",
+            "datatype-annotation": "See Abdelmageed2020",
+            "entity-linking": {
+                "description": "See Abdelmageed2020",
+                "candidate-generation": "lookup, SPARQL",
+                "entity-disambiguation": "features, similarity"
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "SemTab2020",
+        "code-availability": "https://github.com/fusion-jena/JenTab",
+        "license": "Apache 2.0",
+        "inputs": {
+            "type-of-table": "CSV",
+            "kg": {
+                "triple-store": "DBpedia,Wikidata",
+                "index": ""
+            }
+        },
+        "output-format": "CEA,CTA,CPA"
+    },
+    {
+        "author": "Avogadro",
+        "year": 2021,
+        "title": {
+            "text": "MantisTable V: a novel and efficient approach to Semantic Table Interpretation",
+            "link": ""
+        },
+        "conference-journal": "SemTab",
+        "name-of-approach": "MantisTable V",
+        "main-method": {
+            "type": "unsup",
+            "technique": "features"
+        },
+        "domain": {
+            "domain": "independent",
+            "type": ""
+        },
+        "tasks": {
+            "cta": true,
+            "cpa": true,
+            "cea": true,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": {
+                "description": "During this phase, all tables’ cells are analysed using a tokeniser managing special characters and additional spaces",
+                "spell-checker": "",
+                "units-of-measurements": ""
+            },
+            "subject-detection": "Identified within the NE columns using content based scores",
+            "column-analysis": "Identification of literal (L-) columns using a set of Regextypes",
+            "type-annotation": "",
+            "predicate-annotation": "All the predicates previously identified via LamAPI for each column are sorted by their relative frequency to the entire column. The predicate with the greatest frequency will be ranked first.",
+            "datatype-annotation": "Identification of literal (L-) columns using a set of Regextypes",
+            "entity-linking": {
+                "description": "Entity-linking on NE-columns by searching the LamAPI, using the Lookup service",
+                "candidate-generation": "lookup, custom index",
+                "entity-disambiguation": "features"
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "Semtab2021",
+        "code-availability": "https://bitbucket.org/disco_unimib/mantistable-v ",
+        "license": "Apache 2.0",
+        "inputs": {
+            "type-of-table": "",
+            "kg": {
+                "triple-store": "DBpedia,Wikidata",
+                "index": "Lamapi"
+            }
+        },
+        "output-format": "CEA,CTA,CPA"
+    },
+    {
+        "author": "Baazouzi",
+        "year": 2021,
+        "title": {
+            "text": "Kepler-aSI at SemTab 2021",
+            "link": ""
+        },
+        "conference-journal": "SemTab",
+        "name-of-approach": "KEPLER-ASI",
+        "main-method": {
+            "type": "unsup",
+            "technique": "features"
+        },
+        "domain": {
+            "domain": "independent",
+            "type": ""
+        },
+        "tasks": {
+            "cta": true,
+            "cpa": true,
+            "cea": true,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": {
+                "description": "stop word elimination",
+                "spell-checker": "pyspellchecker",
+                "units-of-measurements": "pandas"
+            },
+            "subject-detection": "",
+            "column-analysis": "Aimed at explicitly extracting the candidates for the annotation process. The priming is carried out by an analysis of the processing columns, which aims to understand and delimit the set of regular expressions which contains a set of units. This step allows to identify multiple Regextypes using regular expressions. Also language detection is performed. ",
+            "type-annotation": "After a set of information is collected for each entity (instanceOf, partOf, subclassOf), the column type is identified using a SPARQL query. If more than one type is returned by the query, no annotation is made. ",
+            "predicate-annotation": "After having annotated the cell values as well as the different types of each of the considered entities, they identify the relationships between two cells appearing on the same row via a property using a SPARQL query,",
+            "datatype-annotation": "Datatype is detected in the preprocessing phase by using regex",
+            "entity-linking": {
+                "description": "The approach reuses the results of the CTA task process by introducing the necessary modifications on the SPARQL query. If the operation returns more than one annotation, they run a process based on examining the context of the considered column, relative to what was obtained with the CTA task, to overcome the ambiguity problem.",
+                "candidate-generation": "lookup, SPARQL",
+                "entity-disambiguation": "contextual inf"
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "Semtab2021",
+        "code-availability": "",
+        "license": "NotSpecified",
+        "inputs": {
+            "type-of-table": "CSV",
+            "kg": {
+                "triple-store": "Wikidata",
+                "index": ""
+            }
+        },
+        "output-format": "CEA,CTA,CPA"
+    },
+    {
+        "author": "Heist",
+        "year": 2021,
+        "title": {
+            "text": "Information Extraction From Co-Occurring Similar Entities",
+            "link": ""
+        },
+        "conference-journal": "WWW",
+        "name-of-approach": "CaLiGraph extraction framework",
+        "main-method": {
+            "type": "hybrid",
+            "technique": "distant supervision + rule mining"
+        },
+        "domain": {
+            "domain": "independent",
+            "type": ""
+        },
+        "tasks": {
+            "cta": false,
+            "cpa": false,
+            "cea": false,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": {
+                "description": "",
+                "spell-checker": "",
+                "units-of-measurements": ""
+            },
+            "subject-detection": "implicitly identify the subject column of the table by identifying the subject entities of the table (see section 4.3 Subject Entity Discovery)",
+            "column-analysis": " ",
+            "type-annotation": "type frequency and domain of predicate statistics from the kg",
+            "predicate-annotation": "most frequent",
+            "datatype-annotation": "",
+            "entity-linking": {
+                "description": "",
+                "candidate-generation": "",
+                "entity-disambiguation": ""
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "",
+        "code-availability": "https://github.com/nheist/CaLiGraph ",
+        "license": "GPL 3.0",
+        "inputs": {
+            "type-of-table": "web tables",
+            "kg": {
+                "triple-store": "CaliGraph,DBpedia,Yago",
+                "index": ""
+            }
+        },
+        "output-format": "RDF assertions"
+    },
+    {
+        "author": "Huynh",
+        "year": 2021,
+        "title": {
+            "text": "DAGOBAH: Table and Graph Contexts for Eﬀicient Semantic Annotation of Tabular Data",
+            "link": ""
+        },
+        "conference-journal": "SemTab",
+        "name-of-approach": "DAGOBAH SL 2021",
+        "main-method": {
+            "type": "hybrid",
+            "technique": "features + embeddings, Matching"
+        },
+        "domain": {
+            "domain": "independent",
+            "type": ""
+        },
+        "tasks": {
+            "cta": true,
+            "cpa": true,
+            "cea": true,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": {
+                "description": "Same as previous year",
+                "spell-checker": "",
+                "units-of-measurements": ""
+            },
+            "subject-detection": "Same as previous year",
+            "column-analysis": "Discriminate Columns with String, DateTime, Numerical with Unit, Numerical w/o Unit",
+            "type-annotation": "Same as previous year",
+            "predicate-annotation": "CPA is calculated from CEA (the most occuring relation between two cell annotations in two columns)",
+            "datatype-annotation": "VRAI (named entity, literals with unit, miscellaneous literals (e.g., Email, URL, IP Address)",
+            "entity-linking": {
+                "description": "Iterative {CEA, CTA, CPA} disambiguation",
+                "candidate-generation": "lookup, custom index",
+                "entity-disambiguation": "features, similarity, contextual inf"
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "Fully-automated",
+            "description": ""
+        },
+        "validation": "SemTab2021",
+        "code-availability": "",
+        "license": "Orange",
+        "inputs": {
+            "type-of-table": "CSV, TXT, XLSX",
+            "kg": {
+                "triple-store": "DBpedia,Wikidata",
+                "index": "ElasticSearch"
+            }
+        },
+        "output-format": "JSON"
+    },
+    {
+        "author": "Nguyen",
+        "year": 2021,
+        "title": {
+            "text": "SemTab 2021: Tabular Data Annotation with MTab Tool",
+            "link": ""
+        },
+        "conference-journal": "SemTab",
+        "name-of-approach": "MTab",
+        "main-method": {
+            "type": "unsup",
+            "technique": "features"
+        },
+        "domain": {
+            "domain": "independent",
+            "type": ""
+        },
+        "tasks": {
+            "cta": true,
+            "cpa": true,
+            "cea": true,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": {
+                "description": "remove HTML tags, non-cell-values and use ftfy tool to fix noisy cells",
+                "spell-checker": "",
+                "units-of-measurements": ""
+            },
+            "subject-detection": "A column is a subject column when its datatype is NE, it is determined based on the uniqueness score as an increased score for columns with many uniqeu values and reduces the score for columns with missing values. The subject column is the one with the highest unique score. If the same score is shared, the leftmost column is chosen. ",
+            "column-analysis": "Column analysis is conducted by classifying the datatype of a cell and detecting the subject column. ",
+            "type-annotation": "The column datatype is the most common type within its cells",
+            "predicate-annotation": "Predicates between the subject column and all the other columns are identified",
+            "datatype-annotation": "First a table cell's datatype into non-cell (empty), literal or NE using SpaCy pretrained models. NE, date-time and numeric entities are identified this way. A table column’s data type into either a non-match column (empty column), a literal, or a named-entity column. The column data type is derived from the majority voting of all cell data types in this column.",
+            "entity-linking": {
+                "description": "Entity candidate generation is performed for each table cell with the entity search modules. MTab tool provides the three entity search modules, i.e., keyword search, fuzzy search, and aggregation search",
+                "candidate-generation": "lookup, custom index",
+                "entity-disambiguation": "features, contextual inf"
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "Fully-automated",
+            "description": ""
+        },
+        "validation": "SemTab2021",
+        "code-availability": "https://github.com/phucty/mtab_tool (API DOCS FOR ONLINE TOOL)",
+        "license": "MIT",
+        "inputs": {
+            "type-of-table": "CSV",
+            "kg": {
+                "triple-store": "DBpedia,Wikidata",
+                "index": "Custom BM25"
+            }
+        },
+        "output-format": "CEA,CTA,CPA"
+    },
+    {
+        "author": "Steenwinckel",
+        "year": 2021,
+        "title": {
+            "text": "MAGIC: Mining an Augmented Graph using INK, starting from a CSV",
+            "link": ""
+        },
+        "conference-journal": "SemTab",
+        "name-of-approach": "MAGIC",
+        "main-method": {
+            "type": "hybrid",
+            "technique": "INK, lookup"
+        },
+        "domain": {
+            "domain": "independent",
+            "type": ""
+        },
+        "tasks": {
+            "cta": true,
+            "cpa": true,
+            "cea": true,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": {
+                "description": "future work",
+                "spell-checker": "",
+                "units-of-measurements": ""
+            },
+            "subject-detection": "",
+            "column-analysis": " ",
+            "type-annotation": "The column type can be derived from all cells containing annotated values. For all cells, an INK embedding of depth 1 is generated and the rdf:type for DBpedia and Wikidata P31 relationships are kept to determine the column type annotations. Again, the annotation with the highest count value is kept",
+            "predicate-annotation": "The INK embedding also provides the information going from the major column cell to the neighbouring cells within the same row. This information is directly derived from the provided embedding by selecting the object or data property relationships from the INK embedding. The combination of a relationship between two cells is kept within a dictionary. After the procedure to provide annotations for all cells is finished, the relationships between all those two cells are counted and the relationship with the maximal count is returned",
+            "datatype-annotation": "",
+            "entity-linking": {
+                "description": "DBpedia Spotlight is used to collect candidates from a cell description; candidates are filteres according to predefined characteristics. For the selected candidate annotations an INK embedding of depth 2 is generated. Within these embeddings, a next function will search for matching information residing in the other cells on the same row from which the candidate embeddings were generated.",
+                "candidate-generation": "lookup, DBP Spotlight, WKD API",
+                "entity-disambiguation": "features, entity embedding"
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "SemTab2021",
+        "code-availability": "https://github.com/IBCNServices/Magic",
+        "license": "imec",
+        "inputs": {
+            "type-of-table": "CSV",
+            "kg": {
+                "triple-store": "Wikidata",
+                "index": "CEA,CTA,CPA"
+            }
+        },
+        "output-format": ""
+    },
+    {
+        "author": "Wang",
+        "year": 2021,
+        "title": {
+            "text": "TCN: Table Convolutional Network for Web Table Interpretation",
+            "link": ""
+        },
+        "conference-journal": "WWW",
+        "name-of-approach": "TCN",
+        "main-method": {
+            "type": "sup",
+            "technique": "Transformer"
+        },
+        "domain": {
+            "domain": "independent",
+            "type": ""
+        },
+        "tasks": {
+            "cta": true,
+            "cpa": true,
+            "cea": false,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": {
+                "description": "we apply minimal preprocessing on cell values by lowering all cases and removing redundant spaces.",
+                "spell-checker": "",
+                "units-of-measurements": ""
+            },
+            "subject-detection": "",
+            "column-analysis": " ",
+            "type-annotation": "A representation learning framework (Table Convolution Networks) is employed which uses intra and intert table context available from a collection of tables instead limiting itself to the table under analysis",
+            "predicate-annotation": "Pairwise column relation is obtained through TCN",
+            "datatype-annotation": "A music ontology is used for type detection; non identified types are set to XMLSchema#String",
+            "entity-linking": {
+                "description": "",
+                "candidate-generation": "",
+                "entity-disambiguation": ""
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "custom dataset music domain",
+        "code-availability": "",
+        "license": "NotSpecified",
+        "inputs": {
+            "type-of-table": "",
+            "kg": {
+                "triple-store": "",
+                "index": ""
+            }
+        },
+        "output-format": ""
+    },
+    {
+        "author": "Yang",
+        "year": 2021,
+        "title": {
+            "text": "GBMTab: A Graph-Based Method for Interpreting Noisy Semantic Table to Knowledge Graph",
+            "link": ""
+        },
+        "conference-journal": "SemTab",
+        "name-of-approach": "GBMTab",
+        "main-method": {
+            "type": "sup",
+            "technique": "PGM"
+        },
+        "domain": {
+            "domain": "independent",
+            "type": ""
+        },
+        "tasks": {
+            "cta": true,
+            "cpa": false,
+            "cea": true,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": {
+                "description": "",
+                "spell-checker": "",
+                "units-of-measurements": ""
+            },
+            "subject-detection": "",
+            "column-analysis": " ",
+            "type-annotation": "majority voting",
+            "predicate-annotation": "NO CPA",
+            "datatype-annotation": "",
+            "entity-linking": {
+                "description": "A noise mention repair mechanism is adopted; EL is divided into candidate generation and entity disambiguation. EL is achieved through string similarity comparison and noise mention repair. ",
+                "candidate-generation": "lookup, custom index, Mediawiki API",
+                "entity-disambiguation": "features, probabilistic"
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "SemTab2021",
+        "code-availability": "",
+        "license": "NotSpecified",
+        "inputs": {
+            "type-of-table": "CSV",
+            "kg": {
+                "triple-store": "Wikidata",
+                "index": ""
+            }
+        },
+        "output-format": "CEA,CTA"
+    },
+    {
+        "author": "Zhou",
+        "year": 2021,
+        "title": {
+            "text": "Tabular Data Concept Type Detection Using Star-Transformers",
+            "link": ""
+        },
+        "conference-journal": "CIKM",
+        "name-of-approach": "",
+        "main-method": {
+            "type": "sup",
+            "technique": "Star-Transformers"
+        },
+        "domain": {
+            "domain": "independent",
+            "type": ""
+        },
+        "tasks": {
+            "cta": true,
+            "cpa": false,
+            "cea": false,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": {
+                "description": "feature extraction",
+                "spell-checker": "",
+                "units-of-measurements": ""
+            },
+            "subject-detection": "",
+            "column-analysis": " ",
+            "type-annotation": "The frequency of the msot common level 2 (eg children) and most common level 3 (eg grandchildren) DBpedia classes is calculated and the most frequent one is chosen.",
+            "predicate-annotation": " ",
+            "datatype-annotation": "",
+            "entity-linking": {
+                "description": "",
+                "candidate-generation": "",
+                "entity-disambiguation": ""
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "custom dataset",
+        "code-availability": "",
+        "license": "NotSpecified",
+        "inputs": {
+            "type-of-table": "",
+            "kg": {
+                "triple-store": "",
+                "index": ""
+            }
+        },
+        "output-format": ""
+    },
+    {
+        "author": "Abdelmageed",
+        "year": 2022,
+        "title": {
+            "text": "JenTab: Do CTA solutions affect the entire scores?",
+            "link": ""
+        },
+        "conference-journal": "KGC",
+        "name-of-approach": "JenTab",
+        "main-method": {
+            "type": "unsup",
+            "technique": "features"
+        },
+        "domain": {
+            "domain": "independent",
+            "type": ""
+        },
+        "tasks": {
+            "cta": true,
+            "cpa": true,
+            "cea": true,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": {
+                "description": "datatype detection",
+                "spell-checker": "",
+                "units-of-measurements": ""
+            },
+            "subject-detection": "column position",
+            "column-analysis": "Datatypes (object, date, string, and number)",
+            "type-annotation": "See Abdelmageed2020",
+            "predicate-annotation": "See Abdelmageed2020",
+            "datatype-annotation": "See Abdelmageed2020",
+            "entity-linking": {
+                "description": "See Abdelmageed2020",
+                "candidate-generation": "lookup, SPARQL",
+                "entity-disambiguation": "features, similarity"
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "SemTab2020",
+        "code-availability": "https://github.com/fusion-jena/JenTab",
+        "license": "Apache 2.0",
+        "inputs": {
+            "type-of-table": "CSV",
+            "kg": {
+                "triple-store": "DBpedia,Wikidata",
+                "index": ""
+            }
+        },
+        "output-format": "CEA,CTA,CPA"
+    },
+    {
+        "author": "Chen",
+        "year": 2022,
+        "title": {
+            "text": "LinkingPark: An automatic semantic table interpretation system",
+            "link": ""
+        },
+        "conference-journal": "JOWS",
+        "name-of-approach": "LinkingPark",
+        "main-method": {
+            "type": "unsup",
+            "technique": "features"
+        },
+        "domain": {
+            "domain": "independent",
+            "type": ""
+        },
+        "tasks": {
+            "cta": true,
+            "cpa": true,
+            "cea": true,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": {
+                "description": "future work",
+                "spell-checker": "",
+                "units-of-measurements": ""
+            },
+            "subject-detection": "The subject column is heuristically considered to be the leftmost column that contains cells of the string datatype",
+            "column-analysis": "Column analysis is conducted by classifying the datatype of a cell and detecting the subject column. ",
+            "type-annotation": "Type inference algorithm is a heuristic voting method, dependent on EL resutls.",
+            "predicate-annotation": "The property can be classified into two categories: entity property and literal property, according to the subject/object column types. For each non-subject column, the algorithm computes its entity property distribution and literal property distribution. The definitive property is the highest probability within those computed.",
+            "datatype-annotation": "int, float, datetime and strings are the datatype considered. A cell content is classified into such types if it can be converted into that type using standard type conversion functions, otherwise it is considered to be a string. ",
+            "entity-linking": {
+                "description": "A set of candidate entities through a candidate generation sub-module which uses a dictionary search (alias mapping is conducted and then a dictionary lookup is performed) and a fuzzy search (mostly for strings with multiple spelling errors)",
+                "candidate-generation": "lookup, custom index",
+                "entity-disambiguation": "features, similarity, contextual inf"
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "SemTab2021",
+        "code-availability": "https://github.com/microsoft/vert-papers/tree/master/papers/LinkingPark",
+        "license": "MIT",
+        "inputs": {
+            "type-of-table": "CSV",
+            "kg": {
+                "triple-store": "DBpedia,Wikidata",
+                "index": "ElasticSearch"
+            }
+        },
+        "output-format": "CEA,CTA,CPA"
+    },
+    {
+        "author": "Cremaschi",
+        "year": 2022,
+        "title": {
+            "text": "s-elBat: a Semantic Interpretation Approach for Messy taBle-s",
+            "link": ""
+        },
+        "conference-journal": "SemTab",
+        "name-of-approach": "s-Elbat",
+        "main-method": {
+            "type": "unsup",
+            "technique": "features"
+        },
+        "domain": {
+            "domain": "independent",
+            "type": ""
+        },
+        "tasks": {
+            "cta": true,
+            "cpa": true,
+            "cea": true,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": {
+                "description": "Convertion to lowercase, column classification by associating L-column and NE-column labels to column containing strings and NE mentions respectively. Subject column identification.",
+                "spell-checker": "",
+                "units-of-measurements": ""
+            },
+            "subject-detection": "The S-column is identified in a non determinant way for the final annotation, but ir can positively influence the execution time. ",
+            "column-analysis": "Columns are classified as either subject (S-), named entity (NE-) or literal (LIT-) column in a preprocessing step. Cells from NE-columns are extracted to generate a set of potential candidates for the entity retrieval step.",
+            "type-annotation": "CTA performed by iterating the cell annotation over all the cells in the given column. A dictionary with the frequency of all the classes of the winning entities obtained in the previous step is created; the type with the maximum frequency will be select1ed as an annotation for the column under analysis.",
+            "predicate-annotation": "Most information for CPA is collcted during the CEA phase through LamAPI. A dictionary for every colomn containing all the winning properties and related frequencies is created and than the most frequent property is selected for CPA.",
+            "datatype-annotation": "Datatypes are attributed during the preprocessing step for LIT columns",
+            "entity-linking": {
+                "description": "EL, thus entity retrieval and disambiguation, is performed with LamAPI.",
+                "candidate-generation": "lookup, custom index",
+                "entity-disambiguation": "features, similarity, contextual inf"
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "Semtab2022",
+        "code-availability": "https://bitbucket.org/disco_unimib/selbat/ ",
+        "license": "Apache 2.0",
+        "inputs": {
+            "type-of-table": "CSV,JSON",
+            "kg": {
+                "triple-store": "DBpedia,Wikidata",
+                "index": "Lamapi"
+            }
+        },
+        "output-format": "CEA,CTA,CPA"
+    },
+    {
+        "author": "Deng",
+        "year": 2022,
+        "title": {
+            "text": "TURL: Table Understanding through Representation Learning",
+            "link": ""
+        },
+        "conference-journal": "SIGMOD",
+        "name-of-approach": "TURL",
+        "main-method": {
+            "type": "sup",
+            "technique": "BERT"
+        },
+        "domain": {
+            "domain": "independent",
+            "type": ""
+        },
+        "tasks": {
+            "cta": true,
+            "cpa": true,
+            "cea": true,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": {
+                "description": "",
+                "spell-checker": "",
+                "units-of-measurements": ""
+            },
+            "subject-detection": " We employ a simple heuristic for subject column detection: the subject column must be located in the first two columns of the table and contain unique entities.",
+            "column-analysis": "use an additional type embedding vector t e to differentiate three types of entity cells (i.e., subject/object/topic).",
+            "type-annotation": "Use the available information in each cell of a given table directly for column type annotation without performing entity linking first. The representations of tokens in the column header and representations of entity cells in the column are leveraged to calculate the probability of predicting the column type. ",
+            "predicate-annotation": "aggregated column representations like in CTA optimized with binary cross-entropy loss",
+            "datatype-annotation": "",
+            "entity-linking": {
+                "description": " For entity linking, we first generate candidate entities using the Wikidata Lookup service. We then rank them by their matching scores with the target cell. We obtain a contextualized representation for each cell with its cell text and table metadata. To represent each candidate entity, we utilize the name, description and type information from a KB. ",
+                "candidate-generation": "lookup, WKD API",
+                "entity-disambiguation": "features, LM"
+            },
+            "nil-annotation": "Here we aim to conduct relation extraction without explicitly linking table cells to entities. This is important as it allows the extraction of new knowledge from Web tables for tasks like knowledge base population."
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "T2D, WikiGS",
+        "code-availability": "https://github.com/sunlab-osu/TURL",
+        "license": "Apache 2.0",
+        "inputs": {
+            "type-of-table": "web tables",
+            "kg": {
+                "triple-store": "Freebase, Wikidata, DBpedia",
+                "index": ""
+            }
+        },
+        "output-format": "CTA,CPA,CEA"
+    },
+    {
+        "author": "Gottschalk",
+        "year": 2022,
+        "title": {
+            "text": "Tab2KG: Semantic table interpretation with lightweight semantic profiles",
+            "link": ""
+        },
+        "conference-journal": "SWJ",
+        "name-of-approach": "Tab2KG",
+        "main-method": {
+            "type": "sup",
+            "technique": "Siamese network"
+        },
+        "domain": {
+            "domain": "independent",
+            "type": ""
+        },
+        "tasks": {
+            "cta": true,
+            "cpa": true,
+            "cea": false,
+            "cnea": true
+        },
+        "steps": {
+            "data-preparation": {
+                "description": "data transformed in RML format",
+                "spell-checker": "",
+                "units-of-measurements": ""
+            },
+            "subject-detection": "Subject column detection Several approaches [11,52] for semantic table interpretation assume the existence of a subject column, i.e., the main column of the data table where every other column is directly connected to. The subject column detection is typically identified through a set of statistic features. Approaches relying on a subject column do not consider the involvement of any classes which are not directly represented in the data table (for example, consider Fig. 1, but without the first column). Tab2KG utilizes a graph-based approach where such class relations can be found",
+            "column-analysis": "dateparser library for classification into numeric, spatial, boolean or text categories. Later the columns are further classified into more categories using regex + Alobaid et al (\"Typology-based semantic labeling of numeric tabular data\") method ",
+            "type-annotation": "domain profile + table profile",
+            "predicate-annotation": " ",
+            "datatype-annotation": "Data type identification: For each table column, we identify its data type(s) by trying to parse more than 90% of the values as numeric, Boolean, spatial (Well-Known Text or Well-Known Binary format [25]) or temporal (using the dateparser library). If that is not possible, the column is assigned the text data type.",
+            "entity-linking": {
+                "description": "",
+                "candidate-generation": "",
+                "entity-disambiguation": ""
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "Datasets on github, subsets of DBpedia and schema.org",
+        "code-availability": "https://github.com/sgottsch/Tab2KG",
+        "license": "MIT",
+        "inputs": {
+            "type-of-table": "CSV",
+            "kg": {
+                "triple-store": "DBpedia, Schema.org",
+                "index": ""
+            }
+        },
+        "output-format": "Data graph which represents the content of the table (TURTLE)"
+    },
+    {
+        "author": "Huynh",
+        "year": 2022,
+        "title": {
+            "text": "From Heuristics to Language Models: A Journey Through the Universe of Semantic Table Interpretation with DAGOBAH",
+            "link": ""
+        },
+        "conference-journal": "SemTab",
+        "name-of-approach": "DAGOBAH SL2022",
+        "main-method": {
+            "type": "hybrid",
+            "technique": "Heuristics + Transformer-based embeddings"
+        },
+        "domain": {
+            "domain": "independent",
+            "type": ""
+        },
+        "tasks": {
+            "cta": true,
+            "cpa": true,
+            "cea": true,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": {
+                "description": "",
+                "spell-checker": "",
+                "units-of-measurements": ""
+            },
+            "subject-detection": "",
+            "column-analysis": "A pre-processing step is also applied to each column to find a primitive type such as ORG (organization), LOC (location), MONEY (currency), etc. which is typical for the Named Entity Recognition task in NLP",
+            "type-annotation": "Same as previous year",
+            "predicate-annotation": "CPA is calculated from CEA (the most occuring relation between two cell annotations in two columns)",
+            "datatype-annotation": "A pre-processing step is also applied to each column to find a primitive type such as ORG (organization), LOC (location), MONEY (currency), etc. which is typical for the Named Entity Recognition task in NLP",
+            "entity-linking": {
+                "description": "Two stage approach consisting of: lookup step ad entity scoring step (DAGOBAH 2021 improved). The algorithm employs also the Entity Disambiguation by Reading Entity Descriptions",
+                "candidate-generation": "Elasticsearch ",
+                "entity-disambiguation": "BERT (the system uses entities description and teable headers)"
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "Fully-automated",
+            "description": "DAGOBAH UI enables users to validate DAGOBAH's results."
+        },
+        "validation": "semtab 2022",
+        "code-availability": "",
+        "license": "Orange",
+        "inputs": {
+            "type-of-table": "CSV",
+            "kg": {
+                "triple-store": "DBpedia,Wikidata, Schema.org",
+                "index": "ElasticSearch"
+            }
+        },
+        "output-format": "CTA,CPA,CEA"
+    },
+    {
+        "author": "Liu",
+        "year": 2022,
+        "title": {
+            "text": "Radar Station: Using KG Embeddings for Semantic Table Interpretation and Entity Disambiguation",
+            "link": ""
+        },
+        "conference-journal": "ISWC",
+        "name-of-approach": "Radar Station",
+        "main-method": {
+            "type": "hybrid",
+            "technique": "Heuristics + KG Embedding"
+        },
+        "domain": {
+            "domain": "independent",
+            "type": ""
+        },
+        "tasks": {
+            "cta": false,
+            "cpa": false,
+            "cea": true,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": {
+                "description": "",
+                "spell-checker": "",
+                "units-of-measurements": ""
+            },
+            "subject-detection": "",
+            "column-analysis": " ",
+            "type-annotation": "",
+            "predicate-annotation": " ",
+            "datatype-annotation": "",
+            "entity-linking": {
+                "description": "CEA disambiguation with KG embedding.",
+                "candidate-generation": "lookup",
+                "entity-disambiguation": "contextual inf"
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "T2D, Limaye, Tough Tables, ShortTables",
+        "code-availability": "https://github.com/Orange-OpenSource/radar-station",
+        "license": "Orange",
+        "inputs": {
+            "type-of-table": "CSV, TXT, XLSX",
+            "kg": {
+                "triple-store": "Wikidata",
+                "index": ""
+            }
+        },
+        "output-format": ""
+    },
+    {
+        "author": "Suhara",
+        "year": 2022,
+        "title": {
+            "text": "Annotating Columns with Pre-trained Language Models",
+            "link": ""
+        },
+        "conference-journal": "SIGMOD",
+        "name-of-approach": "Doduo",
+        "main-method": {
+            "type": "sup",
+            "technique": "BERT"
+        },
+        "domain": {
+            "domain": "independent",
+            "type": ""
+        },
+        "tasks": {
+            "cta": true,
+            "cpa": true,
+            "cea": false,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": {
+                "description": "",
+                "spell-checker": "",
+                "units-of-measurements": ""
+            },
+            "subject-detection": "",
+            "column-analysis": " ",
+            "type-annotation": "",
+            "predicate-annotation": " ",
+            "datatype-annotation": "",
+            "entity-linking": {
+                "description": "",
+                "candidate-generation": "",
+                "entity-disambiguation": ""
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "WikiTable, VizNet",
+        "code-availability": "https://github.com/megagonlabs/doduo",
+        "license": "Apache 2.0",
+        "inputs": {
+            "type-of-table": "",
+            "kg": {
+                "triple-store": "Freebase,DBpedia",
+                "index": ""
+            }
+        },
+        "output-format": ""
     }
 ]
