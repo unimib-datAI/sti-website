@@ -3015,5 +3015,295 @@
         },
         "output-format": "CEA,CTA",
         "checked-by-author": false
+    },
+    {
+        "author": "Baazouzi",
+        "year": 2020,
+        "title": {
+            "text": "Kepler-aSI : Kepler as A Semantic Interpreter",
+            "link": ""
+        },
+        "conference-journal": "SemTab",
+        "name-of-approach": "KEPLER-ASI",
+        "main-method": {
+            "type": "unsup",
+            "technique": "features"
+        },
+        "domain": {
+            "domain": "independent",
+            "type": ""
+        },
+        "tasks": {
+            "cta": true,
+            "cpa": false,
+            "cea": false,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": {
+                "description": "- deletion of some chars\n- trasformation into lowercase\n- delete text in brackets\n- normalisation of units",
+                "spell-checker": "",
+                "units-of-measurements": "Yes (regex)"
+            },
+            "subject-detection": "- aw: the average number of words in each cell\n- emc: the fraction of empty cells in the column\n- uc: the fraction of cells with unique content\n- df: the distance of the first NE-column",
+            "column-analysis": "Regex, eg, numbers, geographic coordinates, address, hexadecimal color code, URL",
+            "type-annotation": "The content of a column is fetched in query to Wikidata. If multiple entities were returned for a cell, the one with the number of occurrences was taken.",
+            "predicate-annotation": "",
+            "datatype-annotation": "",
+            "entity-linking": {
+                "description": "",
+                "candidate-generation": "",
+                "entity-disambiguation": ""
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "Semtab2020",
+        "code-availability": "",
+        "license": "NotSpecified",
+        "inputs": {
+            "type-of-table": "CSV",
+            "kg": {
+                "triple-store": "Wikidata",
+                "index": ""
+            }
+        },
+        "output-format": "CTA",
+        "checked-by-author": false
+    },
+    {
+        "author": "Chen",
+        "year": 2020,
+        "title": {
+            "text": "LinkingPark: An Integrated Approach for Semantic Table Interpretation",
+            "link": ""
+        },
+        "conference-journal": "SemTab",
+        "name-of-approach": "LinkingPark",
+        "main-method": {
+            "type": "unsup",
+            "technique": "features"
+        },
+        "domain": {
+            "domain": "independent",
+            "type": ""
+        },
+        "tasks": {
+            "cta": true,
+            "cpa": true,
+            "cea": true,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": {
+                "description": "",
+                "spell-checker": "Yes (tailor made, the corrector checks all strings within one edit distance to the original mention string)",
+                "units-of-measurements": ""
+            },
+            "subject-detection": "",
+            "column-analysis": "",
+            "type-annotation": "Most common types shared by most of the entities. In case of the same count, prioritise the most specific one.",
+            "predicate-annotation": "start from the strings in the cells (in the same row) and generate candidates considering numerical properties and entity properties.",
+            "datatype-annotation": "set of statistics per numeric datatypes (range, mean, stdev)",
+            "entity-linking": {
+                "description": "Candidate Generation: Lookup usign Wikidata API and fine-grained Elastic Search index (word-based, trigram-based) Entity Disambiguation: Type consistency along each column of entities and property relatedness within each row of attribute values TF-IDF weighing",
+                "candidate-generation": "lookup, Mediawiki API, custom index",
+                "entity-disambiguation": "features, contextual inf"
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "Semtab2020",
+        "code-availability": "",
+        "license": "NotSpecified",
+        "inputs": {
+            "type-of-table": "CSV",
+            "kg": {
+                "triple-store": "Wikidata",
+                "index": "ElasticSearch"
+            }
+        },
+        "output-format": "CEA,CTA,CPA",
+        "checked-by-author": false
+    },
+    {
+        "author": "Cremaschi",
+        "year": 2020,
+        "title": {
+            "text": "A fully automated approach to a complete Semantic Table Interpretation",
+            "link": ""
+        },
+        "conference-journal": "FGCS",
+        "name-of-approach": "MantisTable",
+        "main-method": {
+            "type": "unsup",
+            "technique": "features"
+        },
+        "domain": {
+            "domain": "independent",
+            "type": ""
+        },
+        "tasks": {
+            "cta": true,
+            "cpa": true,
+            "cea": true,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": {
+                "description": "Deletion of HTML tags and some characters, transformation of text into lowercase, deletion of text in brackets, explanation of acronyms and abbreviations, and normalisation of units of measurement.",
+                "spell-checker": "",
+                "units-of-measurements": ""
+            },
+            "subject-detection": "The following list of features is considered:\n- Fraction of empty cells;\n- Distance from the first NE-column;\n- Average number of words.\nThen, each column is assigned a score and the highest scoring is the S-column",
+            "column-analysis": "Semantic classification into either Literal columns (L-column) via regex or NE-column",
+            "type-annotation": "For each winning entity, all the rdf:type values are extracted from DBpedia. Then, for each extracted type, the frequency (considering also different ontologies) and the number of cells in which the type appears are calculated. The set of type candidates is defined according to two conditions: (i) fall within the range defined by the maximum global frequency as upper bound and δ as lower bound; (ii) if the type belongs to a number of cells greater than a threshold β. The most specific concept from the two branches of the hierarchy is used to annotate the column.",
+            "predicate-annotation": "The winning concept of the S-column is the subject of relationships among columns, and annotations of the other columns are objects. To identify candidate predicates, they exploit two techniques based on exploratory queries and summary profiles. The former searches the KG for the subject and the object with two distinct methods for NE-columns and L-columns, while the latter uses a distributed tool that integrates profiles for RDF data",
+            "datatype-annotation": "Datatype annotation relies on the results of the Column Type Analysis that delivered an association between every L-column and a specific Regextype. A mapping between Regextypes and Datatypes is performed. In the case of one-to-one relation, the corresponding datatype is used to annotate the L-column, otherwise a further analysis step is required to identify the correct datatype,",
+            "entity-linking": {
+                "description": "When the query returns more than one entity, the edit distance (i.e. Levenshtein distance) is computed between the normalised table cell content and the normalised  candidate entity label. Only the entity with the smallest edit distance is considered for the annotation.",
+                "candidate-generation": "lookup",
+                "entity-disambiguation": "features, similarity"
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "Fully-automated",
+            "description": ""
+        },
+        "validation": "Semtab2019, T2D, Limaye",
+        "code-availability": "https://bitbucket.org/disco_unimib/mantistable-tool/",
+        "license": "Apache 2.0",
+        "inputs": {
+            "type-of-table": "CSV",
+            "kg": {
+                "triple-store": "DBpedia",
+                "index": ""
+            }
+        },
+        "output-format": "CEA,CTA,CPA",
+        "checked-by-author": false
+    },
+    {
+        "author": "Cremaschi",
+        "year": 2020,
+        "title": {
+            "text": "MantisTable SE: an Efficient Approach for the Semantic Table Interpretation",
+            "link": ""
+        },
+        "conference-journal": "SemTab",
+        "name-of-approach": "MantisTable SE",
+        "main-method": {
+            "type": "unsup",
+            "technique": "features"
+        },
+        "domain": {
+            "domain": "independent",
+            "type": ""
+        },
+        "tasks": {
+            "cta": true,
+            "cpa": true,
+            "cea": true,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": {
+                "description": "All the cells of all the tables are analysed using a tokeniser managing special characters and removing parenthesis and the text block inside them.",
+                "spell-checker": "",
+                "units-of-measurements": ""
+            },
+            "subject-detection": "The subject column (S-column) can be identified between NE-column thanks to content-based scores",
+            "column-analysis": "Semantic classification into either Literal columns (L-column) via regex or NE-column",
+            "type-annotation": "Every entity is reconsidered wrt the CPA reordering. Only considering WIkidata, the concepts are retrieved that correspond to every candidate entity from LamAPI. For every column, an in-memory structure storing frequencies (by-max normalization) of the most common datatypes is used. The winning concept is chosen as follows:\n- concepts with a frequency lower than 0.95 are discarded\n- considering every possible column pair, count inbound and outbound edges; the final concept selected is the one having the highest number of connections in the Wikidata graph.",
+            "predicate-annotation": "All the predicates are retrieved for every possible candidate couple with confidence greater than 0 and they are sorted by their relative frequency to the entire column. The predicate with the greatest frequency will be ranked first.",
+            "datatype-annotation": "Literal columns are identified through regex while all the otherr columns are considered to be NE columns",
+            "entity-linking": {
+                "description": "For each cell of the S-column and NE-columns a confidence score is calculated by computing the edit distance (Levenshtein) between the labels in different languages of candidate eneity and the content of the cell. L-columns obtain a confidence score that is computed differently for numeric, string and date datatypes.",
+                "candidate-generation": "lookup, custom index",
+                "entity-disambiguation": "features, contextual inf"
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "Semtab2020",
+        "code-availability": "https://bitbucket.org/disco_unimib/mantistable-4 ",
+        "license": "Apache 2.0",
+        "inputs": {
+            "type-of-table": "CSV",
+            "kg": {
+                "triple-store": "DBpedia,Wikidata",
+                "index": "LamAPI"
+            }
+        },
+        "output-format": "CEA,CTA,CPA",
+        "checked-by-author": false
+    },
+    {
+        "author": "Eslahi",
+        "year": 2020,
+        "title": {
+            "text": "Annotating Web Tables through Knowledge Bases: A Context-Based Approach",
+            "link": ""
+        },
+        "conference-journal": "SDS",
+        "name-of-approach": "",
+        "main-method": {
+            "type": "hybrid",
+            "technique": "features & embeddings"
+        },
+        "domain": {
+            "domain": "independent",
+            "type": ""
+        },
+        "tasks": {
+            "cta": true,
+            "cpa": false,
+            "cea": true,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": {
+                "description": "",
+                "spell-checker": "",
+                "units-of-measurements": ""
+            },
+            "subject-detection": "",
+            "column-analysis": "",
+            "type-annotation": "the three most frequent types obtained from an Entity Linking phase serve as a filter to enhance the results. Among these three types, the most frequent type in the column is determined using majority voting as the selection criterion.",
+            "predicate-annotation": "",
+            "datatype-annotation": "",
+            "entity-linking": {
+                "description": "Candidate Generation Lookup: create list of candate and majority vote on type on whole column Looping Method: cosine similarity between their vector representations (embedding) then build a graph with all unambiguous candates from the table.",
+                "candidate-generation": "lookup",
+                "entity-disambiguation": "features, entity embedding"
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "",
+            "description": ""
+        },
+        "validation": "Limaye, T2D",
+        "code-availability": "https://github.com/eXascaleInfolab/sds2020_web_table_annotation",
+        "license": "NotSpecified",
+        "inputs": {
+            "type-of-table": "Web table",
+            "kg": {
+                "triple-store": "Wikidata",
+                "index": ""
+            }
+        },
+        "output-format": "",
+        "checked-by-author": false
     }
 ]
