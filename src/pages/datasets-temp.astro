@@ -17,7 +17,7 @@ import data from "@/assets/sti-survey.json";
         <h1
           class="py-4 text-4xl mt-8 font-bold bg-gradient-to-r from-[#9E0974] to-[#6665E9] inline-block text-transparent bg-clip-text"
         >
-          Dataset
+          Datasets infographic
         </h1>
         <div
           class="bg-cardBackground p-10 pl-2 pb-0 rounded-lg inline-block max-h-[800px] overflow-y-auto mt-5"
@@ -25,8 +25,582 @@ import data from "@/assets/sti-survey.json";
           <DatasetGraph data={approaches} />
         </div>
       </div>
-    </Section>
+      <h2
+        class="text-3xl font-semibold bg-gradient-to-r from-[#9E0974] to-[#6665E9] inline-block text-transparent bg-clip-text mt-10"
+      >
+        Datasets
+      </h2>
+      <div class="flex flex-col gap-2 items-start mt-4">
+        <div class="inline-block rounded-lg overflow-x-auto max-w-full">
+          <table class="text-sm text-left rtl:text-right text-tableText">
+            <thead class="text-xs text-tableText uppercase bg-tableTop">
+              <tr>
+                <th scope="col" class="p-3 min-w-40" colspan="2"> GS </th>
+                <th scope="col" class="p-3 min-w-24"> Tables </th>
+                <th scope="col" class="p-3 min-w-24">
+                  <div class="flex flex-col w-full items-center">
+                    <span>cols</span>
+                    <span>(min|max|x)</span>
+                  </div>
+                </th>
+                <th scope="col" class="p-3 min-w-24">
+                  <div class="flex flex-col w-full items-center">
+                    <span>rows</span>
+                    <span>(min|max|x)</span>
+                  </div>
+                </th>
+                <th scope="col" class="p-3 min-w-24"> Classes </th>
+                <th scope="col" class="p-3 min-w-24"> Entities </th>
+                <th scope="col" class="p-3 min-w-24"> Pred. </th>
+                <th scope="col" class="p-3 min-w-24"> KG </th>
+                <th scope="col" class="p-3 min-w-24">
+                  Used for validation by
+                </th>
+              </tr>
+            </thead>
+            <tbody class="text-foreground">
+              <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+                <th
+                  scope="row"
+                  colspan="2"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                  >T2Dv2 [<a href="https://disi.unitn.it/~pavel/OM/articles/Ritze_EDBT17.pdf">112</a>]</th
+                >
+                <td class="p-3 min-w-24"> 234 </td>
+                <td class="p-3 min-w-24">
+                  <div class="flex flex-col w-full items-center">
+                    <span>1,2K</span>
+                    <span>(1|30|4,52)</span>
+                  </div>
+                </td>
+                <td class="p-3 min-w-24">
+                  <div class="flex flex-col w-full items-center">
+                    <span>2,8K</span>
+                    <span>(1|5K|84,55)</span>
+                  </div>
+                </td>
+                <td class="p-3 min-w-24"> 39 </td>
+                <td class="p-3 min-w-24"> - </td>
+                <td class="p-3 min-w-24"> 154 </td>
+                <td class="p-3 min-w-24"> DBpedia </td>
+                <td class="p-3 min-w-24">
+                  [<a href="https://ojs.aaai.org/index.php/AAAI/article/view/3765">21</a>, <a href="https://arxiv.org/abs/1906.00781">22</a>, <a href="https://boa.unimib.it/handle/10281/283648">30</a>, <a
+                    href="https://dl.acm.org/doi/10.1145/3542700.3542709">37</a
+                  >, <a href="https://homepages.tuni.fi/konstantinos.stefanidis/docs/er18/efthymiou.pdf">40</a>, <a href="https://svn.aksw.org/papers/2016/EKAW_Taipan/public.pdf">43</a>, <a href="https://digitalcollection.zhaw.ch/handle/11475/20229">44</a>
+                  , <a href="https://dl.acm.org/doi/10.1007/978-3-030-60029-7_37">48</a>, <a href="https://arxiv.org/abs/1905.10688">56</a>, <a href="https://dl.acm.org/doi/abs/10.1145/3459637.3482295">69</a>, <a
+                    href="https://arxiv.org/abs/1907.00083">78</a
+                  >, <a href="https://www.eurecom.fr/en/publication/6983">84</a>, <a href="https://usc-isi-i2.github.io/papers/pham16-iswc.pdf">105</a>, <a href="https://www.uni-mannheim.de/media/Einrichtungen/dws/DWS_News/Documents/Ritze-etal-MatchingTablesToDBpedia-WIMS2015.pdf">113</a>,
+                  <a href="https://arxiv.org/abs/1911.06311">144</a>, <a href="https://arxiv.org/abs/2002.00206">148</a>]</td
+                >
+              </tr>
 
-    <StiTable data={data} client:load />
+              <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+                <th
+                  scope="row"
+                  colspan="2"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                  >WebTableStitching[<a href="https://disi.unitn.it/~pavel/OM/articles/Ritze_EDBT17.pdf">112</a>]</th
+                >
+                <td class="p-3 min-w-24"> 50 </td>
+                <td class="p-3 min-w-24">
+                  <div class="flex flex-col w-full items-center">
+                    <span>300</span>
+                    <span>(6|6|6)</span>
+                  </div>
+                </td>
+                <td class="p-3 min-w-24">
+                  <div class="flex flex-col w-full items-center">
+                    <span>717</span>
+                    <span>(3|83|14,84)</span>
+                  </div>
+                </td>
+                <td class="p-3 min-w-24"> 9 </td>
+                <td class="p-3 min-w-24"> 400 </td>
+                <td class="p-3 min-w-24"> 6 </td>
+                <td class="p-3 min-w-24"> DBpedia </td>
+                <td class="p-3 min-w-24"> [<a href="https://disi.unitn.it/~pavel/OM/articles/Ritze_EDBT17.pdf">112</a>] </td>
+              </tr>
+
+              <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+                <th
+                  scope="row"
+                  colspan="2"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                  >Limaye [<a href="">82</a>]</th
+                >
+                <td class="p-3 min-w-24">6,5K</td>
+                <td class="p-3 min-w-24">- </td>
+                <td class="p-3 min-w-24">- </td>
+                <td class="p-3 min-w-24"> 747 </td>
+                <td class="p-3 min-w-24"> 143K </td>
+                <td class="p-3 min-w-24"> 90 </td>
+                <td class="p-3 min-w-24"> Wikipedia, Yago </td>
+                <td class="p-3 min-w-24"
+                  > [<a href="https://ojs.aaai.org/index.php/AAAI/article/view/3765">21</a>, <a href="https://arxiv.org/abs/1906.00781">22</a>, <a href="https://boa.unimib.it/handle/10281/283648">30</a>, <a href="https://homepages.tuni.fi/konstantinos.stefanidis/docs/er18/efthymiou.pdf">40</a>, <a href="https://digitalcollection.zhaw.ch/handle/11475/20229">44</a>
+                , <a href="https://dl.acm.org/doi/10.1007/978-3-030-60029-7_37">48</a>, <a href="https://dl.acm.org/doi/abs/10.1145/3459637.3482295">69</a>, <a href="https://www.eurecom.fr/en/publication/6983">84</a>, <a href="https://www.semantic-web-journal.net/content/effective-and-efficient-semantic-table-interpretation-using-tableminer">149</a>, <a href="https://research.utwente.nl/en/publications/towards-disambiguating-web-tables">152</a>]</td
+                >
+              </tr>
+
+              <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+                <th
+                  scope="row"
+                  colspan="2"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                  >LimayeAll [<a href="https://www.semantic-web-journal.net/content/effective-and-efficient-semantic-table-interpretation-using-tableminer">149</a>]</th
+                >
+                <td class="p-3 min-w-24">6,3K</td>
+                <td class="p-3 min-w-24">28,5K</td>
+                <td class="p-3 min-w-24">136K</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">227K</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24"> Freebase</td>
+                <td class="p-3 min-w-24">-</td>
+              </tr>
+
+              <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+                <th
+                  scope="row"
+                  colspan="2"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                  >Limaye200 [<a href="https://www.semantic-web-journal.net/content/effective-and-efficient-semantic-table-interpretation-using-tableminer">149</a>]</th
+                >
+                <td class="p-3 min-w-24">200</td>
+                <td class="p-3 min-w-24">903</td>
+                <td class="p-3 min-w-24">4,1K</td>
+                <td class="p-3 min-w-24">615</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">361</td>
+                <td class="p-3 min-w-24"> Freebase</td>
+                <td class="p-3 min-w-24">[<a href="https://www.semantic-web-journal.net/content/effective-and-efficient-semantic-table-interpretation-using-tableminer">149</a>]</td>
+              </tr>
+
+              <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+                <th
+                  scope="row"
+                  colspan="2"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                  >MusicBrainz [<a href="https://www.semantic-web-journal.net/content/effective-and-efficient-semantic-table-interpretation-using-tableminer">149</a>]</th
+                >
+                <td class="p-3 min-w-24">1,4K</td>
+                <td class="p-3 min-w-24">9,8K</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">93,3K</td>
+                <td class="p-3 min-w-24">7K</td>
+                <td class="p-3 min-w-24"> Freebase</td>
+                <td class="p-3 min-w-24">[<a href="https://www.semantic-web-journal.net/content/effective-and-efficient-semantic-table-interpretation-using-tableminer">149</a>]</td>
+              </tr>
+
+              <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+                <th
+                  scope="row"
+                  colspan="2"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                  >IMDB [<a href="https://www.semantic-web-journal.net/content/effective-and-efficient-semantic-table-interpretation-using-tableminer">149</a>]</th
+                >
+                <td class="p-3 min-w-24">7,4K</td>
+                <td class="p-3 min-w-24">7,4K</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">92,3K</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">Freebase</td>
+                <td class="p-3 min-w-24">[<a href="https://www.semantic-web-journal.net/content/effective-and-efficient-semantic-table-interpretation-using-tableminer">149</a>]</td>
+              </tr>
+
+              <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+                <th
+                  scope="row"
+                  colspan="2"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                  >Taheriyan[<a href="https://usc-isi-i2.github.io/papers/taheriyan16-iswc.pdf">129</a>]</th
+                >
+                <td class="p-3 min-w-24">29</td>
+                <td class="p-3 min-w-24"
+                  ><div class="flex flex-col w-full items-center">
+                    <span>2,5K</span>
+                    <span>(3|71,3K|529K)</span>
+                  </div></td
+                >
+                <td class="p-3 min-w-24"
+                  ><div class="flex flex-col w-full items-center">
+                    <span>16K</span>
+                    <span>(1|13,8K|937)</span>
+                  </div></td
+                >
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">Schema.org</td>
+                <td class="p-3 min-w-24">[<a href="https://usc-isi-i2.github.io/papers/taheriyan16-iswc.pdf">129</a>]</td>
+              </tr>
+
+              <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+                <th
+                  scope="row"
+                  colspan="2"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                  >Tough Table (2T) [<a href="https://openaccess.city.ac.uk/id/eprint/24776/">32</a>]</th
+                >
+                <td class="p-3 min-w-24">180</td>
+                <td class="p-3 min-w-24"
+                  ><div class="flex flex-col w-full items-center">
+                    <span>194K</span>
+                    <span>(1|8|4,46)</span>
+                  </div></td
+                >
+                <td class="p-3 min-w-24"
+                  ><div class="flex flex-col w-full items-center">
+                    <span>802</span>
+                    <span>(6|15,5K|108K)</span>
+                  </div></td
+                >
+                <td class="p-3 min-w-24">540</td>
+                <td class="p-3 min-w-24">667K</td>
+                <td class="p-3 min-w-24">0</td>
+                <td class="p-3 min-w-24">Wikidata, DBpedia</td>
+                <td class="p-3 min-w-24">-</td>
+              </tr>
+
+              <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+                <th
+                  scope="row"
+                  colspan="2"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                  >MammoTab[<a href="https://boa.unimib.it/handle/10281/423134">87</a>]</th
+                >
+                <td class="p-3 min-w-24">980K</td>
+                <td class="p-3 min-w-24">5,6M</td>
+                <td class="p-3 min-w-24">2,3M</td>
+                <td class="p-3 min-w-24">2M</td>
+                <td class="p-3 min-w-24">2,8M</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">Wikidata</td>
+                <td class="p-3 min-w-24">-</td>
+              </tr>
+
+              <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+                <th
+                  scope="row"
+                  colspan="2"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                  >SOTAB[<a href="https://ceur-ws.org/Vol-3320/paper1.pdf">77</a>]</th
+                >
+                <td class="p-3 min-w-24">108K</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">91</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">176</td>
+                <td class="p-3 min-w-24">Schema.org</td>
+                <td class="p-3 min-w-24">-</td>
+              </tr>
+
+              <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+                <th
+                  scope="row"
+                  colspan="2"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                  >Wikary[<a href="https://www.semanticscholar.org/paper/Wikary%3A-A-Dataset-of-N-ary-Wikipedia-Tables-Matched-Mazurek-Wiewel/35aebfba4670cd32b61b0a9f577208a3a8b0b038">89</a>]</th
+                >
+                <td class="p-3 min-w-24">81,7K</td>
+                <td class="p-3 min-w-24">22,5K</td>
+                <td class="p-3 min-w-24">63,9K</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">30,6K</td>
+                <td class="p-3 min-w-24">188</td>
+                <td class="p-3 min-w-24">Wikidata</td>
+                <td class="p-3 min-w-24">-</td>
+              </tr>
+
+              <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+                <th
+                  scope="row"
+                  colspan="2"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                  >GitTables[<a href="https://arxiv.org/abs/2106.07258">55</a>]</th
+                >
+                <td class="p-3 min-w-24">962K</td>
+                <td class="p-3 min-w-24">11,5M</td>
+                <td class="p-3 min-w-24">13,6M</td>
+                <td class="p-3 min-w-24">2,4K</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">Schema.org, DBpedia</td>
+                <td class="p-3 min-w-24">-</td>
+              </tr>
+
+              <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+                <th
+                  scope="row"
+                  colspan="2"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                  >RedTab [<a href="https://www.amazon.science/publications/redtab-a-relation-extraction-dataset-for-knowledge-extraction-from-web-tables">119</a>]</th
+                >
+                <td class="p-3 min-w-24">9K</td>
+                <td class="p-3 min-w-24"
+                  ><div class="flex flex-col w-full items-center">
+                    <span>44,6K</span>
+                    <span>(1|11|4,86)</span>
+                  </div></td
+                >
+                <td class="p-3 min-w-24"
+                  ><div class="flex flex-col w-full items-center">
+                    <span>148K</span>
+                    <span>(1|353|17,09)</span>
+                  </div></td
+                >
+                <td class="p-3 min-w-24">70</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">23</td>
+                <td class="p-3 min-w-24">Music, Literature</td>
+                <td class="p-3 min-w-24">-</td>
+              </tr>
+
+              <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+                <th
+                  scope="row"
+                  colspan="2"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                  >TURL[<a href="https://dl.acm.org/doi/10.1145/3542700.3542709">37</a>]</th
+                >
+                <td class="p-3 min-w-24">484K</td>
+                <td class="p-3 min-w-24">2,8M</td>
+                <td class="p-3 min-w-24">7,9M</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">1,2M</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">DBpedia</td>
+                <td class="p-3 min-w-24">[<a href="https://dl.acm.org/doi/10.1145/3542700.3542709">37</a>]</td>
+              </tr>
+
+              <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+                <th
+                  scope="row"
+                  colspan="2"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                  >BiodivTab [<a href="https://ceur-ws.org/Vol-3103/paper1.pdf">5</a>]</th
+                >
+                <td class="p-3 min-w-24">50</td>
+                <td class="p-3 min-w-24"
+                  ><div class="flex flex-col w-full items-center">
+                    <span>1,2K</span>
+                    <span>(1|43|23,96)</span>
+                  </div></td
+                >
+                <td class="p-3 min-w-24"
+                  ><div class="flex flex-col w-full items-center">
+                    <span>12,9K</span>
+                    <span>(26|4,9K|261)</span>
+                  </div></td
+                >
+                <td class="p-3 min-w-24">84</td>
+                <td class="p-3 min-w-24">1,2K</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">Wikidata</td>
+                <td class="p-3 min-w-24">[<a href="https://ceur-ws.org/Vol-3103/paper1.pdf">5</a>]</td>
+              </tr>
+
+              <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+                <th
+                  scope="row"
+                  colspan="2"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                  >TSOTSACorpus[<a href="https://ceur-ws.org/Vol-3320/paper4.pdf">64</a>]</th
+                >
+                <td class="p-3 min-w-24">16K</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">200</td>
+                <td class="p-3 min-w-24">60K</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">Food Data</td>
+                <td class="p-3 min-w-24">-</td>
+              </tr>
+
+              <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+                <th
+                  scope="row"
+                  rowspan="4"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                >
+                  SemTab2019
+                </th>
+                <th
+                  scope="row"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                >
+                  R1
+                </th>
+                <td class="p-3 min-w-24">64</td>
+                <td class="p-3 min-w-24"><div class="flex flex-col w-full items-center">
+                  <span>320</span>
+                  <span>(3|14|5,05)</span>
+                </div></td>
+                <td class="p-3 min-w-24"><div class="flex flex-col w-full items-center">
+                  <span>9K</span>
+                  <span>(7|586|143)</span>
+                </div></td>
+                <td class="p-3 min-w-24">120</td>
+                <td class="p-3 min-w-24">8,4K</td>
+                <td class="p-3 min-w-24">116</td>
+                <td class="p-3 min-w-24" rowspan="4">DBpedia</td>
+                <td class="p-3 min-w-24" rowspan="4">[<a href="https://www.cs.ox.ac.uk/isg/challenges/sem-tab/2019/papers/DAGOBAH.pdf">20</a>, <a href="https://ceur-ws.org/Vol-2553/paper3.pdf">28</a>, <a href="https://ceur-ws.org/Vol-2553/paper7.pdf">91</a>, <a href="https://arxiv.org/abs/1910.00246">97</a>, <a href="https://ceur-ws.org/Vol-2553/paper5.pdf">122</a>, <a href="https://www.semanticscholar.org/paper/Entity-Linking-to-Knowledge-Graphs-to-Infer-Column-Thawani-Hu/0b3af7c1cd0d63b5e9f9c2b138b86c27e3c7994c">133</a> ]</td>
+              </tr>
+
+              <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+                <th
+                  scope="row"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                >
+                  R2
+                </th>
+                <td class="p-3 min-w-24">11,9K</td>
+                <td class="p-3 min-w-24"><div class="flex flex-col w-full items-center">
+                  <span>59,6K</span>
+                  <span>(1|51|5,55)</span>
+                </div></td>
+                <td class="p-3 min-w-24"><div class="flex flex-col w-full items-center">
+                  <span>29,8K</span>
+                  <span>(1|1,5K|27,06)</span>
+                </div></td>
+                <td class="p-3 min-w-24">14,8K</td>
+                <td class="p-3 min-w-24">464K</td>
+                <td class="p-3 min-w-24">6,7K</td>
+                <td class="p-3 min-w-24"></td>
+                <td class="p-3 min-w-24"><a href=""></a></td>
+              </tr>
+
+              <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+                <th
+                  scope="row"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                >
+                  R3
+                </th>
+                <td class="p-3 min-w-24">2,1K</td>
+                <td class="p-3 min-w-24"><div class="flex flex-col w-full items-center">
+                  <span>10,8K</span>
+                  <span>(4|8|4,51)</span>
+                </div></td>
+                <td class="p-3 min-w-24"><div class="flex flex-col w-full items-center">
+                  <span>153K</span>
+                  <span>(6|207|71,69)</span>
+                </div></td>
+                <td class="p-3 min-w-24">5,7K</td>
+                <td class="p-3 min-w-24">407K</td>
+                <td class="p-3 min-w-24">7,6K</td>
+                <td class="p-3 min-w-24"></td>
+                <td class="p-3 min-w-24"><a href=""></a></td>
+              </tr>
+
+              <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+                <th
+                  scope="row"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                >
+                  R4
+                </th>
+                <td class="p-3 min-w-24">817</td>
+                <td class="p-3 min-w-24"><div class="flex flex-col w-full items-center">
+                  <span>3,3K</span>
+                  <span>(4|8|4,36)</span>
+                </div></td>
+                <td class="p-3 min-w-24"><div class="flex flex-col w-full items-center">
+                  <span>51,4K</span>
+                  <span>(6|198|63,73)</span>
+                </div></td>
+                <td class="p-3 min-w-24">1,7K</td>
+                <td class="p-3 min-w-24">107K</td>
+                <td class="p-3 min-w-24">2,7K</td>
+                <td class="p-3 min-w-24"></td>
+                <td class="p-3 min-w-24"><a href=""></a></td>
+              </tr>
+
+              <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+                <th
+                  scope="row"
+                  rowspan="4"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                >
+                  SemTab2020
+                </th>
+                <th
+                  scope="row"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                >
+                  R1
+                </th>
+                <td class="p-3 min-w-24">34,3K</td>
+                <td class="p-3 min-w-24"><div class="flex flex-col w-full items-center">
+                  <span>170K</span>
+                  <span>(4|8|4,96)</span>
+                </div></td>
+                <td class="p-3 min-w-24"><div class="flex flex-col w-full items-center">
+                  <span>249K</span>
+                  <span>(5|16|8,7)</span>
+                </div></td>
+                <td class="p-3 min-w-24">136K</td>
+                <td class="p-3 min-w-24">985K</td>
+                <td class="p-3 min-w-24">136K</td>
+                <td class="p-3 min-w-24" rowspan="4">Wikidata</td>
+                <td class="p-3 min-w-24" rowspan="4">[<a href="https://dl.acm.org/doi/10.1145/3542700.3542709">1</a>, <a href="https://dl.acm.org/doi/10.1145/3542700.3542709">11</a>,  ]</td>
+              </tr>
+
+              <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+                <th
+                  scope="row"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                >
+                  R2
+                </th>
+                <td class="p-3 min-w-24">484K</td>
+                <td class="p-3 min-w-24">2,8M</td>
+                <td class="p-3 min-w-24">7,9M</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">1,2M</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">DBpedia</td>
+                <td class="p-3 min-w-24">[<a href="https://dl.acm.org/doi/10.1145/3542700.3542709">37</a>]</td>
+              </tr>
+              <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+                <th
+                  scope="row"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                >
+                  R3
+                </th>
+                <td class="p-3 min-w-24">484K</td>
+                <td class="p-3 min-w-24">2,8M</td>
+                <td class="p-3 min-w-24">7,9M</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">1,2M</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">DBpedia</td>
+                <td class="p-3 min-w-24">[<a href="https://dl.acm.org/doi/10.1145/3542700.3542709">37</a>]</td>
+              </tr>
+
+              <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+                <th
+                  scope="row"
+                  class="p-3 min-w-40 font-medium whitespace-nowrap"
+                >
+                  R4
+                </th>
+                <td class="p-3 min-w-24">484K</td>
+                <td class="p-3 min-w-24">2,8M</td>
+                <td class="p-3 min-w-24">7,9M</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">1,2M</td>
+                <td class="p-3 min-w-24">-</td>
+                <td class="p-3 min-w-24">DBpedia</td>
+                <td class="p-3 min-w-24">[<a href="https://dl.acm.org/doi/10.1145/3542700.3542709">37</a>]</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </Section>
   </main>
 </Layout>
