@@ -1,0 +1,489 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Section from "@components/Section.astro";
+import x from "@/assets/x.svg";
+import check from "@/assets/check.svg";
+---
+
+<Layout title="">
+  <main>
+    <Section>
+      <h2
+        class="text-3xl font-semibold bg-gradient-to-r from-[#9E0974] to-[#6665E9] inline-block text-transparent bg-clip-text mt-10"
+      >
+        Tools
+      </h2>
+      <p
+        class="mb-6 mt-4 font-light lg:mb-8 md:text-lg lg:text-xl text-gray-400"
+      >
+        In this page you will find a table containing the functionalities
+        offered by various STI tools
+      </p>
+      <div class="inline-block rounded-lg overflow-x-auto max-w-full">
+        <table class="text-sm text-left rtl:text-right text-tableText">
+          <thead class="text-xs text-tableText uppercase bg-tableTop">
+            <tr>
+              <th scope="col" class="p-3 min-w-40 items-center">
+                Functionalities
+              </th>
+              <th
+                scope="col"
+                class="p-3 w-4 [writing-mode:vertical-rl] rotate-180 items-center"
+                ><a
+                  href="https://link.springer.com/chapter/10.1007/978-3-662-46641-4_40"
+                  target="_blank">Karma</a
+                ></th
+              >
+              <th
+                scope="col"
+                class="p-3 w-4 [writing-mode:vertical-rl] rotate-180 items-center"
+              >
+                <a
+                  href="https://ceur-ws.org/Vol-1690/paper88.pdf"
+                  target="_blank"
+                >
+                  TableMminer+
+                </a>
+              </th>
+              <th
+                scope="col"
+                class="p-3 w-4 [writing-mode:vertical-rl] rotate-180 items-center"
+              >
+                <a
+                  href="https://ceur-ws.org/Vol-3103/paper6.pdf"
+                  target="_blank"
+                >
+                  Magic
+                </a>
+              </th>
+              <th
+                scope="col"
+                class="p-3 w-4 [writing-mode:vertical-rl] rotate-180 items-center"
+              >
+                <a
+                  href="https://ceur-ws.org/Vol-3103/paper8.pdf"
+                  target="_blank"
+                >
+                  MTab</a
+                >
+              </th>
+              <th
+                scope="col"
+                class="p-3 w-4 [writing-mode:vertical-rl] rotate-180 items-center"
+              >
+                <a
+                  href="https://ceur-ws.org/Vol-2553/paper3.pdf"
+                  target="_blank"
+                >
+                  MantisTable
+                </a>
+              </th>
+              <th
+                scope="col"
+                class="p-3 w-4 [writing-mode:vertical-rl] rotate-180 items-center"
+              >
+                STAN
+              </th>
+              <th
+                scope="col"
+                class="p-3 w-4 [writing-mode:vertical-rl] rotate-180 items-center"
+              >
+                <a href="https://openrefine.org/" target="_blank">
+                  OpenRefine</a
+                >
+              </th>
+              <th
+                scope="col"
+                class="p-3 w-4 [writing-mode:vertical-rl] rotate-180 items-center"
+              >
+                <a
+                  href="https://www.alteryx.com/about-us/trifacta-is-now-alteryx-designer-cloud"
+                  target="_blank"
+                >
+                  Trifacta
+                </a>
+              </th>
+              <th
+                scope="col"
+                class="p-3 w-4 [writing-mode:vertical-rl] rotate-180 items-center"
+              >
+                <a href="https://github.com/odalic/odalic-ui" target="_blank">
+                  Odalic
+                </a>
+              </th>
+              <th
+                scope="col"
+                class="p-3 w-4 [writing-mode:vertical-rl] rotate-180 items-center"
+              >
+                DataGraft
+              </th>
+              <th
+                scope="col"
+                class="p-3 w-4 [writing-mode:vertical-rl] rotate-180 items-center"
+              >
+                <a
+                  href="https://link.springer.com/chapter/10.1007/978-3-031-11609-4_20"
+                  target="_blank"
+                >
+                  DAGOBAH UI
+                </a>
+              </th>
+              <th
+                scope="col"
+                class="p-3 w-4 [writing-mode:vertical-rl] rotate-180 items-center"
+              >
+                <a href="https://arxiv.org/abs/2203.09521" target="_blank">
+                  SemTUI
+                </a>
+              </th>
+            </tr>
+          </thead>
+
+          <tbody class="text-foreground">
+            <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+              <th scope="row" class="p-3 min-w-40 font-medium whitespace-nowrap"
+                >Import of tables</th
+              >
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td><td
+                class="p-3 w-4"><img src={check.src} /></td
+              ><td class="p-3 w-4"><img src={check.src} /></td>
+            </tr>
+
+            <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+              <th scope="row" class="p-3 min-w-40 font-medium whitespace-nowrap"
+                >Import of tables via API</th
+              >
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+            </tr>
+
+            <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+              <th scope="row" class="p-3 min-w-40 font-medium whitespace-nowrap"
+                >Import of ontologies</th
+              >
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+            </tr>
+
+            <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+              <th scope="row" class="p-3 min-w-40 font-medium whitespace-nowrap"
+                >Definition of personalised ontologies</th
+              >
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+            </tr>
+
+            <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+              <th scope="row" class="p-3 min-w-40 font-medium whitespace-nowrap"
+                >Semi-automatic annotation/HITL</th
+              >
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+            </tr>
+
+            <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+              <th scope="row" class="p-3 min-w-40 font-medium whitespace-nowrap"
+                >Annotation suggestions</th
+              >
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+            </tr>
+
+            <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+              <th scope="row" class="p-3 min-w-40 font-medium whitespace-nowrap"
+                >Auto-complete support</th
+              >
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+            </tr>
+
+            <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+              <th scope="row" class="p-3 min-w-40 font-medium whitespace-nowrap"
+                >Subject column detection</th
+              >
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+            </tr>
+
+            <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+              <th scope="row" class="p-3 min-w-40 font-medium whitespace-nowrap"
+                >CEA</th
+              >
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+            </tr>
+
+            <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+              <th scope="row" class="p-3 min-w-40 font-medium whitespace-nowrap"
+                >CTA</th
+              >
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+            </tr>
+
+            <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+              <th scope="row" class="p-3 min-w-40 font-medium whitespace-nowrap"
+                >CPA (NE columns)</th
+              >
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+            </tr>
+
+            <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+              <th scope="row" class="p-3 min-w-40 font-medium whitespace-nowrap"
+                >CPA (LIT columns)</th
+              >
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+            </tr>
+
+            <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+              <th scope="row" class="p-3 min-w-40 font-medium whitespace-nowrap"
+                >Table manipulation</th
+              >
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+            </tr>
+
+            <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+              <th scope="row" class="p-3 min-w-40 font-medium whitespace-nowrap"
+                >Automatic table extension</th
+              >
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+            </tr>
+
+            <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+              <th scope="row" class="p-3 min-w-40 font-medium whitespace-nowrap"
+                >Visualisation of annotations</th
+              >
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+            </tr>
+
+            <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+              <th scope="row" class="p-3 min-w-40 font-medium whitespace-nowrap"
+                >Auto save</th
+              >
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+            </tr>
+
+            <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+              <th scope="row" class="p-3 min-w-40 font-medium whitespace-nowrap"
+                >Export mapping</th
+              >
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+            </tr>
+
+            <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+              <th scope="row" class="p-3 min-w-40 font-medium whitespace-nowrap"
+                >Export RDF triplets</th
+              >
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+            </tr>
+
+            <tr class="even:bg-tableBottom odd:bg-tableBottom/70">
+              <th scope="row" class="p-3 min-w-40 font-medium whitespace-nowrap"
+                >Open Source</th
+              >
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+              <td class="p-3 w-4"><img src={x.src} /></td>
+              <td class="p-3 w-4"><img src={check.src} /></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </Section>
+  </main>
+</Layout>

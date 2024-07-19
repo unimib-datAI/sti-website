@@ -22,91 +22,95 @@ import HorizontalTimeline from "@components/HorizontalTimeline.astro";
         What's Semantic Table Interpretation?
       </h2>
       <p class="mt-4 mb-6 md:text-base lg:text-base">
-        Semantic Table Interpretation, as defined by the the <a href="https://sem-tab-challenge.github.io/2023/">SemTab challenge</a>, involves annotating relational
-        tables with information from a Knowledge Graph (KG). This process
-        includes associating each column in a table with one or more KG types,
-        known as Column Type Annotation (CTA). Additionally, Cell Entity
-        Annotation (CEA) is applied to annotate each cell in named entity columns
-        with a KG entity or mark it as Not In Lexicon (NIL) if it does not exist in the KG.
-        Columns Property Annotation (CPA) involves annotating pairs of columns
-        with a KG property. The result of this annotation process is a
-        table enriched with semantic information
-      <p class="mt-4 mb-4 md:text-base lg:text-base"></p>
-      <Button href="/sti-website/description" variant="secondary">
-        Learn more about STI
-      </Button>
-      <section>
+        Semantic Table Interpretation, as defined by the the <a
+          href="https://sem-tab-challenge.github.io/2023/">SemTab challenge</a
+        >, involves annotating relational tables with information from a
+        Knowledge Graph (KG). This process includes associating each column in a
+        table with one or more KG types, known as Column Type Annotation (CTA).
+        Additionally, Cell Entity Annotation (CEA) is applied to annotate each
+        cell in named entity columns with a KG entity or mark it as Not In
+        Lexicon (NIL) if it does not exist in the KG. Columns Property
+        Annotation (CPA) involves annotating pairs of columns with a KG
+        property. The result of this annotation process is a table enriched with
+        semantic information
+        <p class="mt-4 mb-4 md:text-base lg:text-base"></p>
+        <Button href="/sti-website/description" variant="secondary">
+          Learn more about STI
+        </Button>
+        <section>
+          <h2
+            class="text-3xl font-semibold bg-gradient-to-r from-[#9E0974] to-[#6665E9] inline-block text-transparent bg-clip-text mt-10"
+          >
+            TUTSTI @ISWC2024
+          </h2>
+          <p class="mb-6 mt-4 md:text-base lg:text-base">
+            Discover the comprehensive world of Semantic Table Interpretation
+            (STI) in this tutorial, which covers both theoretical and practical
+            aspects, and trace the evolution of STI from heuristic-based methods
+            to machine learning (ML) techniques and the latest large language
+            model (LLM) innovations. By examining the unique characteristics,
+            advantages, and limitations of each approach you will understand
+            their optimal contexts of use
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <Button href="/sti-website/tutorial" variant="secondary">
+              Learn more about TUTSTI @ ISWC2024
+            </Button>
+            <Button
+              href="https://iswc2024.semanticweb.org/event/3715c6fc-e2d7-47eb-8c01-5fe4ac589a52/summary"
+              variant="secondary"
+              className="md:ml-4"
+            >
+              ISWC 2024
+              <img src={logoISWC.src} class="ms-2 w-6 h-6" />
+            </Button>
+          </div>
+        </section>
+      </p>
+
+      <Section className="pt-20">
         <h2
           class="text-3xl font-semibold bg-gradient-to-r from-[#9E0974] to-[#6665E9] inline-block text-transparent bg-clip-text mt-10"
         >
-          TUTSTI @ISWC2024
+          Our Approaches, Datasets, Tools and UIs
         </h2>
-        <p class="mb-6 mt-4 md:text-base lg:text-base">
-          Discover the comprehensive world of Semantic Table Interpretation
-          (STI) in this tutorial, which covers both theoretical and practical
-          aspects, and trace the evolution of STI from heuristic-based methods
-          to machine learning (ML) techniques and the latest large language
-          model (LLM) innovations. By examining the unique characteristics,
-          advantages, and limitations of each approach you will understand their
-          optimal contexts of use
-        </p>
-        <div class="flex flex-wrap gap-2">
-          <Button href="/sti-website/tutorial" variant="secondary">
-            Learn more about TUTSTI @ ISWC2024 
-          </Button>
-          <Button
-            href="https://iswc2024.semanticweb.org/event/3715c6fc-e2d7-47eb-8c01-5fe4ac589a52/summary"
-            variant="secondary"
-            className="md:ml-4"
-          >
-            ISWC 2024
-            <img src={logoISWC.src} class="ms-2 w-6 h-6" />
-          </Button>
-        </div>
-      </section>
-    </Section>
+        <HorizontalTimeline />
+      </Section>
 
-    <Section className="pt-20">
-      <h2
-        class="text-3xl font-semibold bg-gradient-to-r from-[#9E0974] to-[#6665E9] inline-block text-transparent bg-clip-text mt-10"
-      >
-        Our Approaches, Dataset, Tools and UI
-      </h2>
-      <HorizontalTimeline />
-    </Section>
-
-    <Section title="" className="pt-20">
-      <h2
-        class="text-3xl font-semibold bg-gradient-to-r from-[#9E0974] to-[#6665E9] inline-block text-transparent bg-clip-text mt-10"
-      >
-        Our Datasets
-      </h2>
-      <div class="flex flex-wrap lg:flex-nowrap mt-8">
-        <div>
-          <img
-            src={mammoth.src}
-            alt="table illustration"
-            class="lg:mt-0 lg:col-span-4 max-w-48 object-fit-cover lg:mr-8"
-          />
+      <Section title="" className="pt-20">
+        <h2
+          class="text-3xl font-semibold bg-gradient-to-r from-[#9E0974] to-[#6665E9] inline-block text-transparent bg-clip-text mt-10"
+        >
+          Our Datasets
+        </h2>
+        <div class="flex flex-wrap lg:flex-nowrap mt-8">
+          <div>
+            <img
+              src={mammoth.src}
+              alt="table illustration"
+              class="lg:mt-0 lg:col-span-4 max-w-48 object-fit-cover lg:mr-8"
+            />
+          </div>
+          <div>
+            <h3 class="mt-2 text-2xl font-semibold text-orange-">Mammotab</h3>
+            <p class="mb-6 mt-4 md:text-base lg:text-base">
+              MammoTab is a unique dataset consisting of 1 million Wikipedia
+              tables, extracted from over 20 million Wikipedia pages, and
+              annotated using Wikidata. This dataset fills a gap in the current
+              state-of-the-art resources, making it an excellent tool for
+              testing and training Semantic Table Interpretation approaches.
+              MammoTab is specifically designed to address several key
+              challenges, including disambiguation, homonymy, and NIL-mentions,
+              providing a comprehensive resource for advancing STI research and
+              applications
+            </p>
+            <p class="mt-4 mb-6 md:text-base lg:text-base"></p>
+            <Button href="/sti-website/mammotab" variant="secondary">
+              Check out Mammotab
+            </Button>
+          </div>
         </div>
-        <div>
-          <h3 class="mt-2 text-2xl font-semibold text-orange-">Mammotab</h3>
-          <p class="mb-6 mt-4 md:text-base lg:text-base">
-            MammoTab is a unique dataset consisting of 1 million Wikipedia
-            tables, extracted from over 20 million Wikipedia pages, and
-            annotated using Wikidata. This dataset fills a gap in the current
-            state-of-the-art resources, making it an excellent tool for testing
-            and training Semantic Table Interpretation approaches. MammoTab is
-            specifically designed to address several key challenges, including
-            disambiguation, homonymy, and NIL-mentions, providing a
-            comprehensive resource for advancing STI research and applications
-          </p>
-          <p class="mt-4 mb-6 md:text-base lg:text-base"></p>
-          <Button href="/sti-website/mammotab" variant="secondary">
-            Check out Mammotab
-          </Button>
-        </div>
-      </div>
+      </Section>
     </Section>
   </main>
 </Layout>
