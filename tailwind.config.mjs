@@ -43,8 +43,8 @@ export default {
           600: "#353496",
         },
         cardBackground: "#0C0C2F",
+        dropdownBackground: "#241928",
         sectionBackground: "#0C0C2F",
-
         tableTop: "#38384C",
         tableBottom: "#1E1A26",
         tableDark: "#19121C",
