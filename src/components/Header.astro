@@ -1,5 +1,6 @@
 ---
 import MenuItem from "@components/MenuItem.astro";
+import { DropdownMenu } from "./ui/dropdown-menu";
 ---
 
 <header class="bg-background sticky top-0 z-20">
@@ -47,7 +48,7 @@ import MenuItem from "@components/MenuItem.astro";
               id="dropdownNavbarLink"
               data-dropdown-toggle="dropdownNavbar"
               class="flex items-center justify-between w-full py-2 px-3 text-foreground rounded md:border-0 md:hover:text-purple-500 md:p-0 md:w-auto"
-              >Dropdown <svg
+              >Our works <svg
                 class="w-2.5 h-2.5 ms-2.5"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +69,7 @@ import MenuItem from "@components/MenuItem.astro";
               class="z-10 hidden font-normal divide-y divide-gray-100 rounded-lg shadow w-44 bg-dropdownBackground dark:divide-gray-600"
             >
               <ul
-                class="py-2 text-smtext-foreground"
+                class="py-2 text-sm text-foreground w-full"
                 aria-labelledby="dropdownLargeButton"
               >
                 <li>
@@ -102,7 +103,11 @@ import MenuItem from "@components/MenuItem.astro";
 </header>
 
 <script>
-  const collapse = document.querySelector("[data-collapse-toggle]");
+  import { Dropdown, type DropdownOptions } from "flowbite";
+
+  const collapse = document.querySelector(
+    "[data-collapse-toggle='navbar-default']"
+  );
 
   const toggleNavbar = () => {
     if (!collapse) return;
@@ -125,4 +130,34 @@ import MenuItem from "@components/MenuItem.astro";
   if (collapse) {
     collapse.addEventListener("click", toggleNavbar);
   }
+
+  // set the dropdown menu element
+  const $targetEl = document.getElementById("dropdownNavbar");
+
+  // set the element that trigger the dropdown menu on click
+  const $triggerEl = document.getElementById("dropdownNavbarLink");
+
+  const options: DropdownOptions = {
+    placement: "bottom",
+    triggerType: "click",
+    offsetSkidding: 0,
+    offsetDistance: 10,
+    delay: 300,
+    ignoreClickOutsideClass: false,
+  };
+
+  // instance options object
+  const instanceOptions = {
+    id: "dropdownNavbarLink",
+    override: true,
+  };
+
+  const dropdown = new Dropdown(
+    $targetEl,
+    $triggerEl,
+    options,
+    instanceOptions
+  );
+
+  const toggleDropdown = () => dropdown.toggle();
 </script>

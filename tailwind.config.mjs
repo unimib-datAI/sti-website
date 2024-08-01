@@ -6,8 +6,6 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
-
-
       backgroundSize: {
         "400%": "400%",
       },
@@ -30,7 +28,6 @@ export default {
         sans: ["Inter var", "Inter", ...defaultTheme.fontFamily.sans],
       },
       colors: ({ colors }) => ({
-        
         background: "#0E0202",
         foreground: "#D9D9D9",
         gray: {
@@ -61,6 +58,7 @@ export default {
     },
   },
   plugins: [
+    require("flowbite/plugin"),
     plugin(function ({ matchUtilities, theme }) {
       matchUtilities(
         {
