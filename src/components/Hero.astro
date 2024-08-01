@@ -1,6 +1,5 @@
 ---
-import Bgblur from "@components/Bgblur.astro";
-import Button from "./Button.astro";
+import { Image } from "astro:assets";
 import STIhero from "src/assets/STIhero.png";
 ---
 
@@ -25,8 +24,8 @@ import STIhero from "src/assets/STIhero.png";
         support your work in making sense of tabular data
       </p>
     </div>
-    <img
-      src={STIhero.src}
+    <Image
+      src={STIhero}
       alt="table illustration"
       class="lg:mt-0 lg:col-span-4 lg:flex max-w-lg w-full object-fit-cover hidden"
     />
