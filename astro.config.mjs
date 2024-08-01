@@ -6,7 +6,7 @@ const isProd = true;
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://unimibinside.github.io/sti-website/",
+  site: "https://unimib-datai.github.io/sti-website/",
   base: "/sti-website",
   trailingSlash: "never",
   integrations: [tailwind(), react()],

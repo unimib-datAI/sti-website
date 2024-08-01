@@ -40,6 +40,7 @@ export default {
           600: "#353496",
         },
         cardBackground: "#0C0C2F",
+        mammotab: "#df8849",
         dropdownBackground: "#241928",
         sectionBackground: "#0C0C2F",
         tableTop: "#38384C",
@@ -47,6 +48,7 @@ export default {
         tableDark: "#19121C",
         tableAlt: "#282332",
         tableText: "#A5A0B5",
+        mantis: "#90bf31",
         iconBackground: {
           100: "#9E0974",
           200: "#8E2294",

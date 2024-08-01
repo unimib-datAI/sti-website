@@ -3,7 +3,9 @@ import Layout from "@/layouts/Layout.astro";
 import Hero from "@components/Hero.astro";
 import Section from "@components/Section.astro";
 import Button from "@components/Button.astro";
-import mammoth from "@/assets/geometric-mammoth.png";
+import mammoth from "@/assets/mammoth.png";
+import bat from "@/assets/bat.png";
+import mantis from "@/assets/mantis.png";
 import logoISWC from "@/assets/logoISWC.png";
 import HorizontalTimeline from "@components/HorizontalTimeline.astro";
 ---
@@ -33,84 +35,141 @@ import HorizontalTimeline from "@components/HorizontalTimeline.astro";
         Annotation (CPA) involves annotating pairs of columns with a KG
         property. The result of this annotation process is a table enriched with
         semantic information
-        <p class="mt-4 mb-4 md:text-base lg:text-base"></p>
-        <Button href="/sti-website/description" variant="secondary">
-          Learn more about STI
-        </Button>
-        <section>
-          <h2
-            class="text-3xl font-semibold bg-gradient-to-r from-[#9E0974] to-[#6665E9] inline-block text-transparent bg-clip-text mt-10"
-          >
-            TUTSTI @ISWC2024
-          </h2>
-          <p class="mb-6 mt-4 md:text-base lg:text-base">
-            Discover the comprehensive world of Semantic Table Interpretation
-            (STI) in this tutorial, which covers both theoretical and practical
-            aspects, and trace the evolution of STI from heuristic-based methods
-            to machine learning (ML) techniques and the latest large language
-            model (LLM) innovations. By examining the unique characteristics,
-            advantages, and limitations of each approach you will understand
-            their optimal contexts of use
-          </p>
-          <div class="flex flex-wrap gap-2">
-            <Button href="/sti-website/tutorial" variant="secondary">
-              Learn more about TUTSTI @ ISWC2024
-            </Button>
-            <Button
-              href="https://iswc2024.semanticweb.org/event/3715c6fc-e2d7-47eb-8c01-5fe4ac589a52/summary"
-              variant="secondary"
-              className="md:ml-4"
-            >
-              ISWC 2024
-              <img src={logoISWC.src} class="ms-2 w-6 h-6" alt="" />
-            </Button>
-          </div>
-        </section>
       </p>
-
-      <Section className="pt-20">
+      <p class="mt-4 mb-4 md:text-base lg:text-base"></p>
+      <Button href="/sti-website/description" variant="secondary">
+        Learn more about STI
+      </Button>
+      <section>
         <h2
           class="text-3xl font-semibold bg-gradient-to-r from-[#9E0974] to-[#6665E9] inline-block text-transparent bg-clip-text mt-10"
         >
-          Our Approaches, Datasets, Tools and UIs
+          TUTSTI @ISWC2024
         </h2>
-        <HorizontalTimeline />
-      </Section>
-
-      <Section title="" className="pt-20">
-        <h2
-          class="text-3xl font-semibold bg-gradient-to-r from-[#9E0974] to-[#6665E9] inline-block text-transparent bg-clip-text mt-10"
-        >
-          Our Datasets
-        </h2>
-        <div class="flex flex-wrap lg:flex-nowrap mt-8">
-          <div>
-            <img
-              src={mammoth.src}
-              alt="table illustration"
-              class="lg:mt-0 lg:col-span-4 max-w-48 object-fit-cover lg:mr-8"
-            />
-          </div>
-          <div>
-            <h3 class="mt-2 text-2xl font-semibold text-orange-">Mammotab</h3>
-            <p class="mb-6 mt-4 md:text-base lg:text-base">
-              MammoTab is a unique dataset consisting of 1 million Wikipedia
-              tables, extracted from over 20 million Wikipedia pages, and
-              annotated using Wikidata. This dataset fills a gap in the current
-              state-of-the-art resources, making it an excellent tool for
-              testing and training Semantic Table Interpretation approaches.
-              MammoTab is specifically designed to address several key
-              challenges, including disambiguation, homonymy, and NIL-mentions,
-              providing a comprehensive resource for advancing STI research and
-              applications
-            </p>
-            <p class="mt-4 mb-6 md:text-base lg:text-base"></p>
-            <Button href="/sti-website/mammotab" variant="secondary">
-              Check out Mammotab
-            </Button>
-          </div>
+        <p class="mb-6 mt-4 md:text-base lg:text-base">
+          Discover the comprehensive world of Semantic Table Interpretation
+          (STI) in this tutorial, which covers both theoretical and practical
+          aspects, and trace the evolution of STI from heuristic-based methods
+          to machine learning (ML) techniques and the latest large language
+          model (LLM) innovations. By examining the unique characteristics,
+          advantages, and limitations of each approach you will understand their
+          optimal contexts of use
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <Button href="/sti-website/tutorial" variant="secondary">
+            Learn more about TUTSTI @ ISWC2024
+          </Button>
+          <Button
+            href="https://iswc2024.semanticweb.org/event/3715c6fc-e2d7-47eb-8c01-5fe4ac589a52/summary"
+            variant="secondary"
+            className="md:ml-4"
+          >
+            ISWC 2024
+            <img src={logoISWC.src} class="ms-2 w-6 h-6" alt="" />
+          </Button>
         </div>
-      </Section>
+      </section>
+    </Section>
+
+    <Section className="pt-20">
+      <h2
+        class="text-3xl font-semibold bg-gradient-to-r from-[#9E0974] to-[#6665E9] inline-block text-transparent bg-clip-text mt-10"
+      >
+        Our Approaches, Datasets, Tools and UIs
+      </h2>
+      <HorizontalTimeline />
+    </Section>
+
+    <Section title="" className="pt-20">
+      <h2
+        class="text-3xl font-semibold bg-gradient-to-r from-[#9E0974] to-[#6665E9] inline-block text-transparent bg-clip-text mt-10 mb-10"
+      >
+        Our Projects
+      </h2>
+      <div class="flex flex-wrap lg:flex-nowrap mt-8">
+        <div>
+          <img
+            src={mammoth.src}
+            alt="table illustration"
+            class="lg:mt-0 lg:col-span-4 max-w-56 object-fit-cover lg:mr-8"
+          />
+        </div>
+        <div>
+          <h3 class="mt-2 text-2xl font-semibold text-orange-">Mammotab</h3>
+          <p class="mb-6 mt-4 md:text-base lg:text-base">
+            MammoTab is a unique dataset consisting of 1 million Wikipedia
+            tables, extracted from over 20 million Wikipedia pages, and
+            annotated using Wikidata. This dataset fills a gap in the current
+            state-of-the-art resources, making it an excellent tool for testing
+            and training Semantic Table Interpretation approaches. MammoTab is
+            specifically designed to address several key challenges, including
+            disambiguation, homonymy, and NIL-mentions, providing a
+            comprehensive resource for advancing STI research and applications
+          </p>
+          <p class="mt-4 mb-6 md:text-base lg:text-base"></p>
+          <Button
+            href="https://unimib-datai.github.io/mammotab-docs/"
+            variant="secondary"
+          >
+            Check out Mammotab
+          </Button>
+        </div>
+      </div>
+      <div class="flex flex-wrap lg:flex-nowrap mt-10">
+        <div>
+          <img
+            src={bat.src}
+            alt="selbat illustration"
+            class="lg:mt-0 lg:col-span-4 max-w-56 object-fit-cover lg:mr-8"
+          />
+        </div>
+        <div>
+          <h3 class="mt-2 text-2xl font-semibold text-orange-">s-elBat</h3>
+          <p class="mb-6 mt-4 md:text-base lg:text-base">
+            s-elBat is a Semantic Table Interpretation approach designed to
+            perform Entity Linking (EL) on tables. It uses an iterative process
+            to link entities within tables and includes an innovative and
+            optimised lookup approach for generating candidate entities for
+            annotation. This method enhances the accuracy and efficiency of STI.
+          </p>
+          <p class="mt-4 mb-6 md:text-base lg:text-base"></p>
+          <Button
+            href="https://unimib-datai.github.io/s-elbat-docs/"
+            variant="secondary"
+          >
+            Check out s-elBat
+          </Button>
+        </div>
+      </div>
+      <div class="flex flex-wrap lg:flex-nowrap mt-10">
+        <div>
+          <img
+            src={mantis.src}
+            alt="mantis illustration"
+            class="lg:mt-0 lg:col-span-4 max-w-56 object-fit-cover lg:mr-8"
+          />
+        </div>
+        <div>
+          <h3 class="mt-2 text-2xl font-semibold text-orange-">MantisTable</h3>
+          <p class="mb-6 mt-4 md:text-base lg:text-base">
+            MantisTable is an open-source Semantic Table Interpretation tool
+            that automatically annotates tables using a Knowledge Graph. It
+            features a graphical interface that allows users to analyze the
+            results of the semantic interpretation process and validate final
+            annotations. The tool also offers a guided mode for viewing and
+            editing annotations. With MantisTable, users can create semantic
+            annotations, facilitating the publication and exchange of tabular
+            data.
+          </p>
+          <p class="mt-4 mb-6 md:text-base lg:text-base"></p>
+          <Button
+            href="https://unimib-datai.github.io/mantistable-ui-docs/"
+            variant="secondary"
+          >
+            Check out MantisTable
+          </Button>
+        </div>
+      </div>
     </Section>
   </main>
 </Layout>
