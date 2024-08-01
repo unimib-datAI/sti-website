@@ -6,7 +6,6 @@ import Button from "@components/Button.astro";
 import mammoth from "@/assets/geometric-mammoth.png";
 import logoISWC from "@/assets/logoISWC.png";
 import HorizontalTimeline from "@components/HorizontalTimeline.astro";
-import { Image } from "astro:assets";
 ---
 
 <Layout title="STI resources">
@@ -63,7 +62,7 @@ import { Image } from "astro:assets";
               className="md:ml-4"
             >
               ISWC 2024
-              <Image src={logoISWC} class="ms-2 w-6 h-6" alt="" />
+              <img src={logoISWC.src} class="ms-2 w-6 h-6" alt="" />
             </Button>
           </div>
         </section>
@@ -86,8 +85,8 @@ import { Image } from "astro:assets";
         </h2>
         <div class="flex flex-wrap lg:flex-nowrap mt-8">
           <div>
-            <Image
-              src={mammoth}
+            <img
+              src={mammoth.src}
               alt="table illustration"
               class="lg:mt-0 lg:col-span-4 max-w-48 object-fit-cover lg:mr-8"
             />
