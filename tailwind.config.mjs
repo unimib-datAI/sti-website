@@ -50,6 +50,7 @@ export default {
         tableText: "#A5A0B5",
         mantis: "#90bf31",
         seellm: "#51DDF9",
+        llamapi: "#FBB2CC",
         iconBackground: {
           100: "#9E0974",
           200: "#8E2294",
