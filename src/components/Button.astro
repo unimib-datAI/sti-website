@@ -1,7 +1,7 @@
 ---
 type Prop = {
   href?: string;
-  variant?: "primary" | "secondary" | "disabled";
+  variant?: "primary" | "secondary" | "disabled" | "border";
   className?: string;
   version?: "V2" | "V1";
   tooltip?: string;
@@ -20,6 +20,8 @@ const { href = "#", variant = "primary", className, tooltip } = Astro.props;
         "bg-purple-700 hover:bg-purple-700/80 saturate-50",
       variant === "disabled" &&
         "cursor-not-allowed active:pointer-events-none bg-gray-800",
+      variant === "border" &&
+        "bg-none border-solid border-2 border-purple-700 hover:border-purple-700 text-purple-700 font-normal",
       className,
     ]}
   >
