@@ -4986,5 +4986,63 @@
         },
         "output-format": "",
         "checked-by-author": false
+    },
+    {
+        "author": "Zhang",
+        "year": 2024,
+        "title": {
+            "text": "TableLlama: Towards Open Large Generalist Models for Tables",
+            "link": "https://arxiv.org/pdf/2311.09206"
+        },
+        "conference-journal": "arXiv",
+        "name-of-approach": "TableLlama",
+        "main-method": {
+            "type": "sup",
+            "technique": "LLama 2"
+        },
+        "domain": {
+            "domain": "independent",
+            "type": ""
+        },
+        "tasks": {
+            "cta": true,
+            "cpa": true,
+            "cea": true,
+            "cnea": false
+        },
+        "steps": {
+            "data-preparation": {
+                "description": "",
+                "spell-checker": "",
+                "units-of-measurements": ""
+            },
+            "subject-detection": "",
+            "column-analysis": "",
+            "type-annotation": " ",
+            "predicate-annotation": " ",
+            "datatype-annotation": "",
+            "entity-linking": {
+                "description": "",
+                "candidate-generation": "",
+                "entity-disambiguation": " "
+            },
+            "nil-annotation": ""
+        },
+        "user-revision": {
+            "type": "none",
+            "description": ""
+        },
+        "validation": "TURL Dataset",
+        "code-availability": "https://github.com/OSU-NLP-Group/TableLlama",
+        "license": "MIT",
+        "inputs": {
+            "type-of-table": "",
+            "kg": {
+                "triple-store": "Wikidata",
+                "index": ""
+            }
+        },
+        "output-format": "",
+        "checked-by-author": false
     }
 ]
