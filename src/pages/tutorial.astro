@@ -10,7 +10,6 @@ import Carousel from "@components/Carousel.astro";
 import Presenter from "@components/Presenter.astro";
 import logoISWC from "@/assets/logoISWC.png";
 
-
 import marco from "src/assets/marco.jpeg";
 import MatteoPalmonari from "src/assets/MatteoPalmonari.jpg";
 import ErnestoJimenezRuiz from "src/assets/ErnestoJimenezRuiz.jpg";
@@ -22,24 +21,28 @@ import fabio from "src/assets/fabio.jpg";
     <Section>
       <div class="flex gap-4 items-center">
         <img
-      src={logoISWC.src}
-      alt="table illustration"
-      class="max-w-16 object-fit-cover shrink-0"
-    />
-    <h1 class="py-4 mt-8 text-4xl font-bold bg-gradient-to-r from-[#9E0974] to-[#6665E9] inline-block text-transparent bg-clip-text">TUTSTI @ ISWC2024</h1> 
+          src={logoISWC.src}
+          alt="table illustration"
+          class="max-w-16 object-fit-cover shrink-0"
+        />
+        <h1
+          class="py-4 mt-8 text-4xl font-bold bg-gradient-to-r from-[#9E0974] to-[#6665E9] inline-block text-transparent bg-clip-text"
+        >
+          TUTSTI @ ISWC2024
+        </h1>
       </div>
       <p
         class="mb-6 mt-4 font-light lg:mb-8 md:text-lg lg:text-xl text-gray-400"
       >
-        The tutorial TUTSTI introduces the topic of Semantic Table Interpretation
-        (STI), covering theoretical and practical considerations. In particular,
-        the tutorial will provide a comprehensive analysis of how the approaches
-        to STI have evolved from heuristic-based to ML-based, to the most recent
-        LLM-based approaches. The analysis will consider the specific
-        characteristics of these different classes, providing insights into
-        their respective advantages and limitations to identify the contexts of
-        use. The final part will describe a case study to demonstrate the
-        application of two state-of-the-art approaches
+        The tutorial TUTSTI introduces the topic of Semantic Table
+        Interpretation (STI), covering theoretical and practical considerations.
+        In particular, the tutorial will provide a comprehensive analysis of how
+        the approaches to STI have evolved from heuristic-based to ML-based, to
+        the most recent LLM-based approaches. The analysis will consider the
+        specific characteristics of these different classes, providing insights
+        into their respective advantages and limitations to identify the
+        contexts of use. The final part will describe a case study to
+        demonstrate the application of two state-of-the-art approaches
       </p>
     </Section>
     <Section title="Objectives">
@@ -55,7 +58,7 @@ import fabio from "src/assets/fabio.jpg";
         and review SOTA (L1, L2, L3 and L5);
       </p>
       <p class="text-base md:text-base lg:text-base">
-        <strong class="font-bold">Slot 1:</strong> where we present two SOTA approach
+        <strong class="font-bold">Slot 2:</strong> where we present two SOTA approach
         and use it in a hands-on session, by walking the audience through a use case
         (L4)
       </p>
@@ -81,7 +84,8 @@ import fabio from "src/assets/fabio.jpg";
         to support data-driven innovation
       </p>
       <p class="font-light lg:mb-2x md:text-base lg:text-base text-base">
-        <strong class="font-bold">iii) data scientists and data engineers</strong
+        <strong class="font-bold"
+          >iii) data scientists and data engineers</strong
         >, who will learn how semantic technologies can be exploited to support
         data-driven innovation
       </p>
